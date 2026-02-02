@@ -1,0 +1,79 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram name="Página-1" id="4H9OFMZS_D71qR37B4_g">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_7BPurw87L3pjbjwQsAW-1" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
+          <mxGeometry height="320" width="340" x="210" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-3" parent="_7BPurw87L3pjbjwQsAW-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Flutter_App_Frontend" vertex="1">
+          <mxGeometry height="30" width="60" x="130" as="geometry" />
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-4" parent="_7BPurw87L3pjbjwQsAW-1" style="rounded=0;whiteSpace=wrap;html=1;" value="UI Screens" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-5" parent="_7BPurw87L3pjbjwQsAW-1" style="rounded=0;whiteSpace=wrap;html=1;" value="Controllers/View/Models" vertex="1">
+          <mxGeometry height="70" width="170" x="80" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-6" edge="1" parent="_7BPurw87L3pjbjwQsAW-1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="159.5" y="100" as="sourcePoint" />
+            <mxPoint x="160" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-7" parent="_7BPurw87L3pjbjwQsAW-1" style="rounded=0;whiteSpace=wrap;html=1;" value="Trivia Engine" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-8" edge="1" parent="_7BPurw87L3pjbjwQsAW-1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_7BPurw87L3pjbjwQsAW-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="159.5" y="200" as="sourcePoint" />
+            <mxPoint x="160" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-19" edge="1" parent="_7BPurw87L3pjbjwQsAW-1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="_7BPurw87L3pjbjwQsAW-17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="250" y="200" as="sourcePoint" />
+            <mxPoint x="310" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-22" edge="1" parent="_7BPurw87L3pjbjwQsAW-1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="_7BPurw87L3pjbjwQsAW-18" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="150" y="300" as="sourcePoint" />
+            <mxPoint x="290" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-23" edge="1" parent="_7BPurw87L3pjbjwQsAW-1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="_7BPurw87L3pjbjwQsAW-18" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="90" y="460" />
+            </Array>
+            <mxPoint x="90" y="200" as="sourcePoint" />
+            <mxPoint x="90" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-14" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
+          <mxGeometry height="260" width="290" x="590" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-15" parent="_7BPurw87L3pjbjwQsAW-14" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Firebase_Backend" vertex="1">
+          <mxGeometry height="30" width="70" x="70" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-17" parent="_7BPurw87L3pjbjwQsAW-14" style="rounded=0;whiteSpace=wrap;html=1;" value="Firebase auth" vertex="1">
+          <mxGeometry height="40" width="80" x="140" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-18" parent="_7BPurw87L3pjbjwQsAW-14" style="rounded=0;whiteSpace=wrap;html=1;" value="Firestore Database" vertex="1">
+          <mxGeometry height="60" width="120" x="45" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="_7BPurw87L3pjbjwQsAW-20" edge="1" parent="_7BPurw87L3pjbjwQsAW-14" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="_7BPurw87L3pjbjwQsAW-18" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="210" />
+            </Array>
+            <mxPoint x="190" y="80" as="sourcePoint" />
+            <mxPoint x="268.75" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

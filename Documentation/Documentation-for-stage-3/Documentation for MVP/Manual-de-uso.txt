@@ -1,0 +1,38 @@
+Manual de uso
+1. Inicio de la aplicación
+
+Abrir la aplicación de Trivia.
+
+En la pantalla principal, seleccionar la opción Jugar.
+
+(Opcional) Ingresar o seleccionar un jugador.
+
+2. Flujo del juego
+
+El sistema presenta una pregunta.
+
+El jugador selecciona una respuesta.
+
+El sistema valida la respuesta:
+
+Si es correcta, el jugador avanza al siguiente nodo o nivel.
+
+Si es incorrecta, se muestra la respuesta correcta y se ajusta el progreso.
+
+3. Progreso del jugador
+
+El progreso se guarda automáticamente.
+
+El jugador puede continuar desde el último nodo alcanzado.
+
+4. Navegación principal
+
+Jugar: iniciar una partida.
+
+Configuración: ajustar opciones básicas.
+
+Salir: cerrar la aplicación.
+
+5. Consideraciones
+
+El MVP presenta funcionalidades básicas de trivia.

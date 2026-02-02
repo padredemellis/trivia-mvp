@@ -1,0 +1,38 @@
+User Manual
+1. Application Start
+
+Open the Trivia application.
+
+On the main screen, select the Play option.
+
+(Optional) Enter or select a player profile.
+
+2. Game Flow
+
+The system displays a question.
+
+The player selects an answer.
+
+The system validates the answer:
+
+If correct, the player advances to the next node or level.
+
+If incorrect, the correct answer is shown and progress is updated.
+
+3. Player Progress
+
+Progress is saved automatically.
+
+The player can continue from the last reached node.
+
+4. Main Navigation
+
+Play: start a game session.
+
+Settings: adjust basic options.
+
+Exit: close the application.
+
+5. Notes
+
+The MVP provides basic trivia functionalities.
