@@ -1,0 +1,1 @@
+We get to know the team members, brainstorm, and get the final project underway.
