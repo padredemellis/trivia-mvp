@@ -1,0 +1,1 @@
+Controladores (conectan UI ↔ lógica)

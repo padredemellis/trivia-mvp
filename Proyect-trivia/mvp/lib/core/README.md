@@ -1,0 +1,1 @@
+Cosas básicas del sistema (reglas, estados, constantes).
