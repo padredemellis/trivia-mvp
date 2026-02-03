@@ -1,0 +1,306 @@
+{
+  "category": "Peliculas",
+  "id": 1,
+  "questions": [
+    {
+      "id": 1,
+      "question": "¿En qué película aparece el personaje Jack Dawson?",
+      "options": ["Titanic", "Avatar", "Inception", "The Matrix"],
+      "answer": "Titanic"
+    },
+    {
+      "id": 2,
+      "question": "¿Quién dirigió la película Avatar (2009)?",
+      "options": ["Steven Spielberg", "James Cameron", "Christopher Nolan", "Ridley Scott"],
+      "answer": "James Cameron"
+    },
+    {
+      "id": 3,
+      "question": "¿Cómo se llama el martillo de Thor?",
+      "options": ["Stormbreaker", "Mjolnir", "Excalibur", "Gungnir"],
+      "answer": "Mjolnir"
+    },
+    {
+      "id": 4,
+      "question": "¿En qué película los juguetes cobran vida cuando los humanos no están?",
+      "options": ["Shrek", "Toy Story", "Cars", "Monsters Inc."],
+      "answer": "Toy Story"
+    },
+    {
+      "id": 5,
+      "question": "¿Cuál es el nombre del ogro verde de DreamWorks?",
+      "options": ["Fiona", "Burro", "Shrek", "Hipo"],
+      "answer": "Shrek"
+    },
+    {
+      "id": 6,
+      "question": "¿Qué película popularizó la frase 'Yo soy tu padre'?",
+      "options": ["Star Wars: El Imperio Contraataca", "Star Wars: Una Nueva Esperanza", "Rogue One", "Star Wars: El Retorno del Jedi"],
+      "answer": "Star Wars: El Imperio Contraataca"
+    },
+    {
+      "id": 7,
+      "question": "¿Qué superhéroe es conocido como el Hombre Araña?",
+      "options": ["Clark Kent", "Bruce Wayne", "Peter Parker", "Tony Stark"],
+      "answer": "Peter Parker"
+    },
+    {
+      "id": 8,
+      "question": "¿En qué película aparece el mundo virtual llamado OASIS?",
+      "options": ["Tron", "Ready Player One", "The Matrix", "Avatar"],
+      "answer": "Ready Player One"
+    },
+    {
+      "id": 9,
+      "question": "¿Qué película animada tiene como protagonista a una emoción llamada Alegría?",
+      "options": ["Up", "Coco", "Intensamente", "Ratatouille"],
+      "answer": "Intensamente"
+    },
+    {
+      "id": 10,
+      "question": "¿Qué actor interpretó a Iron Man?",
+      "options": ["Chris Evans", "Robert Downey Jr.", "Chris Hemsworth", "Mark Ruffalo"],
+      "answer": "Robert Downey Jr."
+    },
+    {
+      "id": 11,
+      "question": "¿En qué película un autobús no puede bajar de cierta velocidad o explotará?",
+      "options": ["Speed", "Die Hard", "Taken", "Heat"],
+      "answer": "Speed"
+    },
+    {
+      "id": 12,
+      "question": "¿Cómo se llama el villano principal de Avengers: Infinity War?",
+      "options": ["Ultron", "Loki", "Thanos", "Red Skull"],
+      "answer": "Thanos"
+    },
+    {
+      "id": 13,
+      "question": "¿Qué película trata sobre dinosaurios clonados?",
+      "options": ["King Kong", "Jurassic Park", "Godzilla", "Ice Age"],
+      "answer": "Jurassic Park"
+    },
+    {
+      "id": 14,
+      "question": "¿Qué objeto debe destruir Frodo en El Señor de los Anillos?",
+      "options": ["Una espada", "Un anillo", "Un collar", "Un libro"],
+      "answer": "Un anillo"
+    },
+    {
+      "id": 15,
+      "question": "¿En qué película el protagonista vive sin saber que su vida es un show?",
+      "options": ["Inception", "The Truman Show", "Matrix", "Fight Club"],
+      "answer": "The Truman Show"
+    },
+    {
+      "id": 16,
+      "question": "¿Qué película animada está inspirada en la cultura mexicana y el Día de los Muertos?",
+      "options": ["Coco", "Luca", "Soul", "Encanto"],
+      "answer": "Coco"
+    },
+    {
+      "id": 17,
+      "question": "¿Qué animal es Simba?",
+      "options": ["Tigre", "León", "Pantera", "Jaguar"],
+      "answer": "León"
+    },
+    {
+      "id": 18,
+      "question": "¿Qué película se desarrolla dentro de los sueños?",
+      "options": ["Interstellar", "Inception", "Tenet", "Matrix"],
+      "answer": "Inception"
+    },
+    {
+      "id": 19,
+      "question": "¿Cómo se llama el amigo burro de Shrek?",
+      "options": ["Asno", "Burro", "Donkey", "Mulo"],
+      "answer": "Burro"
+    },
+    {
+      "id": 20,
+      "question": "¿Qué película tiene carreras de autos con personajes animados?",
+      "options": ["Turbo", "Cars", "Planes", "Speed Racer"],
+      "answer": "Cars"
+    },
+    {
+      "id": 21,
+      "question": "¿Qué superhéroe es conocido como el Capitán América?",
+      "options": ["Tony Stark", "Steve Rogers", "Bruce Banner", "Clint Barton"],
+      "answer": "Steve Rogers"
+    },
+    {
+      "id": 22,
+      "question": "¿En qué película los humanos viven en una simulación?",
+      "options": ["Inception", "Matrix", "Avatar", "Tron"],
+      "answer": "Matrix"
+    },
+    {
+      "id": 23,
+      "question": "¿Qué película animada tiene un robot llamado Wall-E?",
+      "options": ["Robots", "Wall-E", "Big Hero 6", "Astro Boy"],
+      "answer": "Wall-E"
+    },
+    {
+      "id": 24,
+      "question": "¿Qué saga incluye la escuela Hogwarts?",
+      "options": ["Narnia", "Percy Jackson", "Harry Potter", "Star Wars"],
+      "answer": "Harry Potter"
+    },
+    {
+      "id": 25,
+      "question": "¿Qué película trata sobre un violinista en un campo de concentración?",
+      "options": ["La lista de Schindler", "El pianista", "Forrest Gump", "Titanic"],
+      "answer": "El pianista"
+    },
+    {
+      "id": 26,
+      "question": "¿Qué película muestra viajes a través de un agujero negro?",
+      "options": ["Gravity", "Interstellar", "The Martian", "Ad Astra"],
+      "answer": "Interstellar"
+    },
+    {
+      "id": 27,
+      "question": "¿Qué actor protagoniza Forrest Gump?",
+      "options": ["Tom Cruise", "Tom Hanks", "Brad Pitt", "Leonardo DiCaprio"],
+      "answer": "Tom Hanks"
+    },
+    {
+      "id": 28,
+      "question": "¿Qué película animada ocurre en una casa embrujada de monstruos?",
+      "options": ["Hotel Transylvania", "Monsters Inc.", "Frankenweenie", "Coraline"],
+      "answer": "Monsters Inc."
+    },
+    {
+      "id": 29,
+      "question": "¿Qué película tiene un villano llamado Joker?",
+      "options": ["Superman", "Batman", "Iron Man", "Deadpool"],
+      "answer": "Batman"
+    },
+    {
+      "id": 30,
+      "question": "¿Qué película sigue la vida de un hombre con una caja de chocolates?",
+      "options": ["Big", "Forrest Gump", "Cast Away", "Green Mile"],
+      "answer": "Forrest Gump"
+    },
+    {
+      "id": 31,
+      "question": "¿Qué película animada trata sobre emociones en la mente?",
+      "options": ["Soul", "Intensamente", "Up", "Toy Story"],
+      "answer": "Intensamente"
+    },
+    {
+      "id": 32,
+      "question": "¿Qué película popularizó el multiverso animado de Spider-Man?",
+      "options": ["Spider-Man 2", "No Way Home", "Into the Spider-Verse", "Amazing Spider-Man"],
+      "answer": "Into the Spider-Verse"
+    },
+    {
+      "id": 33,
+      "question": "¿Qué animal es Po en Kung Fu Panda?",
+      "options": ["Oso", "Panda", "Mapache", "Tigre"],
+      "answer": "Panda"
+    },
+    {
+      "id": 34,
+      "question": "¿Qué película tiene un parque con dinosaurios?",
+      "options": ["Godzilla", "Jurassic Park", "King Kong", "Rampage"],
+      "answer": "Jurassic Park"
+    },
+    {
+      "id": 35,
+      "question": "¿Qué película trata sobre un náufrago con una pelota llamada Wilson?",
+      "options": ["Life of Pi", "Cast Away", "The Beach", "Titanic"],
+      "answer": "Cast Away"
+    },
+    {
+      "id": 36,
+      "question": "¿Qué saga es conocida por los Autobots?",
+      "options": ["Terminator", "Transformers", "Pacific Rim", "Robocop"],
+      "answer": "Transformers"
+    },
+    {
+      "id": 37,
+      "question": "¿Qué película animada trata sobre una familia con superpoderes?",
+      "options": ["Big Hero 6", "Los Increíbles", "Megamind", "Bolt"],
+      "answer": "Los Increíbles"
+    },
+    {
+      "id": 38,
+      "question": "¿Qué película se centra en un tiburón gigante?",
+      "options": ["Deep Blue Sea", "Jaws", "The Meg", "Open Water"],
+      "answer": "Jaws"
+    },
+    {
+      "id": 39,
+      "question": "¿Qué película animada sigue la aventura de un pez perdido?",
+      "options": ["Shark Tale", "Buscando a Nemo", "Luca", "Rio"],
+      "answer": "Buscando a Nemo"
+    },
+    {
+      "id": 40,
+      "question": "¿Qué película presenta a un antihéroe llamado Deadpool?",
+      "options": ["Logan", "Deadpool", "X-Men", "Venom"],
+      "answer": "Deadpool"
+    },
+    {
+      "id": 41,
+      "question": "¿Qué película tiene un torneo mortal llamado Los Juegos del Hambre?",
+      "options": ["Divergente", "Maze Runner", "Los Juegos del Hambre", "Battle Royale"],
+      "answer": "Los Juegos del Hambre"
+    },
+    {
+      "id": 42,
+      "question": "¿Qué película animada ocurre en la ciudad de Zootopia?",
+      "options": ["Sing", "Zootopia", "Madagascar", "Rio"],
+      "answer": "Zootopia"
+    },
+    {
+      "id": 43,
+      "question": "¿Qué película trata sobre un chico con cicatriz en forma de rayo?",
+      "options": ["Percy Jackson", "Harry Potter", "Narnia", "Eragon"],
+      "answer": "Harry Potter"
+    },
+    {
+      "id": 44,
+      "question": "¿Qué película animada tiene dragones y vikingos?",
+      "options": ["Brave", "Cómo entrenar a tu dragón", "Frozen", "Raya"],
+      "answer": "Cómo entrenar a tu dragón"
+    },
+    {
+      "id": 45,
+      "question": "¿Qué película trata sobre autos que hablan?",
+      "options": ["Planes", "Cars", "Turbo", "Robots"],
+      "answer": "Cars"
+    },
+    {
+      "id": 46,
+      "question": "¿Qué película presenta el Guantelete del Infinito?",
+      "options": ["Avengers", "Avengers: Infinity War", "Thor", "Guardians of the Galaxy"],
+      "answer": "Avengers: Infinity War"
+    },
+    {
+      "id": 47,
+      "question": "¿Qué película animada trata sobre música y almas?",
+      "options": ["Coco", "Soul", "Up", "Encanto"],
+      "answer": "Soul"
+    },
+    {
+      "id": 48,
+      "question": "¿Qué película tiene una ciudad flotante llamada Pandora?",
+      "options": ["Avatar", "Alita", "Dune", "Star Wars"],
+      "answer": "Avatar"
+    },
+    {
+      "id": 49,
+      "question": "¿Qué película sigue a un grupo que roba sueños?",
+      "options": ["Tenet", "Inception", "Matrix", "Now You See Me"],
+      "answer": "Inception"
+    },
+    {
+      "id": 50,
+      "question": "¿Qué película animada ocurre en el océano con una familia de peces?",
+      "options": ["Buscando a Dory", "Buscando a Nemo", "Luca", "Moana"],
+      "answer": "Buscando a Nemo"
+    }
+  ]
+}
