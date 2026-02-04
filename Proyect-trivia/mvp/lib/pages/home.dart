@@ -12,7 +12,7 @@ class _HomeState extends State<Home> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/fondo_de_hojas.png'),
+            image: AssetImage('assets/images/leaf_background.png'),
             fit: BoxFit.cover,
           ),
         ),
