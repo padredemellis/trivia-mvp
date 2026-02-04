@@ -10,7 +10,6 @@ class Question {
       options: List<String>.from(map['options'] ?? []),
       correctAnswer: map['correctAnswer'] ?? '',
       category: map['category'] ?? "",
-
     );
   }
 
