@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:Proyect-trivia/mvp/pages/home.dart';
-import 'package:Proyect-trivia/mvp/pages/map.dart';
+import 'mvp/pages/home.dart';
+import 'mvp/pages/map.dart';
 
 void main() => runApp(MaterialApp(
       initialRoute: '/home',
