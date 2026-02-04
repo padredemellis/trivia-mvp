@@ -1,6 +1,6 @@
-import 'package:tu_app/widget/card_widget.dart';
+import 'package:mvp/widget/card_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:tu_app/class/item_class.dart';
+import 'package:mvp/class/item_class.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

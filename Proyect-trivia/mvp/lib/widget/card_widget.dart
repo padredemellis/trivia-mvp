@@ -1,7 +1,7 @@
-import 'package:tu_app/class/item_class.dart';
-import 'package:tu_app/core/constants.dart';
+import 'package:mvp/class/item_class.dart';
+import 'package:mvp/core/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:tu_app/pages/quiz.dart';
+import 'package:mvp/pages/quiz.dart';
 
 class CardWidget extends StatelessWidget {
   const CardWidget({super.key, required this.box});
