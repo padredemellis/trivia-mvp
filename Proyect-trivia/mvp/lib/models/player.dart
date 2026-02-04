@@ -1,8 +1,19 @@
 class Player {
   final int score;
   final List<String> completedNodes;
-  final int id;
+  int id;
 
-  Player({this.score, this.completedNodes, this.id})
+  Player({required this.score, required this.completedNodes, required this.id});
 
+factory Player.fromMap(Map<String, dynamic> map) {
+    return Player(
+      score: map['score'] ?? 0,
+      completedNodes: List<String>.from(map['completedNodes'] ?? ""),
+      id: map['id'] ?? '',
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {'score': score, 'completedNodes': completedNodes, 'id': id};
+  }
 }
