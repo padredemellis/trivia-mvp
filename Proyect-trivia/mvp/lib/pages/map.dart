@@ -37,9 +37,17 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text('DITSY QUIZ')),
-      body: SingleChildScrollView(
-        child: Column(
-          children: buildLevelCards(items),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/leaf_background.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: buildLevelCards(items),
+          ),
         ),
       ),
     );
