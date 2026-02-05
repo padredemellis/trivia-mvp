@@ -3,6 +3,5 @@ class Player {
   final List<String> completedNodes;
   final int id;
 
-  Player({this.score, this.completedNodes, this.id})
-
+  Player({required this.score, required this.completedNodes, required this.id});
 }

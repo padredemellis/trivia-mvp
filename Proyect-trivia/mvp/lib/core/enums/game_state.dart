@@ -9,3 +9,10 @@ lose o Game Over, bueno, si el usuario es manco.
 
 Este se comunica con la clase GameEngine.
 */
+enum GameState {
+  idle,       // En el menú principal
+  playing,    // Jugando una pregunta
+  win,        // Ganó la pregunta
+  lose,       // Perdió la pregunta
+  completed,  // Completó todos los nodos
+}

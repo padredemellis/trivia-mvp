@@ -1,4 +1,4 @@
-import 'package:tu_app/class/item_class.dart';
+import 'package:mvp/class/item_class.dart';
 import 'package:flutter/material.dart';
 
 class QuizPage extends StatelessWidget {

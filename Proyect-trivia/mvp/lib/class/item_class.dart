@@ -5,10 +5,11 @@ class ItemClass {
   final String tema;
 
   static const List<String> temas = [
-    'Cultura',
-    'Ciencias',
+    'Arte y entretenimiento',
+    'Ciencias Naturales',
+    'Ciencias sociales',
     'Actualidad',
-    'Hobbies',
+    'Historia'
   ];
 
   ItemClass({required int nivel})
