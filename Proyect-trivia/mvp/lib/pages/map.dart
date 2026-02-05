@@ -1,11 +1,11 @@
 import 'package:mvp/widget/card_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:mvp/class/item_class.dart';
+import 'package:mvp/models/node.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  List<Widget> buildLevelCards(List<ItemClass> items) {
+  List<Widget> buildLevelCards(List<Node> items) {
     List<Widget> widgets = [];
     int i = 0;
 
@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final items = List.generate(
       30,
-      (index) => ItemClass(nivel: index + 1),
+      (index) => Node(nivel: index + 1),
     );
 
     return Scaffold(

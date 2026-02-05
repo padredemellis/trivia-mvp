@@ -1,11 +1,11 @@
-import 'package:mvp/class/item_class.dart';
+import 'package:mvp/models/node.dart';
 import 'package:mvp/core/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:mvp/pages/quiz.dart';
 
 class CardWidget extends StatelessWidget {
   const CardWidget({super.key, required this.box});
-  final ItemClass box;
+  final Node box;
 
   @override
   Widget build(BuildContext context) {
