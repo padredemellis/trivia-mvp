@@ -1,24 +1,37 @@
-import 'package:mvp/widget/card_widget.dart';
+import 'package:mvp/widget/node_button.dart';
 import 'package:flutter/material.dart';
 import 'package:mvp/models/node.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  Widget background() {
+    return IgnorePointer(
+      child: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/leaf_background.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+    );
+  }
+
   List<Widget> buildLevelCards(List<Node> items) {
     List<Widget> widgets = [];
     int i = 0;
 
     while (i < items.length) {
-      widgets.add(CardWidget(box: items[i]));
+      widgets.add(NodeButton(box: items[i]));
       i++;
 
       if (i + 1 < items.length) {
         widgets.add(
           Row(
             children: [
-              Expanded(child: CardWidget(box: items[i])),
-              Expanded(child: CardWidget(box: items[i + 1])),
+              Expanded(child: NodeButton(box: items[i])),
+              Expanded(child: NodeButton(box: items[i + 1])),
             ],
           ),
         );
@@ -30,25 +43,17 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final items = List.generate(
-      30,
-      (index) => Node(nivel: index + 1),
-    );
+    final items = List.generate(30, (index) => Node(nivel: index + 1));
 
     return Scaffold(
       appBar: AppBar(title: const Text('DITSY QUIZ')),
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/leaf_background.png'),
-            fit: BoxFit.cover,
+      body: Stack(
+        children: [
+          Positioned.fill(child: background()),
+          SingleChildScrollView(
+            child: Column(children: buildLevelCards(items)),
           ),
-        ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: buildLevelCards(items),
-          ),
-        ),
+        ],
       ),
     );
   }
