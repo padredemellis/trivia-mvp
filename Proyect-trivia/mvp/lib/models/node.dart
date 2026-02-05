@@ -1,15 +1,17 @@
+import 'dart:math';
+
 class Node {
-  final int id;
-  final String category;
-  //TODO final int difficult;
+  final String title;
+  final String tema;
 
-  Node({required this.id, required this.category});
+  static const List<String> temas = [
+    'Cultura',
+    'Ciencias',
+    'Actualidad',
+    'Hobbies',
+  ];
 
-  factory Node.fromMap(Map<String, dynamic> map) {
-    return Node(id: map["id"] ?? 0, category: map['category'] ?? "");
-  }
-
-  Map<String, dynamic> toMap() {
-    return {'id': id, 'category': category};
-  }
+  Node({required int nivel})
+    : title = 'Nivel $nivel',
+      tema = temas[Random().nextInt(temas.length)];
 }

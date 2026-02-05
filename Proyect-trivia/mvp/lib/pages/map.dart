@@ -1,21 +1,60 @@
+import 'package:mvp/widget/node_button.dart';
 import 'package:flutter/material.dart';
+import 'package:mvp/models/node.dart';
 
-class MapPage extends StatefulWidget {
-  @override
-  _MapPageState createState() => _MapPageState();
-}
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
-class _MapPageState extends State<MapPage> {
+  Widget background() {
+    return IgnorePointer(
+      child: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/leaf_background.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+    );
+  }
+
+  List<Widget> buildLevelCards(List<Node> items) {
+    List<Widget> widgets = [];
+    int i = 0;
+
+    while (i < items.length) {
+      widgets.add(NodeButton(box: items[i]));
+      i++;
+
+      if (i + 1 < items.length) {
+        widgets.add(
+          Row(
+            children: [
+              Expanded(child: NodeButton(box: items[i])),
+              Expanded(child: NodeButton(box: items[i + 1])),
+            ],
+          ),
+        );
+        i += 2;
+      }
+    }
+    return widgets;
+  }
+
   @override
   Widget build(BuildContext context) {
+    final items = List.generate(30, (index) => Node(nivel: index + 1));
+
     return Scaffold(
-      backgroundColor: Colors.green[200],
-      appBar: AppBar(
-        backgroundColor: Colors.pink,
-        title: Text('Map'),
-        centerTitle: true,
-        elevation: 0,
+      appBar: AppBar(title: const Text('DITSY QUIZ')),
+      body: Stack(
+        children: [
+          Positioned.fill(child: background()),
+          SingleChildScrollView(
+            child: Column(children: buildLevelCards(items)),
+          ),
+        ],
       ),
-    ); // Scaffold
+    );
   }
 }
