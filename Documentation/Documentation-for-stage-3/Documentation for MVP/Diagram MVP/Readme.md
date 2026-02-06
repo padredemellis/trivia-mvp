@@ -1,3 +1,1 @@
-Collectively, the UML diagrams allow representing the system from different perspectives: functional, structural, and dynamic.
-Each diagram fulfills a specific role within the system design, contributing to a comprehensive understanding of the MVP architecture.
-This combination of diagrams allows validating design decisions before implementation, reducing ambiguities, and ensuring coherence between the conceptual idea of the game and its technical implementation.
+This directory contains the entire process of creating our final project.
