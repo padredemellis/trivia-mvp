@@ -1,18 +1,22 @@
-/*
-Acá controlaremos cada estado del juego:
-idle - juego sin empezar, el menu
-start o home- inicio.
-loading - cargando.
-question - mostrando las preguntas.
-win, si el usario ganá.
-lose o Game Over, bueno, si el usuario es manco.
-
-Este se comunica con la clase GameEngine.
-*/
+/// Representa en qué estado se encuentra el juego en un momento dado.
+///
+/// Uso:
+/// El GameController (en la capa de presentación) usará este enum para saber qué pantalla mostrar.
+///
+/// Valores:
+/// - idle: El juego está en reposo (pantalla principal, esperando acción del usuario)
+/// - navigating: MapScreen (seleccionando nodo)
+/// - playing: El jugador está activamente respondiendo preguntas
+/// - loading: Cargando datos (Firestore, transiciones)
+/// - nodeCompleted: El jugador completó un nodo exitosamente
+/// - nodeFailed: El jugador falló un nodo (perdió una vida)
+/// - gameOver: El jugador perdió todas las vidas
 enum GameState {
-  idle,       // En el menú principal
-  playing,    // Jugando una pregunta
-  win,        // Ganó la pregunta
-  lose,       // Perdió la pregunta
-  completed,  // Completó todos los nodos
+  idle,
+  navigating,
+  playing,
+  loading,
+  nodeCompleted,
+  nodeFailed,
+  gameOver,
 }
