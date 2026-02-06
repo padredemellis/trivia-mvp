@@ -2,6 +2,7 @@ import 'package:mvp/models/node.dart';
 import 'package:mvp/core/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:mvp/pages/quiz.dart';
+import 'package:mvp/pages/quiz.dart';
 
 class CardWidget extends StatelessWidget {
   const CardWidget({super.key, required this.box});
