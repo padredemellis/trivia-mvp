@@ -1,4 +1,4 @@
-//import 'package:mvp/class/item_class.dart'; esa clase no esta hecha?
+import 'package:mvp/class/item_class.dart';
 import 'package:mvp/core/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:mvp/pages/quiz.dart';
