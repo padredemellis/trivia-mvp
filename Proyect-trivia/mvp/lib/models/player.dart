@@ -78,4 +78,28 @@ class Player {
       'updatedAt': Timestamp.fromDate(updatedAt),
     };
   }
+
+  Player copyWith({
+    String? userId,
+    String? name,
+    int? lives,
+    int? coins,
+    int? points,
+    List<int>? completedNodes,
+    List<int>? unlockedNodes,
+    DateTime? createdAt,
+    DateTime? updatedAt,
+  }) {
+    return Player(
+      userId: userId ?? this.userId,
+      name: name ?? this.name,
+      lives: lives ?? this.lives,
+      coins: coins ?? this.coins,
+      points: points ?? this.points,
+      completedNodes: completedNodes ?? this.completedNodes,
+      unlockedNodes: unlockedNodes ?? this.unlockedNodes,
+      createdAt: createdAt ?? this.createdAt,
+      updatedAt: updatedAt ?? this.updatedAt,
+    );
+  }
 }
