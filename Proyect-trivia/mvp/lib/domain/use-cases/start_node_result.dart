@@ -1,6 +1,6 @@
-import 'package:mvp/models/game_sessions.dart';
-import 'package:mvp/models/node.dart';
-import 'package:mvp/models/question.dart';
+import 'package:mvp/data/models/game_sessions.dart';
+import 'package:mvp/data/models/node.dart';
+import 'package:mvp/data/models/question.dart';
 
 /// Esta clase es el resultado de iniciar un nodo.
 ///

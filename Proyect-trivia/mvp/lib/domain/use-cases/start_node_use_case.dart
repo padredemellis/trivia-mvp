@@ -1,11 +1,11 @@
-import 'package:mvp/models/game_session.dart';
-import 'package:mvp/models/node.dart';
-import 'package:mvp/models/question.dart';
-import 'package:mvp/models/player.dart';
+import 'package:mvp/data/models/game_sessions.dart';
+import 'package:mvp/data/models/node.dart';
+import 'package:mvp/data/models/question.dart';
+import 'package:mvp/data/models/player.dart';
 import 'package:mvp/domain/use-cases/start_node_result.dart';
-import 'package:mvp/domain/repositories/game_session_repository.dart';
-import 'package:mvp/domain/repositories/node_repository.dart';
-import 'package:mvp/domain/repositories/question_repository.dart';
+import 'package:mvp/data/repositories/game_session_repository.dart';
+import 'package:mvp/data/repositories/node_repository.dart';
+import 'package:mvp/data/repositories/question_repository.dart';
 import 'package:collection/collection.dart';
 
 /// Inicializa un nodo cuando el jugador lo toca en el mapa.

@@ -1,8 +1,8 @@
-import 'package:mvp/models/game_session.dart';
-import 'package:mvp/models/node.dart';
-import 'package:mvp/models/player.dart';
-import 'package:mvp/repositories/player_repository.dart';
-import 'package:mvp/repositories/game_session_repository.dart';
+import 'package:mvp/data/models/game_sessions.dart';
+import 'package:mvp/data/models/node.dart';
+import 'package:mvp/data/models/player.dart';
+import 'package:mvp/data/repositories/player_repository.dart';
+import 'package:mvp/data/repositories/game_session_repository.dart';
 
 /// Procesa la finalización exitosa de un nodo.
 ///

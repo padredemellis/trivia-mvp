@@ -1,4 +1,4 @@
-import 'package:mvp/models/player.dart';
+import 'package:mvp/data/models/player.dart';
 
 /// Reduce las vidas de un jugador cuando responde incorrectamente.
 ///
