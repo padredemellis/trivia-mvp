@@ -1,6 +1,7 @@
 import 'package:mvp/widget/node_button.dart';
 import 'package:flutter/material.dart';
 import 'package:mvp/models/node.dart';
+import 'package:mvp/core/enums/difficulty.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -43,7 +44,17 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final items = List.generate(30, (index) => Node(nivel: index + 1));
+    final items = List.generate(
+      30,
+      (index) => Node(
+        nodeId: index + 1,
+        title: 'Level ${index + 1}',
+        description: 'Level ${index + 1} Description',
+        difficulty: Difficulty.medium,
+        poolQuestionIds: [],
+        questionsToShow: 5,
+      ),
+    );
 
     return Scaffold(
       appBar: AppBar(title: const Text('DITSY QUIZ')),

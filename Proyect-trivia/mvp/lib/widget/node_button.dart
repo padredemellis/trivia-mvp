@@ -33,7 +33,7 @@ class NodeButton extends StatelessWidget {
             ),
             child: ClipOval(
               child: Image.asset(
-                themeImages[box.tema] ?? 'images/default.png',
+                themeImages[box.title] ?? 'images/default.png',
                 fit: BoxFit.cover,
               ),
             ),
@@ -46,7 +46,7 @@ class NodeButton extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Text(box.tema, style: const TextStyle(fontSize: 14.0)),
+          Text(box.title, style: const TextStyle(fontSize: 14.0)),
         ],
       ),
     );

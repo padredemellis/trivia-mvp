@@ -1,7 +1,6 @@
-import 'package:mvp/class/item_class.dart';
+import 'package:mvp/models/node.dart';
 import 'package:mvp/core/constants/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:mvp/pages/quiz.dart';
 import 'package:mvp/pages/quiz.dart';
 
 class CardWidget extends StatelessWidget {
@@ -26,7 +25,7 @@ class CardWidget extends StatelessWidget {
                 width: 120,
                 height: 120,
                 child: Image.asset(
-                  themeImages[box.tema] ?? 'images/default.png',
+                  themeImages[box.title] ?? 'images/default.png',
                   fit: BoxFit.contain,
                 ),
               ),
@@ -38,7 +37,7 @@ class CardWidget extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(box.tema, style: const TextStyle(fontSize: 14.0)),
+              Text(box.title, style: const TextStyle(fontSize: 14.0)),
             ],
           ),
         ),

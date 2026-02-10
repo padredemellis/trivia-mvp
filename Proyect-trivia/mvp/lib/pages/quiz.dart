@@ -8,7 +8,7 @@ class QuizPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Quiz ${box.tema}')),
+      appBar: AppBar(title: Text('Quiz ${box.title}')),
       body: const Center(child: Text('This is the Quiz Page')),
     );
   }
