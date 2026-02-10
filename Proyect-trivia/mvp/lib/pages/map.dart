@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
       widgets.add(NodeButton(box: items[i]));
       i++;
 
-      if (i + 1 < items.length) {
+      if (i < items.length - 1) {
         widgets.add(
           Row(
             children: [
@@ -44,17 +44,24 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final items = List.generate(
-      30,
-      (index) => Node(
+    final List<String> themes = [
+      'Cultura',
+      'Ciencias',
+      'Actualidad',
+      'Hobbies',
+    ];
+
+    final items = List.generate(30, (index) {
+      String theme = themes[index % themes.length];
+      return Node(
         nodeId: index + 1,
-        title: 'Level ${index + 1}',
-        description: 'Level ${index + 1} Description',
-        difficulty: Difficulty.medium,
+        title: theme,
+        description: '',
+        difficulty: Difficulty.easy,
         poolQuestionIds: [],
-        questionsToShow: 5,
-      ),
-    );
+        questionsToShow: 0,
+      );
+    });
 
     return Scaffold(
       appBar: AppBar(title: const Text('DITSY QUIZ')),

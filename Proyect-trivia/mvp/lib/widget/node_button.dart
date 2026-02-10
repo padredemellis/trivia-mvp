@@ -33,20 +33,29 @@ class NodeButton extends StatelessWidget {
             ),
             child: ClipOval(
               child: Image.asset(
-                themeImages[box.title] ?? 'images/default.png',
+                themeImages[box.title] ?? 'assets/images/default.png',
                 fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Container(
+                    color: Colors.grey[300],
+                    child: const Icon(Icons.error, color: Colors.red, size: 30),
+                  );
+                },
               ),
             ),
           ),
           SizedBox(height: kDouble5),
           Text(
-            box.title,
+            'Level ${box.nodeId}',
             style: const TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.bold,
             ),
           ),
-          Text(box.title, style: const TextStyle(fontSize: 14.0)),
+          Text(
+            box.title,
+            style: const TextStyle(fontSize: 14.0),
+          ),
         ],
       ),
     );
