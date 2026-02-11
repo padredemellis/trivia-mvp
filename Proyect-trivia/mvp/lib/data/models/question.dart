@@ -27,12 +27,23 @@ class Question {
 
   Question({
     required this.questionId,
-    required this.text,
     required this.questionType,
-    required this.options,
     required this.category,
+    required this.text,
+    required this.options,
     required this.correctAnswer,
   });
+
+  factory Question.fromMap(Map<String, dynamic> map) {
+    return Question(
+      questionId: map['id'],
+      questionType: map['questionType'],
+      category: map['Category'],
+      text: map['text'],
+      options: List<String>.from(map['options'] ?? []),
+      correctAnswer: map['answer'],
+      );
+  }
 
   factory Question.fromJson(Map<String, dynamic> json) {
     return Question(
