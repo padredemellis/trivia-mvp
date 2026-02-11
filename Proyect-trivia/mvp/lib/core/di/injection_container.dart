@@ -11,28 +11,42 @@ import 'package:mvp/domain/use-cases/update_game_session_use_case.dart';
 import 'package:mvp/domain/engine/game_engine.dart';
 import 'package:mvp/data/models/player.dart';
 
-final sl = GetIt.instance; // sl = Service Locator
+/// Instancia global del Service Locator (GetIt).
+/// 
+/// Se utiliza para acceder a las dependencias de la aplicación desde cualquier punto
+/// sin necesidad de instanciarlas manualmente, facilitando el desacoplamiento.
+final sl = GetIt.instance;
 
+/// Inicializa y registra todas las dependencias de la aplicación.
 Future<void> init() async {
-  // 1. REPOSITORIOS
+  
+  // --- 1. REPOSITORIOS ---
+  /// Se registran como LazySingletons para que la instancia solo se cree 
+  /// cuando se necesite por primera vez y se mantenga en memoria.
   sl.registerLazySingleton(() => PlayerRepository());
   sl.registerLazySingleton(() => GameSessionRepository());
   sl.registerLazySingleton(() => NodeRepository());
   sl.registerLazySingleton(() => QuestionRepository());
 
-  // 2. USE CASES
+  // --- 2. CASOS DE USO (USE CASES) ---
+  /// Lógica de negocio pura. Algunos dependen de los repositorios registrados arriba.
+  /// Se usa sl() para inyectar automáticamente la dependencia requerida.
   sl.registerLazySingleton(() => StartNodeUseCase(sl(), sl(), sl()));
   sl.registerLazySingleton(() => AnswerQuestionUseCase());
   sl.registerLazySingleton(() => LoseLifeUseCase());
   sl.registerLazySingleton(() => CompleteNodeUseCase(sl(), sl()));
   sl.registerLazySingleton(() => UpdateGameSessionUseCase(sl()));
 
-  // 3. ENGINE (Lo registramos como un Singleton)
-  // Nota: El Engine pide un Player inicial. Para el MVP, crearemos uno vacío
-  // o lo registraremos cuando el usuario haga Login.
+  // --- 3. GAME ENGINE ---
+  /// El motor central del juego. Se registra como Singleton para asegurar
+  /// que toda la aplicación comparta el mismo estado de juego.
+  /// 
+  /// Nota: Requiere un [Player] inicial. En esta etapa de MVP, se usa un usuario
+  /// invitado ('guest_user'). En producción, este registro podría moverse
+  /// al flujo de autenticación.
   sl.registerLazySingleton(
     () => GameEngine(
-      initialPlayer: Player(userId: 'guest_user'), // ID temporal hasta el Login
+      initialPlayer: Player(userId: 'guest_user'), 
       startNodeUC: sl(),
       answerQuestionUC: sl(),
       loseLifeUC: sl(),
