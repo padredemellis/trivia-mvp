@@ -3,6 +3,7 @@ import 'package:mvp/pages/home.dart';
 import 'package:mvp/pages/map.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:mvp/core/di/injection_container.dart' as di; 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // set up Flutter Engine
@@ -10,6 +11,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   ); // intialize Database
+
+  await di.init(); 
   
   runApp(
   MaterialApp(
