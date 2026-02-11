@@ -1,4 +1,4 @@
-import 'package:mvp/models/question.dart';
+import 'package:mvp/data/models/question.dart';
 
 /// Verifica si la respuesta del usuario es correcta.
 ///

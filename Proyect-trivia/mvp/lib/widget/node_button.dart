@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mvp/models/node.dart';
+import 'package:mvp/data/models/node.dart';
 import 'package:mvp/core/constants/constants.dart';
 import 'package:mvp/pages/quiz.dart';
 

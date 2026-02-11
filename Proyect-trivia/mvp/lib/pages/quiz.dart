@@ -1,4 +1,4 @@
-import 'package:mvp/models/node.dart';
+import 'package:mvp/data/models/node.dart';
 import 'package:flutter/material.dart';
 
 class QuizPage extends StatelessWidget {
