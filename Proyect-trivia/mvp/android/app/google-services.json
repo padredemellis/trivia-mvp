@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "112067599353",
+    "firebase_url": "https://bandw-questions-default-rtdb.firebaseio.com",
+    "project_id": "bandw-questions",
+    "storage_bucket": "bandw-questions.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112067599353:android:f17696e50c115ed05afb28",
+        "android_client_info": {
+          "package_name": "com.example.mvp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbFG-RsIPr1-sV4Xvi67gb470Evr2gWOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

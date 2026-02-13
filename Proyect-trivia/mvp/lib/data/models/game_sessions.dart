@@ -80,4 +80,30 @@ class GameSession {
       'lastUpdated': Timestamp.fromDate(lastUpdated),
     };
   }
+
+  GameSession copyWith({
+    String? sessionId,
+    String? userId,
+    int? currentNodeId,
+    int? correctCount,
+    int? incorrectCount,
+    List<String>? questionsShownIds,
+    Map<String, bool>? answersGiven,
+    int? attemptNumber,
+    DateTime? createdAt,
+    DateTime? lastUpdated,
+  }) {
+    return GameSession(
+      sessionId: sessionId ?? this.sessionId,
+      userId: userId ?? this.userId,
+      currentNodeId: currentNodeId ?? this.currentNodeId,
+      correctCount: correctCount ?? this.correctCount,
+      incorrectCount: incorrectCount ?? this.incorrectCount,
+      questionsShownIds: questionsShownIds ?? this.questionsShownIds,
+      answersGiven: answersGiven ?? this.answersGiven,
+      attemptNumber: attemptNumber ?? this.attemptNumber,
+      createdAt: createdAt ?? this.createdAt,
+      lastUpdated: lastUpdated ?? this.lastUpdated,
+    );
+  }
 }

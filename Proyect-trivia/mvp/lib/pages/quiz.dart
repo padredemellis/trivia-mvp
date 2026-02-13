@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+=======
+>>>>>>> main
 import 'package:flutter/material.dart';
 import 'package:mvp/widget/pregunta_widget.dart';
 import 'package:mvp/widget/respuesta_widget.dart';

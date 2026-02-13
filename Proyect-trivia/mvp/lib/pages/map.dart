@@ -1,6 +1,6 @@
 import 'package:mvp/widget/node_button.dart';
 import 'package:flutter/material.dart';
-import 'package:mvp/models/node.dart';
+import 'package:mvp/data/models/node.dart';
 import 'package:mvp/core/enums/difficulty.dart';
 
 class HomePage extends StatelessWidget {

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mvp/models/node.dart';
+import 'package:mvp/data/models/node.dart';
 import 'package:mvp/core/constants/constants.dart';
-import 'package:mvp/pages/quiz.dart';
+import 'package:mvp/pages/home.dart';
+//import 'package:mvp/pages/quiz.dart';
 
 class NodeButton extends StatelessWidget {
   const NodeButton({super.key, required this.box});
@@ -13,7 +14,8 @@ class NodeButton extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => QuizPage(box: box)),
+          MaterialPageRoute(builder: (context) => Home()),
+          //MaterialPageRoute(builder: (context) => QuizPage(box: box)),
         );
       },
       child: Column(
