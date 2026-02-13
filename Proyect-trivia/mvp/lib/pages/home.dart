@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mvp/core/constants/app_color.dart';
+import 'package:mvp/core/constants/text_styles.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -7,6 +9,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int currentCharacterIndex = 0;
+
   final List<String> characterImages = [
     'assets/images/personaje_2d.png',
     'assets/images/personaje_bloqueado.png',
@@ -16,6 +19,7 @@ class _HomeState extends State<Home> {
     setState(() {
       currentCharacterIndex =
           (currentCharacterIndex + direction) % characterImages.length;
+
       if (currentCharacterIndex < 0) {
         currentCharacterIndex = characterImages.length - 1;
       }
@@ -35,15 +39,13 @@ class _HomeState extends State<Home> {
         child: SafeArea(
           child: Column(
             children: <Widget>[
-              // Título en la parte superior
+              // Título
               Padding(
                 padding: const EdgeInsets.only(top: 50.0),
                 child: Text(
-                  'Ditsy & Friends',
-                  style: TextStyle(
-                    fontSize: 36,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.pink,
+                  'BESTIA TRIVIA',
+                  style: TextStyles.level.copyWith(
+                    fontSize: 32,
                     shadows: [
                       Shadow(
                         offset: Offset(2.0, 2.0),
@@ -55,7 +57,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
 
-              // Espacio flexible antes del personaje con botones de cambio
+              // Personaje con flechas
               Expanded(
                 child: Center(
                   child: Row(
@@ -63,15 +65,16 @@ class _HomeState extends State<Home> {
                     children: [
                       Spacer(),
 
-                      // Botón flecha izquierda
+                      // Flecha izquierda
                       GestureDetector(
                         onTap: () => changeCharacter(-1),
                         child: Image.asset(
-                          'assets/images/flecha_cambio_de_personaje_izquierda.png',
-                          height: 40,
-                          width: 40,
+                          'assets/images/flecha_izq.png',
+                          height: 100,
+                          width: 100,
                         ),
                       ),
+
                       SizedBox(width: 20),
 
                       // Personaje
@@ -84,15 +87,16 @@ class _HomeState extends State<Home> {
                           fit: BoxFit.contain,
                         ),
                       ),
+
                       SizedBox(width: 20),
 
-                      // Botón flecha derecha
+                      // Flecha derecha
                       GestureDetector(
                         onTap: () => changeCharacter(1),
                         child: Image.asset(
-                          'assets/images/flecha_cambio_de_personaje_derecha.png',
-                          height: 40,
-                          width: 40,
+                          'assets/images/flecha_der.png',
+                          height: 100,
+                          width: 100,
                         ),
                       ),
 
@@ -102,7 +106,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
 
-              // Botones en la parte inferior
+              // Botones inferiores
               Padding(
                 padding: const EdgeInsets.only(bottom: 60.0),
                 child: Column(
@@ -114,27 +118,30 @@ class _HomeState extends State<Home> {
                               Navigator.pushNamed(context, '/map');
                             },
                       style: ElevatedButton.styleFrom(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 60, vertical: 20),
-                        textStyle: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
+                        backgroundColor: AppColor.backgroundCrema, // crema
+                        foregroundColor: AppColor.oscuro, // color del texto
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 60,
+                          vertical: 20,
                         ),
                       ),
-                      child: Text('PLAY'),
+                      child: Text('PLAY', style: TextStyles.grande),
                     ),
+
                     SizedBox(height: 15),
+
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                        textStyle: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
+                        backgroundColor: AppColor.backgroundCrema, // crema
+                        foregroundColor: AppColor.oscuro, // color del texto
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 40,
+                          vertical: 20,
                         ),
+                        textStyle: TextStyles.grande,
                       ),
-                      child: Text('SETTINGS'),
+                      child: Text('SETTINGS', style: TextStyles.grande),
                     ),
                   ],
                 ),
@@ -143,6 +150,6 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-    ); // Scaffold
+    );
   }
 }

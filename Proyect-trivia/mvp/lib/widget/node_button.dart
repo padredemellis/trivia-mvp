@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mvp/data/models/node.dart';
 import 'package:mvp/core/constants/constants.dart';
 import 'package:mvp/pages/home.dart';
+import 'package:mvp/core/constants/text_styles.dart';
 //import 'package:mvp/pages/quiz.dart';
 
 class NodeButton extends StatelessWidget {
@@ -27,7 +28,7 @@ class NodeButton extends StatelessWidget {
               shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.3),
+                  color: const Color.fromARGB(255, 15, 109, 46).withOpacity(0.3),
                   spreadRadius: 2,
                   blurRadius: 5,
                 ),
@@ -49,14 +50,11 @@ class NodeButton extends StatelessWidget {
           SizedBox(height: kDouble5),
           Text(
             'Level ${box.nodeId}',
-            style: const TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
+            style: TextStyles.level,
             ),
-          ),
           Text(
             box.title,
-            style: const TextStyle(fontSize: 14.0),
+            style: TextStyles.categoria,
           ),
         ],
       ),
