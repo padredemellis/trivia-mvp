@@ -6,29 +6,33 @@ class TextStyles {
     fontSize: 24,
     fontWeight: FontWeight.bold,
     color: AppColor.oscuro,
+    fontFamily: 'Fredoka',
   );
   static const TextStyle pregunta = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.normal,
     color: AppColor.oscuro,
+    fontFamily: 'Fredoka',
   );
 
   static const TextStyle level = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.bold,
     color: AppColor.oscuro,
+    fontFamily: 'Fredoka',
   );
 
    static const TextStyle categoria = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.normal,
-    color: AppColor.oscuro,
+    color: Color.fromARGB(255, 170, 114, 58),
+    fontFamily: 'Fredoka',
   );
 
     static const TextStyle grande = TextStyle(
-    fontSize: 26,
+    fontSize: 22,
     fontWeight: FontWeight.bold,
     color: AppColor.oscuro,
-    fontFamily: 'Roboto',
+    fontFamily: 'Fredoka',
   );
 }

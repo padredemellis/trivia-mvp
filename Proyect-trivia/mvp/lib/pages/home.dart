@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mvp/core/constants/app_color.dart';
 import 'package:mvp/core/constants/text_styles.dart';
+import 'package:mvp/widget/animated_hover_button.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -11,7 +11,7 @@ class _HomeState extends State<Home> {
   int currentCharacterIndex = 0;
 
   final List<String> characterImages = [
-    'assets/images/personaje_2d.png',
+    'assets/images/skin_zorro.png',
     'assets/images/personaje_bloqueado.png',
   ];
 
@@ -44,8 +44,8 @@ class _HomeState extends State<Home> {
                 padding: const EdgeInsets.only(top: 50.0),
                 child: Text(
                   'BESTIA TRIVIA',
-                  style: TextStyles.level.copyWith(
-                    fontSize: 32,
+                  style: TextStyles.categoria.copyWith(
+                    fontSize: 50, fontFamily: 'LuckiestGuy', color: const Color.fromARGB(255, 245, 213, 127),
                     shadows: [
                       Shadow(
                         offset: Offset(2.0, 2.0),
@@ -65,19 +65,17 @@ class _HomeState extends State<Home> {
                     children: [
                       Spacer(),
 
-                      // Flecha izquierda
                       GestureDetector(
                         onTap: () => changeCharacter(-1),
                         child: Image.asset(
                           'assets/images/flecha_izq.png',
-                          height: 100,
-                          width: 100,
+                          height: 60,
+                          width: 60,
                         ),
                       ),
 
                       SizedBox(width: 20),
 
-                      // Personaje
                       Expanded(
                         flex: 3,
                         child: Image.asset(
@@ -90,13 +88,12 @@ class _HomeState extends State<Home> {
 
                       SizedBox(width: 20),
 
-                      // Flecha derecha
                       GestureDetector(
                         onTap: () => changeCharacter(1),
                         child: Image.asset(
                           'assets/images/flecha_der.png',
-                          height: 100,
-                          width: 100,
+                          height: 60,
+                          width: 60,
                         ),
                       ),
 
@@ -111,37 +108,22 @@ class _HomeState extends State<Home> {
                 padding: const EdgeInsets.only(bottom: 60.0),
                 child: Column(
                   children: [
-                    ElevatedButton(
+                    AnimatedHoverButton(
+                      text: 'PLAY',
                       onPressed: currentCharacterIndex == 1
                           ? null
                           : () {
                               Navigator.pushNamed(context, '/map');
                             },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColor.backgroundCrema, // crema
-                        foregroundColor: AppColor.oscuro, // color del texto
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 60,
-                          vertical: 20,
-                        ),
-                      ),
-                      child: Text('PLAY', style: TextStyles.grande),
                     ),
 
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
 
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColor.backgroundCrema, // crema
-                        foregroundColor: AppColor.oscuro, // color del texto
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 40,
-                          vertical: 20,
-                        ),
-                        textStyle: TextStyles.grande,
-                      ),
-                      child: Text('SETTINGS', style: TextStyles.grande),
+                    AnimatedHoverButton(
+                      text: 'SETTINGS',
+                      onPressed: () {
+                        print("Settings clicked");
+                      },
                     ),
                   ],
                 ),
