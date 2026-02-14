@@ -16,7 +16,7 @@ class TextStyles {
   );
 
   static const TextStyle level = TextStyle(
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: FontWeight.bold,
     color: AppColor.oscuro,
     fontFamily: 'Fredoka',
@@ -25,7 +25,7 @@ class TextStyles {
    static const TextStyle categoria = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.normal,
-    color: Color.fromARGB(255, 170, 114, 58),
+    color: AppColor.oscuro,
     fontFamily: 'Fredoka',
   );
 
@@ -33,6 +33,13 @@ class TextStyles {
     fontSize: 22,
     fontWeight: FontWeight.bold,
     color: AppColor.oscuro,
+    fontFamily: 'Fredoka',
+  );
+
+  static const TextStyle bar = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: AppColor.amarillo,
     fontFamily: 'Fredoka',
   );
 }

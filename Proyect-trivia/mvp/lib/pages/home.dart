@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mvp/core/constants/text_styles.dart';
 import 'package:mvp/widget/animated_hover_button.dart';
+import 'package:mvp/core/constants/app_color.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -45,7 +46,7 @@ class _HomeState extends State<Home> {
                 child: Text(
                   'BESTIA TRIVIA',
                   style: TextStyles.categoria.copyWith(
-                    fontSize: 50, fontFamily: 'LuckiestGuy', color: const Color.fromARGB(255, 245, 213, 127),
+                    fontSize: 50, fontFamily: 'LuckiestGuy', color: AppColor.rosa,
                     shadows: [
                       Shadow(
                         offset: Offset(2.0, 2.0),
@@ -102,7 +103,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-
+              
               // Botones inferiores
               Padding(
                 padding: const EdgeInsets.only(bottom: 60.0),

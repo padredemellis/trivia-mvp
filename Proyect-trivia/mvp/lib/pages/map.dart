@@ -3,6 +3,7 @@ import 'package:mvp/widget/node_button.dart';
 import 'package:flutter/material.dart';
 import 'package:mvp/data/models/node.dart';
 import 'package:mvp/core/enums/difficulty.dart';
+import 'package:mvp/core/constants/text_styles.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -65,7 +66,7 @@ class HomePage extends StatelessWidget {
     });
 
     return Scaffold(
-      appBar: AppBar(title: const Text('MAPA'), backgroundColor: AppColor.backgroundVerde),
+      appBar: AppBar(title: const Text('MAPA', style: TextStyles.bar), backgroundColor: AppColor.backgroundVerde.withValues(), elevation: 50),
       body: Stack(
         children: [
           Positioned.fill(child: background()),

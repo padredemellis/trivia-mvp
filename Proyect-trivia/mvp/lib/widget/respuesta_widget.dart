@@ -27,7 +27,7 @@ class RespuestasWidget extends StatelessWidget {
     if (esCorrecta) {
       return AppColor.backgroundVerde;
     } else {
-      return AppColor.titulo;
+      return AppColor.rosa;
     }
   }
 
