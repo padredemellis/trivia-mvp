@@ -3,6 +3,8 @@ import 'package:mvp/data/models/node.dart';
 import 'package:mvp/core/constants/constants.dart';
 import 'package:mvp/pages/home.dart';
 import 'package:mvp/core/constants/text_styles.dart';
+import 'package:mvp/core/constants/app_color.dart'
+;
 //import 'package:mvp/pages/quiz.dart';
 
 class NodeButton extends StatelessWidget {
@@ -28,7 +30,7 @@ class NodeButton extends StatelessWidget {
               shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
-                  color: const Color.fromARGB(255, 15, 109, 46).withOpacity(0.3),
+                  color: AppColor.verdeOscuro.withOpacity(0.3),
                   spreadRadius: 2,
                   blurRadius: 5,
                 ),

@@ -31,7 +31,7 @@ class _AnimatedHoverButtonState extends State<AnimatedHoverButton> {
         child: ElevatedButton(
           onPressed: widget.onPressed,
           style: ElevatedButton.styleFrom(
-            backgroundColor: AppColor.backgroundCrema,
+            backgroundColor: const Color.fromARGB(255, 244, 223, 200),
             foregroundColor: AppColor.oscuro,
             padding: const EdgeInsets.symmetric(
               horizontal: 40,

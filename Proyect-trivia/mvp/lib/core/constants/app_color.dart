@@ -8,6 +8,6 @@ class AppColor {
   static const Color blanco =  Color(0xFFEEFCCE);
   static const Color rojo =  Color(0xFFF56960);
   static const Color naranja = Color(0xFFF98948);
-  static const Color rosa = Color.fromARGB(255, 252, 207, 212);
+  static const Color rosa = Color.fromARGB(255, 226, 180, 189);
   static const Color verdeOscuro = Color(0xFF2C6E49);
 }
