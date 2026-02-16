@@ -3,7 +3,9 @@ import 'package:mvp/core/di/injection_container.dart' as di;
 import 'package:mvp/core/enums/game_state.dart';
 import 'package:mvp/domain/engine/game_engine.dart';
 import 'package:mvp/domain/engine/game_engine_state.dart';
+import 'package:mvp/pages/map.dart';
 import 'package:mvp/pages/trivia_screen.dart';
+import 'package:mvp/pages/home.dart';
 
 /// Manejador central de la interfaz de usuario.
 ///
@@ -38,17 +40,13 @@ class GameOrchestrator extends StatelessWidget {
               body: Center(child: CircularProgressIndicator()),
             );
 
-          /// Estado de reposo o navegación: El usuario está en el mapa de niveles.
+          /// Estado de reposo: El usuario está en la pantalla de inicio.
           case GameState.idle:
+            return Home();
+
+          /// Estado de navegación: El usuario está en el mapa de niveles.
           case GameState.navigating:
-            return Scaffold(
-              body: Center(
-                child: ElevatedButton(
-                  onPressed: () => engine.startNode(1),
-                  child: const Text("Empezar Nivel 1"),
-                ),
-              ),
-            );
+            return  HomePage();
 
           /// Estado de juego activo: Se muestra la interfaz de la trivia.
           case GameState.playing:
@@ -76,12 +74,13 @@ class GameOrchestrator extends StatelessWidget {
           /// Estado de derrota: Se muestra cuando el jugador agota sus vidas.
           case GameState.gameOver:
             return Scaffold(
+              backgroundColor: Colors.red[50],
               body: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "Juego Terminado",
+                      "💀 Juego Terminado 💀",
                       style: TextStyle(fontSize: 24),
                     ),
                     const SizedBox(height: 20),
@@ -97,20 +96,21 @@ class GameOrchestrator extends StatelessWidget {
           /// Estado de éxito: Se muestra al completar todas las preguntas del nodo.
           case GameState.nodeCompleted:
             return Scaffold(
+              backgroundColor: Colors.green[50],
               body: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "¡Nivel Superado!",
+                      "🎉 ¡Nivel Superado! 🎉",
                       style: TextStyle(fontSize: 24),
                     ),
                     Text("Puntos ganados: ${state.pointsEarned ?? 0}"),
                     const SizedBox(height: 20),
                     ElevatedButton(
                       // Vuelve al mapa/menú
-                      onPressed: () => engine.resetGame(),
-                      child: const Text("Continuar"),
+                      onPressed: () => engine.goToMap(),
+                      child: const Text("Continuar", style:TextStyle(fontSize: 18)),
                     ),
                   ],
                 ),
