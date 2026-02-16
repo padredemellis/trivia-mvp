@@ -11,42 +11,59 @@ import 'package:mvp/domain/use-cases/lose_life_use_case.dart';
 import 'package:mvp/domain/use-cases/start_node_use_case.dart';
 import 'package:mvp/domain/use-cases/update_game_session_use_case.dart';
 
-/// Controlador central de la lógica de juego.
+/// GameEngine
 ///
-/// Coordina la interacción entre los Casos de Uso (Use Cases) y el estado
-/// de la aplicación, emitiendo actualizaciones a través de un Stream.
+/// Orquestador central de la lógica del juego.
+///
+/// Responsabilidades principales:
+/// - Gestionar el estado global del juego.
+/// - Coordinar los casos de uso del dominio.
+/// - Emitir cambios de estado de forma reactiva mediante Streams.
+/// - Controlar el flujo del juego (inicio de nodo, preguntas, game over, recompensas).
+///
+/// Este diseño sigue principios de Clean Architecture:
+/// - El engine no implementa lógica de negocio directamente.
+/// - Delegación de reglas a Use Cases.
+/// - Estado inmutable mediante `copyWith`.
 class GameEngine {
-  /// Stream que emite el estado actualizado del motor de juego.
+  /// StreamController que emite cambios del estado del juego.
+  ///
+  /// Se utiliza `.broadcast()` para permitir múltiples oyentes (UI, logs, tests).
   final _stateController = StreamController<GameEngineState>.broadcast();
 
-  /// Estado interno actual.
+  /// Estado actual del GameEngine.
+  ///
+  /// Se inicializa en el constructor y se actualiza mediante `_update`.
   late GameEngineState _state;
 
-  /// Caso de uso para inicializar un nodo y sus preguntas.
+  /// Caso de uso para iniciar un nodo del juego.
   final StartNodeUseCase _startNodeUC;
 
-  /// Caso de uso para validar la respuesta del jugador.
+  /// Caso de uso para validar respuestas del usuario.
   final AnswerQuestionUseCase _answerQuestionUC;
 
-  /// Caso de uso para gestionar la reducción de vidas.
+  /// Caso de uso para gestionar la pérdida de vidas del jugador.
   final LoseLifeUseCase _loseLifeUC;
 
-  /// Caso de uso para procesar la finalización exitosa de un nivel.
+  /// Caso de uso para completar un nodo y calcular recompensas.
   final CompleteNodeUseCase _completeNodeUC;
 
-  /// Caso de uso para persistir el progreso de la sesión actual.
+  /// Caso de uso para actualizar la sesión de juego en persistencia.
   final UpdateGameSessionUseCase _updateSessionUC;
 
-  /// Stream para que la UI escuche los cambios de estado.
+  /// Stream público del estado del juego.
+  ///
+  /// La UI se suscribe a este stream para reaccionar a cambios del engine.
   Stream<GameEngineState> get stateStream => _stateController.stream;
 
-  /// Retorna el estado actual del juego.
+  /// Estado actual del juego (solo lectura).
   GameEngineState get state => _state;
 
-  /// Crea una instancia del GameEngine.
+  /// Constructor del GameEngine.
   ///
-  /// Requiere el [initialPlayer] y todos los casos de uso necesarios
-  /// para ejecutar la lógica de negocio.
+  /// Recibe las dependencias mediante inyección (Dependency Injection),
+  /// lo que permite desacoplar el engine de implementaciones concretas
+  /// y facilita el testeo.
   GameEngine({
     required Player initialPlayer,
     required StartNodeUseCase startNodeUC,
@@ -54,19 +71,25 @@ class GameEngine {
     required LoseLifeUseCase loseLifeUC,
     required CompleteNodeUseCase completeNodeUC,
     required UpdateGameSessionUseCase updateSessionUC,
-  }) : _startNodeUC = startNodeUC,
-       _answerQuestionUC = answerQuestionUC,
-       _loseLifeUC = loseLifeUC,
-       _completeNodeUC = completeNodeUC,
-       _updateSessionUC = updateSessionUC {
+  })  : _startNodeUC = startNodeUC,
+        _answerQuestionUC = answerQuestionUC,
+        _loseLifeUC = loseLifeUC,
+        _completeNodeUC = completeNodeUC,
+        _updateSessionUC = updateSessionUC {
+    /// Inicializa el estado del juego con un jugador inicial.
     _state = GameEngineState.initial(initialPlayer);
+
+    /// Emite el estado inicial hacia los observadores.
     _emit();
   }
 
-  /// Inicia el juego en un nodo específico.
+  /// Inicia un nodo del juego.
   ///
-  /// Obtiene los datos del [nodeId], carga las preguntas y actualiza el
-  /// estado a [GameState.playing].
+  ///
+  /// 1. Activa estado de carga.
+  /// 2. Ejecuta el caso de uso StartNodeUseCase.
+  /// 3. Actualiza el estado con nodo, sesión y preguntas.
+  /// 4. Cambia el estado a `playing`.
   Future<void> startNode(int nodeId) async {
     _update(isLoading: true, errorMessage: null);
 
@@ -88,21 +111,26 @@ class GameEngine {
     }
   }
 
-  /// Procesa la respuesta enviada por el usuario.
+  /// Cambia el estado a 'navigating' para mostrar el mapa de niveles.
+  void goToMap() {
+    _update(status: GameState.navigating);
+  }
+
+  /// Procesa la respuesta del usuario a una pregunta.
   ///
-  /// Valida la respuesta, actualiza la sesión, resta vidas si es necesario
-  /// y determina si el juego debe avanzar, terminar o mostrar Game Over.
+  /// Flujo:
+  /// - Valida la respuesta mediante AnswerQuestionUseCase.
+  /// - Actualiza la sesión de juego.
+  /// - Persiste los cambios.
+  /// - Gestiona pérdida de vidas y Game Over.
+  /// - Avanza a la siguiente pregunta o finaliza el nodo.
   Future<void> answerQuestion(String userAnswer) async {
-    if (_state.currentQuestions == null || _state.currentSession == null) {
-      return;
-    }
+    if (_state.currentQuestions == null || _state.currentSession == null) return;
 
     final question = _state.currentQuestions![_state.currentQuestionIndex];
 
-    // Valida si la respuesta es correcta
     final isCorrect = _answerQuestionUC.execute(question, userAnswer);
 
-    // Actualiza datos de la sesión localmente
     var updatedSession = _state.currentSession!.copyWith(
       correctCount: isCorrect
           ? _state.currentSession!.correctCount + 1
@@ -112,14 +140,12 @@ class GameEngine {
           : _state.currentSession!.incorrectCount,
       lastUpdated: DateTime.now(),
     );
+
     updatedSession.answersGiven[question.questionId] = isCorrect;
 
-    // Persiste el cambio en la base de datos
     await _updateSessionUC.execute(updatedSession);
 
     Player currentPlayer = _state.player;
-
-    // Gestión de respuesta incorrecta
     if (!isCorrect) {
       currentPlayer = _loseLifeUC.execute(currentPlayer);
       _update(player: currentPlayer);
@@ -130,7 +156,6 @@ class GameEngine {
       }
     }
 
-    // Determina si es la última pregunta del nodo
     final isLastQuestion =
         _state.currentQuestionIndex == _state.currentQuestions!.length - 1;
 
@@ -144,10 +169,9 @@ class GameEngine {
     }
   }
 
-  /// Finaliza el nodo actual y otorga recompensas.
+  /// Finaliza un nodo del juego.
   ///
-  /// Llama al caso de uso para persistir el progreso del jugador
-  /// y cambia el estado a [GameState.nodeCompleted].
+  /// Calcula recompensas y actualiza el jugador.
   Future<void> _finishNode(GameSession session) async {
     _update(isLoading: true);
 
@@ -170,9 +194,7 @@ class GameEngine {
     }
   }
 
-  /// Reinicia el motor de juego al estado inicial.
-  ///
-  /// Limpia los datos de la sesión actual y el nodo, volviendo a [GameState.idle].
+  /// Reinicia el estado del juego a su estado inicial.
   void resetGame() {
     _update(
       status: GameState.idle,
@@ -187,7 +209,7 @@ class GameEngine {
     );
   }
 
-  /// Obtiene la pregunta que se debe mostrar actualmente en la UI.
+  /// Obtiene la pregunta actual del nodo.
   Question? getCurrentQuestion() {
     if (_state.currentQuestions != null &&
         _state.currentQuestionIndex < _state.currentQuestions!.length) {
@@ -196,12 +218,15 @@ class GameEngine {
     return null;
   }
 
-  /// Define un mensaje de error y lo notifica al estado.
+  /// Registra un error en el estado del engine.
   void setError(String message) {
     _update(isLoading: false, errorMessage: message);
   }
 
-  /// Actualiza el estado interno y emite el cambio al Stream.
+  /// Actualiza el estado del GameEngine.
+  ///
+  /// Centraliza todas las modificaciones del estado y utiliza `copyWith`
+  /// para mantener la inmutabilidad.
   void _update({
     Player? player,
     GameState? status,
@@ -229,9 +254,9 @@ class GameEngine {
     _emit();
   }
 
-  /// Emite el estado actual al controlador del Stream.
+  /// Emite el estado actual a través del Stream.
   void _emit() => _stateController.add(_state);
 
-  /// Cierra los recursos del motor de juego.
+  /// Libera recursos del StreamController.
   void dispose() => _stateController.close();
 }
