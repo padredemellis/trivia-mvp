@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
                 child: Text(
                   'BESTIA TRIVIA',
                   style: TextStyles.categoria.copyWith(
-                    fontSize: 50, fontFamily: 'LuckiestGuy', color: AppColor.rosa,
+                    fontSize: 50, fontFamily: 'LuckiestGuy', color: AppColor.amarillo,
                     shadows: [
                       Shadow(
                         offset: Offset(2.0, 2.0),
