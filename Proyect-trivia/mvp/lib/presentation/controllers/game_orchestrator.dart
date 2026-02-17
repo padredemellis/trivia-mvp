@@ -9,7 +9,7 @@ import 'package:mvp/pages/home.dart';
 
 /// Manejador central de la interfaz de usuario.
 ///
-/// Su función es escuchar reactivamente el estado del [GameEngine]
+/// Su función es escuchar reactivamente el estado del GameEngine
 /// y determinar qué pantalla debe mostrarse en cada momento.
 ///
 /// Este componente actúa como el punto de entrada principal de la navegación
@@ -80,7 +80,7 @@ class GameOrchestrator extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "💀 Juego Terminado 💀",
+                      "Juego Terminado ",
                       style: TextStyle(fontSize: 24),
                     ),
                     const SizedBox(height: 20),
