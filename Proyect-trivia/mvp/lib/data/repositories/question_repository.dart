@@ -38,27 +38,26 @@ class QuestionRepository {
   /// Limitación: Máximo 10 IDs por restricción de Firestore whereIn.
   Future<List<Question>> getQuestionsByIds(List<String> ids) async {
     try {
-      if (ids.isEmpty) return [];
-
-      if (ids.length > 10) {
-        print(
-          'Warning: getQuestionsByIds recibió ${ids.length} IDs. '
-          'Firestore limita whereIn a 10. Tomando solo los primeros 10.',
-        );
-        ids = ids.sublist(0, 10);
+      print("Buscando estas preguntas: $ids");
+      if (ids.isEmpty) {
+        print("¡OJO! La lista de IDs que llegó está VACÍA");
+        return [];
       }
 
-      QuerySnapshot snapshot = await _firestoreInstance
-          .collection(_collection)
+      final query = await _firestoreInstance
+          .collection('questions')
           .where(FieldPath.documentId, whereIn: ids)
           .get();
 
-      return snapshot.docs
-          .map((doc) => Question.fromJson(doc.data() as Map<String, dynamic>))
-          .toList();
+      print("Preguntas encontradas en Firestore: ${query.docs.length}");
+
+      return query.docs.map((doc) {
+        print("Mapeando pregunta: ${doc.id}");
+        return Question.fromJson(doc.data());
+      }).toList();
     } catch (e) {
-      print('Error in QuestionRepository.getQuestionsByIds: $e');
-      rethrow;
+      print("ERROR BUSCANDO PREGUNTAS: $e");
+      return [];
     }
   }
 }

@@ -107,6 +107,7 @@ class GameEngine {
         pointsEarned: null,
       );
     } catch (e) {
+      print("EL ERROR REAL ES: $e");
       setError("Error al cargar el nodo: $e");
     }
   }

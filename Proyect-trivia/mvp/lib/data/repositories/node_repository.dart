@@ -24,13 +24,13 @@ class NodeRepository {
           .collection(_collectionName)
           .doc(nodeId.toString())
           .get();
-
+      print("¿Documento encontrado?: ${doc.exists}");
       if (!doc.exists) return null;
 
       Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
       return Node.fromJson(data);
     } catch (e) {
-      print('Error in NodeRepository.getNode: $e');
+      print("ERROR DIRECTO DE FIRESTORE: $e");
       rethrow;
     }
   }

@@ -19,20 +19,40 @@ class _PreguntaWidgetState extends State<PreguntaWidget> {
     _animateText();
   }
 
+  // Detecta cuando la trivia pasa a la siguiente pregunta y reinicia la animación
+  @override
+  void didUpdateWidget(covariant PreguntaWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.texto != widget.texto) {
+      setState(() {
+        _charCount = 0;
+      });
+      _animateText();
+    }
+  }
+
   Future<void> _animateText() async {
-    for (int i = 0; i <= widget.texto.length; i++) {
-      await Future.delayed(const Duration(milliseconds: 40));
-      if (!mounted) return;
+    final originalText = widget.texto; 
+    for (int i = 0; i <= originalText.length; i++) {
+      // Pequeña pausa entre letras
+      await Future.delayed(const Duration(milliseconds: 30));
+      
+      // Si el widget se cierra o el texto cambia, detenemos este bucle
+      if (!mounted || widget.texto != originalText) return; 
+      
       setState(() => _charCount = i);
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    // EL SEGURO: clamp evita que _charCount sea mayor al texto actual (evita el error rojo)
+    final safeCharCount = _charCount.clamp(0, widget.texto.length);
+    
     return Text(
-      widget.texto.substring(0, _charCount),
+      widget.texto.substring(0, safeCharCount),
       style: TextStyles.pregunta,
       textAlign: TextAlign.left,
-      );
+    );
   }
 }
