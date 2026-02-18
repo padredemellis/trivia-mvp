@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mvp/core/constants/text_styles.dart';
 import 'package:mvp/widget/animated_hover_button.dart';
 import 'package:mvp/core/constants/app_color.dart';
+import 'package:mvp/core/di/injection_container.dart' as di;
+import 'package:mvp/domain/engine/game_engine.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -114,7 +116,8 @@ class _HomeState extends State<Home> {
                       onPressed: currentCharacterIndex == 1
                           ? null
                           : () {
-                              Navigator.pushNamed(context, '/map');
+                              final engine = di.sl<GameEngine>();
+                              engine.goToMap();
                             },
                     ),
 

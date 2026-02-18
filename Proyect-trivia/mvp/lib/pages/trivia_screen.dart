@@ -1,38 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:mvp/widget/pregunta_widget.dart';
+import 'package:mvp/widget/respuesta_widget.dart';
 
-/// Interfaz de la pantalla de trivia activa.
-///
-/// Uso:
-/// El GameOrchestrator instancia esta pantalla cuando el estado del motor es GameState.playing.
-/// Es una pantalla pasiva: recibe datos del motor y notifica acciones del usuario.
-///
-/// Componentes para el Front-end:
-/// - questionText: Título o cuerpo de la pregunta.
-/// - options: Lista de botones para las respuestas.
-/// - lives: Indicador de salud/intentos restantes.
-/// - currentNode: Indicador de progreso (ej: "Pregunta 1 de 5").
-/// - category: Tema del nodo actual para aplicar estilos o íconos.
 class TriviaScreen extends StatelessWidget {
-  /// El texto de la pregunta que el jugador debe responder.
   final String questionText;
-
-  /// Lista de strings con las opciones de respuesta disponibles.
   final List<String> options;
-
-  /// Cantidad de vidas actuales del jugador (para mostrar corazones/energía).
   final int lives;
-
-  /// Etiqueta de progreso actual del nivel (ej: "3 / 5").
-  final String currentNode;
-
-  /// Nombre de la categoría de la pregunta (Historia, Geografía, etc.).
   final String category;
-
-  /// Callback que se dispara cuando el usuario selecciona una opción.
-  /// Envía el String de la respuesta elegida al GameEngine.
+  final String currentNode;
   final Function(String) onOptionSelected;
-
-  /// Callback para gestionar la salida del juego (botón de cerrar/atrás).
   final VoidCallback onQuit;
 
   const TriviaScreen({
@@ -40,49 +16,74 @@ class TriviaScreen extends StatelessWidget {
     required this.questionText,
     required this.options,
     required this.lives,
-    required this.currentNode,
     required this.category,
+    required this.currentNode,
     required this.onOptionSelected,
     required this.onQuit,
   });
 
   @override
   Widget build(BuildContext context) {
-    // Sofi y Nacho: Todo listo para que hagan su magia con el diseño.
-    // Devolvemos este Scaffold básico para que la app sea funcional durante el desarrollo.
     return Scaffold(
       appBar: AppBar(
-        title: Text(category),
+        title: Text("$category - Nivel $currentNode"),
         leading: IconButton(
           icon: const Icon(Icons.close),
           onPressed: onQuit,
         ),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            currentNode,
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 20),
+        actions: [
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Text(
-              questionText,
-              textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 22),
+            child: Row(
+              children: [
+                const Icon(Icons.favorite, color: Colors.red),
+                const SizedBox(width: 5),
+                Text("$lives", style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              ],
+            ),
+          )
+        ],
+        backgroundColor: const Color(0xFFA1CF58),
+      ),
+      body: Stack(
+        children: [
+          // Fondo del equipo de front-end
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/fondo_quiz1.png'),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
-          const SizedBox(height: 40),
-          // Aquí es donde deben mapear las 'options' a botones de la UI.
-          ...options.map((option) => ElevatedButton(
-                onPressed: () => onOptionSelected(option),
-                child: Text(option),
-              )),
-          const Spacer(),
-          Text("Vidas: $lives"),
-          const SizedBox(height: 20),
+          Column(
+            children: [
+              const SizedBox(height: 40),
+              // Área de la pregunta animada
+              Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: PreguntaWidget(texto: questionText),
+                ),
+              ),
+              // Listado de opciones dinámicas
+              Expanded(
+                flex: 3,
+                child: ListView.builder(
+                  itemCount: options.length,
+                  itemBuilder: (context, index) {
+                    return RespuestasWidget(
+                      texto: options[index],
+                      esCorrecta: false, // El motor maneja la validación
+                      mostrarResultado: false,
+                      onTap: () => onOptionSelected(options[index]),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mvp/core/constants/app_color.dart';
 import 'package:mvp/core/constants/text_styles.dart';
 
-
 class RespuestasWidget extends StatelessWidget {
   final String texto;
   final bool esCorrecta;
@@ -38,19 +37,17 @@ class RespuestasWidget extends StatelessWidget {
       child: SizedBox(
         width: double.infinity,
         child: ElevatedButton(
-          onPressed: () {
-          },
+          onPressed: onTap,
           style: ElevatedButton.styleFrom(
             backgroundColor: backgroundColor(),
             padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(18.0),
             ),
-          ), 
-          child: Text(texto, style: TextStyles.respuesta
+          ),
+          child: Text(texto, style: TextStyles.respuesta),
         ),
       ),
-      )
     );
   }
 }

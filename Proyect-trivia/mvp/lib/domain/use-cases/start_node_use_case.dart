@@ -52,7 +52,7 @@ class StartNodeUseCase {
     if (node == null) {
       throw Exception('Node $nodeId not found');
     }
-    List<String> selectedIds = node.poolQuestionIds.sample(5);
+    List<String> selectedIds = node.poolQuestionIds.sample(3);
     List<Question> questions = await _questionRepository.getQuestionsByIds(
       selectedIds,
     );

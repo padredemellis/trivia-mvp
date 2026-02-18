@@ -4,8 +4,8 @@ import 'package:mvp/core/enums/game_state.dart';
 import 'package:mvp/domain/engine/game_engine.dart';
 import 'package:mvp/domain/engine/game_engine_state.dart';
 import 'package:mvp/pages/map.dart';
-import 'package:mvp/pages/trivia_screen.dart';
 import 'package:mvp/pages/home.dart';
+import 'package:mvp/pages/trivia_screen.dart';
 
 /// Manejador central de la interfaz de usuario.
 ///
