@@ -12,23 +12,20 @@ import 'package:mvp/domain/engine/game_engine.dart';
 import 'package:mvp/data/models/player.dart';
 
 /// Instancia global del Service Locator (GetIt).
-/// 
+///
 /// Se utiliza para acceder a las dependencias de la aplicación desde cualquier punto
 /// sin necesidad de instanciarlas manualmente, facilitando el desacoplamiento.
 final sl = GetIt.instance;
 
 /// Inicializa y registra todas las dependencias de la aplicación.
 Future<void> init() async {
-  
-  // --- 1. REPOSITORIOS ---
-  /// Se registran como LazySingletons para que la instancia solo se cree 
+  /// Se registran como LazySingletons para que la instancia solo se cree
   /// cuando se necesite por primera vez y se mantenga en memoria.
   sl.registerLazySingleton(() => PlayerRepository());
   sl.registerLazySingleton(() => GameSessionRepository());
   sl.registerLazySingleton(() => NodeRepository());
   sl.registerLazySingleton(() => QuestionRepository());
 
-  // --- 2. CASOS DE USO (USE CASES) ---
   /// Lógica de negocio pura. Algunos dependen de los repositorios registrados arriba.
   /// Se usa sl() para inyectar automáticamente la dependencia requerida.
   sl.registerLazySingleton(() => StartNodeUseCase(sl(), sl(), sl()));
@@ -37,16 +34,23 @@ Future<void> init() async {
   sl.registerLazySingleton(() => CompleteNodeUseCase(sl(), sl()));
   sl.registerLazySingleton(() => UpdateGameSessionUseCase(sl()));
 
-  // --- 3. GAME ENGINE ---
-  /// El motor central del juego. Se registra como Singleton para asegurar
-  /// que toda la aplicación comparta el mismo estado de juego.
-  /// 
-  /// Nota: Requiere un [Player] inicial. En esta etapa de MVP, se usa un usuario
-  /// invitado ('guest_user'). En producción, este registro podría moverse
-  /// al flujo de autenticación.
-  sl.registerLazySingleton(
+  /// Motor central del juego.
+  ///
+  /// Se registra como `registerFactory` para garantizar que cada vez que
+  /// se solicite una instancia se cree un nuevo GameEngine.
+  ///
+  /// Esto permite que cada partida represente una sesión independiente,
+  /// evitando que el estado de una sesión anterior persista al iniciar
+  /// una nueva.
+  ///
+  /// Nota:
+  /// Requiere un [Player] inicial. En esta etapa de MVP se utiliza
+  /// un usuario invitado ('guest_user'). En una versión productiva,
+  /// el jugador debería inyectarse dinámicamente desde el flujo
+  /// de autenticación.
+  sl.registerFactory(
     () => GameEngine(
-      initialPlayer: Player(userId: 'guest_user'), 
+      initialPlayer: Player(userId: 'guest_user'),
       startNodeUC: sl(),
       answerQuestionUC: sl(),
       loseLifeUC: sl(),

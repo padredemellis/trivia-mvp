@@ -19,8 +19,11 @@ class GameOrchestrator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /// Obtiene la instancia única del motor de juego desde el Service Locator.
-    final engine = di.sl<GameEngine>();
+/// Obtiene una nueva instancia del GameEngine desde el Service Locator.
+/// 
+/// Debido a que el motor está registrado como factory, cada creación
+/// del GameOrchestrator implica una nueva sesión de juego independiente.
+final engine = di.sl<GameEngine>();
 
     /// Escucha el flujo de estados emitidos por el motor.
     /// [initialData] asegura que la UI tenga un estado válido desde el primer frame.
