@@ -5,7 +5,6 @@ import 'package:mvp/core/constants/text_styles.dart';
 import 'package:mvp/core/constants/app_color.dart';
 import 'package:mvp/core/di/injection_container.dart' as di;
 import 'package:mvp/domain/engine/game_engine.dart';
-//import 'package:mvp/pages/quiz.dart';
 
 class NodeButton extends StatelessWidget {
   const NodeButton({super.key, required this.box});

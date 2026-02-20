@@ -6,8 +6,10 @@ import 'package:mvp/core/di/injection_container.dart' as di;
 import 'package:mvp/domain/engine/game_engine.dart';
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
-  _HomeState createState() => _HomeState();
+  State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
@@ -33,7 +35,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/fondo.png'),
             fit: BoxFit.cover,
@@ -42,16 +44,19 @@ class _HomeState extends State<Home> {
         child: SafeArea(
           child: Column(
             children: <Widget>[
-              // Título
+              SizedBox(height: 30),
+              /// 🔥 TÍTULO
               Padding(
                 padding: const EdgeInsets.only(top: 50.0),
                 child: Text(
-                  'BESTIA TRIVIA',
+                  'BEAST & QUIZ',
                   style: TextStyles.categoria.copyWith(
-                    fontSize: 50, fontFamily: 'LuckiestGuy', color: AppColor.amarillo,
+                    fontSize: 50,
+                    fontFamily: 'LuckiestGuy',
+                    color: AppColor.amarillo,
                     shadows: [
                       Shadow(
-                        offset: Offset(2.0, 2.0),
+                        offset: const Offset(2.0, 2.0),
                         blurRadius: 3.0,
                         color: Colors.black.withOpacity(0.5),
                       ),
@@ -60,59 +65,68 @@ class _HomeState extends State<Home> {
                 ),
               ),
 
-              // Personaje con flechas
+              /// 🐺 PERSONAJE + FLECHAS
               Expanded(
                 child: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Spacer(),
+                      const Spacer(),
 
-                      GestureDetector(
-                        onTap: () => changeCharacter(-1),
-                        child: Image.asset(
-                          'assets/images/flecha_izq.png',
-                          height: 60,
-                          width: 60,
-                        ),
+                      AnimatedIconButton(
+                        imagePath: 'assets/images/left.png',
+                        size: 50,
+                        onPressed: () => changeCharacter(-1),
                       ),
 
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
 
                       Expanded(
                         flex: 3,
-                        child: Image.asset(
-                          characterImages[currentCharacterIndex],
-                          height: 450,
-                          width: 450,
-                          fit: BoxFit.contain,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Image.asset(
+                            characterImages[currentCharacterIndex],
+                            height: 450,
+                            width: 450,
+                            fit: BoxFit.contain,
+                          ),
                         ),
                       ),
 
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
 
-                      GestureDetector(
-                        onTap: () => changeCharacter(1),
-                        child: Image.asset(
-                          'assets/images/flecha_der.png',
-                          height: 60,
-                          width: 60,
-                        ),
+                      AnimatedIconButton(
+                        imagePath: 'assets/images/right.png',
+                        size: 50,
+                        onPressed: () => changeCharacter(1),
                       ),
 
-                      Spacer(),
+                      const Spacer(),
                     ],
                   ),
                 ),
               ),
-              
-              // Botones inferiores
+
+              /// 📝 DESCRIPCIÓN
+              Text(
+                'Choose your character and start the adventure!',
+                style: TextStyles.categoria.copyWith(
+                  fontSize: 18,
+                  color: AppColor.oscuro.withOpacity(0.8),
+                ),
+              ),
+
+              const SizedBox(height: 30),
+
+              /// 🎮 BOTONES INFERIORES
               Padding(
                 padding: const EdgeInsets.only(bottom: 60.0),
-                child: Column(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    AnimatedHoverButton(
-                      text: 'PLAY',
+                    AnimatedIconButton(
+                      imagePath: 'assets/images/play.png',
                       onPressed: currentCharacterIndex == 1
                           ? null
                           : () {
@@ -120,11 +134,9 @@ class _HomeState extends State<Home> {
                               engine.goToMap();
                             },
                     ),
-
-                    const SizedBox(height: 15),
-
-                    AnimatedHoverButton(
-                      text: 'SETTINGS',
+                      const SizedBox(width: 40),
+                    AnimatedIconButton(
+                      imagePath: 'assets/images/setting.png',
                       onPressed: () {
                         print("Settings clicked");
                       },

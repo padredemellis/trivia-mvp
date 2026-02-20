@@ -1,45 +1,53 @@
 import 'package:flutter/material.dart';
-import 'package:mvp/core/constants/text_styles.dart';
-import 'package:mvp/core/constants/app_color.dart';
 
-class AnimatedHoverButton extends StatefulWidget {
-  final String text;
+class AnimatedIconButton extends StatefulWidget {
+  final String imagePath;
   final VoidCallback? onPressed;
+  final double size;
 
-  const AnimatedHoverButton({
+  const AnimatedIconButton({
     super.key,
-    required this.text,
+    required this.imagePath,
     required this.onPressed,
+    this.size = 60,
   });
 
   @override
-  State<AnimatedHoverButton> createState() => _AnimatedHoverButtonState();
+  State<AnimatedIconButton> createState() => _AnimatedIconButtonState();
 }
 
-class _AnimatedHoverButtonState extends State<AnimatedHoverButton> {
+class _AnimatedIconButtonState extends State<AnimatedIconButton> {
   bool _isHovering = false;
+  bool _isPressed = false;
 
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovering = true),
       onExit: (_) => setState(() => _isHovering = false),
-      child: AnimatedScale(
-        scale: _isHovering ? 1.1 : 1.0,
-        duration: const Duration(milliseconds: 200),
-        curve: Curves.easeOut,
-        child: ElevatedButton(
-          onPressed: widget.onPressed,
-          style: ElevatedButton.styleFrom(
-            backgroundColor: AppColor.backgroundCrema,
-            foregroundColor: AppColor.oscuro,
-            padding: const EdgeInsets.symmetric(
-              horizontal: 60,
-              vertical: 20,
+      child: GestureDetector(
+        onTapDown: (_) => setState(() => _isPressed = true),
+        onTapUp: (_) {
+          setState(() => _isPressed = false);
+          widget.onPressed?.call();
+        },
+        onTapCancel: () => setState(() => _isPressed = false),
+        child: AnimatedScale(
+          scale: _isPressed
+              ? 0.95
+              : _isHovering
+                  ? 1.1
+                  : 1.0,
+          duration: const Duration(milliseconds: 150),
+          curve: Curves.easeOut,
+          child: ClipOval(
+            child: Image.asset(
+              widget.imagePath,
+              width: widget.size,
+              height: widget.size,
+              fit: BoxFit.cover,
             ),
-            textStyle: TextStyles.grande,
           ),
-          child: Text(widget.text),
         ),
       ),
     );
