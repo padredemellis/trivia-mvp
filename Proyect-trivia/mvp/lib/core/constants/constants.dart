@@ -4,8 +4,8 @@ const double kDouble20 = 20.0;
 const double kDouble40 = 40.0;
 
 const Map<String, String> themeImages = {
-  'Cultura': 'assets/images/nodo_rosa.png',
-  'Ciencias': 'assets/images/nodo_azul.png',
-  'Actualidad': 'assets/images/nodo_violeta.png',
-  'Hobbies': 'assets/images/nodo_amarillo.png',
+  'Cultura': 'assets/images/star.png',
+  'Ciencias': 'assets/images/nodo_estrella.png',
+  'Actualidad': 'assets/images/star2.png',
+  'Hobbies': 'assets/images/star_block.png',
 };
