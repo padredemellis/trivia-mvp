@@ -12,13 +12,44 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<Home>
+    with SingleTickerProviderStateMixin {
+
   int currentCharacterIndex = 0;
+
+  late AnimationController _controller;
+  late Animation<double> _breathingAnimation;
 
   final List<String> characterImages = [
     'assets/images/skin_zorro.png',
     'assets/images/personaje_bloqueado.png',
   ];
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    )..repeat(reverse: true);
+
+    _breathingAnimation = Tween<double>(
+      begin: 0.98,
+      end: 1.02,
+    ).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: Curves.easeInOut,
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   void changeCharacter(int direction) {
     setState(() {
@@ -44,14 +75,15 @@ class _HomeState extends State<Home> {
         child: SafeArea(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 30),
+              const SizedBox(height: 20),
+
               // Titulo
               Padding(
                 padding: const EdgeInsets.only(top: 50.0),
                 child: Text(
-                  'BEAST & QUIZ',
+                  'BEAST QUIZ',
                   style: TextStyles.categoria.copyWith(
-                    fontSize: 50,
+                    fontSize: 55,
                     fontFamily: 'LuckiestGuy',
                     color: AppColor.amarillo,
                     shadows: [
@@ -75,7 +107,7 @@ class _HomeState extends State<Home> {
 
                       AnimatedIconButton(
                         imagePath: 'assets/images/left.png',
-                        size: 50,
+                        size: 40,
                         onPressed: () => changeCharacter(-1),
                       ),
 
@@ -85,11 +117,20 @@ class _HomeState extends State<Home> {
                         flex: 3,
                         child: Padding(
                           padding: const EdgeInsets.all(20.0),
-                          child: Image.asset(
-                            characterImages[currentCharacterIndex],
-                            height: 450,
-                            width: 450,
-                            fit: BoxFit.contain,
+                          child: AnimatedBuilder(
+                            animation: _breathingAnimation,
+                            builder: (context, child) {
+                              return Transform.scale(
+                                scale: _breathingAnimation.value,
+                                child: child,
+                              );
+                            },
+                            child: Image.asset(
+                              characterImages[currentCharacterIndex],
+                              height: 500,
+                              width: 500,
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         ),
                       ),
@@ -98,7 +139,7 @@ class _HomeState extends State<Home> {
 
                       AnimatedIconButton(
                         imagePath: 'assets/images/right.png',
-                        size: 50,
+                        size: 40,
                         onPressed: () => changeCharacter(1),
                       ),
 
@@ -108,11 +149,11 @@ class _HomeState extends State<Home> {
                 ),
               ),
 
-              // descripcion
+              // Descripcion
               Text(
-                'Choose your character and start the adventure!',
+                'Choose your character!',
                 style: TextStyles.categoria.copyWith(
-                  fontSize: 18,
+                  fontSize: 22,
                   color: AppColor.oscuro.withOpacity(0.8),
                 ),
               ),
@@ -134,7 +175,7 @@ class _HomeState extends State<Home> {
                               engine.goToMap();
                             },
                     ),
-                      const SizedBox(width: 40),
+                    const SizedBox(width: 40),
                     AnimatedIconButton(
                       imagePath: 'assets/images/setting.png',
                       onPressed: () {
