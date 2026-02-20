@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
           child: Column(
             children: <Widget>[
               SizedBox(height: 30),
-              /// 🔥 TÍTULO
+              // Titulo
               Padding(
                 padding: const EdgeInsets.only(top: 50.0),
                 child: Text(
@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
 
-              /// 🐺 PERSONAJE + FLECHAS
+              // Body - Personaje
               Expanded(
                 child: Center(
                   child: Row(
@@ -108,7 +108,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
 
-              /// 📝 DESCRIPCIÓN
+              // descripcion
               Text(
                 'Choose your character and start the adventure!',
                 style: TextStyles.categoria.copyWith(
@@ -119,7 +119,7 @@ class _HomeState extends State<Home> {
 
               const SizedBox(height: 30),
 
-              /// 🎮 BOTONES INFERIORES
+              // Botones inferiores
               Padding(
                 padding: const EdgeInsets.only(bottom: 60.0),
                 child: Row(
