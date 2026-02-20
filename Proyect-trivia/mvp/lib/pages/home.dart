@@ -21,8 +21,11 @@ class _HomeState extends State<Home>
   late Animation<double> _breathingAnimation;
 
   final List<String> characterImages = [
-    'assets/images/skin_zorro.png',
-    'assets/images/personaje_bloqueado.png',
+    'assets/images/skin_fox2.png',
+    'assets/images/skin_cat.png',
+    'assets/images/rana.png',
+    'assets/images/oveja.png',
+    'assets/images/block.png',
   ];
 
   @override
@@ -167,7 +170,7 @@ class _HomeState extends State<Home>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     AnimatedIconButton(
-                      imagePath: 'assets/images/play.png',
+                      imagePath: 'assets/images/play2.png',
                       onPressed: currentCharacterIndex == 1
                           ? null
                           : () {
