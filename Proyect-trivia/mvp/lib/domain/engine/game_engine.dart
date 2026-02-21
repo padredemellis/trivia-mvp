@@ -71,11 +71,11 @@ class GameEngine {
     required LoseLifeUseCase loseLifeUC,
     required CompleteNodeUseCase completeNodeUC,
     required UpdateGameSessionUseCase updateSessionUC,
-  })  : _startNodeUC = startNodeUC,
-        _answerQuestionUC = answerQuestionUC,
-        _loseLifeUC = loseLifeUC,
-        _completeNodeUC = completeNodeUC,
-        _updateSessionUC = updateSessionUC {
+  }) : _startNodeUC = startNodeUC,
+       _answerQuestionUC = answerQuestionUC,
+       _loseLifeUC = loseLifeUC,
+       _completeNodeUC = completeNodeUC,
+       _updateSessionUC = updateSessionUC {
     /// Inicializa el estado del juego con un jugador inicial.
     _state = GameEngineState.initial(initialPlayer);
 
@@ -126,7 +126,8 @@ class GameEngine {
   /// - Gestiona pérdida de vidas y Game Over.
   /// - Avanza a la siguiente pregunta o finaliza el nodo.
   Future<void> answerQuestion(String userAnswer) async {
-    if (_state.currentQuestions == null || _state.currentSession == null) return;
+    if (_state.currentQuestions == null || _state.currentSession == null)
+      return;
 
     final question = _state.currentQuestions![_state.currentQuestionIndex];
 
@@ -253,6 +254,16 @@ class GameEngine {
       pointsEarned: pointsEarned,
     );
     _emit();
+  }
+
+  bool isNodeCompleted(int nodeId) {
+    return _state.player.completedNodes.contains(nodeId);
+  }
+
+  bool isNodeUnlocked(int nodeId) {
+    if (nodeId == 1) return true;
+
+    return _state.player.completedNodes.contains(nodeId - 1);
   }
 
   /// Emite el estado actual a través del Stream.

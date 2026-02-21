@@ -27,10 +27,7 @@ class TriviaScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("$category - Nivel $currentNode"),
-        leading: IconButton(
-          icon: const Icon(Icons.close),
-          onPressed: onQuit,
-        ),
+        leading: IconButton(icon: const Icon(Icons.close), onPressed: onQuit),
         actions: [
           Padding(
             padding: const EdgeInsets.all(16.0),
@@ -38,51 +35,61 @@ class TriviaScreen extends StatelessWidget {
               children: [
                 const Icon(Icons.favorite, color: Colors.red),
                 const SizedBox(width: 5),
-                Text("$lives", style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                Text(
+                  "$lives",
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ],
             ),
-          )
+          ),
         ],
         backgroundColor: const Color(0xFFA1CF58),
       ),
       body: Stack(
         children: [
-          // Fondo del equipo de front-end
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/fondo_quiz1.png'),
+                image: AssetImage('assets/images/mockup.png'),
                 fit: BoxFit.cover,
               ),
             ),
           ),
-          Column(
-            children: [
-              const SizedBox(height: 40),
-              // Área de la pregunta animada
-              Expanded(
-                flex: 2,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: PreguntaWidget(texto: questionText),
-                ),
+
+          // Pregunta en cuadrante superior izquierdo
+          Positioned(
+            top: 0,
+            left: 0,
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width * 0.5,
+              height: MediaQuery.of(context).size.height * 0.5,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 70.0, top: 35.0),
+                child: PreguntaWidget(texto: questionText),
               ),
-              // Listado de opciones dinámicas
-              Expanded(
-                flex: 3,
-                child: ListView.builder(
-                  itemCount: options.length,
-                  itemBuilder: (context, index) {
-                    return RespuestasWidget(
-                      texto: options[index],
-                      esCorrecta: false, // El motor maneja la validación
-                      mostrarResultado: false,
-                      onTap: () => onOptionSelected(options[index]),
-                    );
-                  },
-                ),
+            ),
+          ),
+
+          // Opciones abajo
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height * 0.45,
+              child: ListView.builder(
+                itemCount: options.length,
+                itemBuilder: (context, index) {
+                  return RespuestasWidget(
+                    texto: options[index],
+                    esCorrecta: false,
+                    mostrarResultado: false,
+                    onTap: () => onOptionSelected(options[index]),
+                  );
+                },
               ),
-            ],
+            ),
           ),
         ],
       ),

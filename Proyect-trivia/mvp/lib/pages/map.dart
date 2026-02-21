@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:mvp/data/models/node.dart';
 import 'package:mvp/core/enums/difficulty.dart';
 import 'package:mvp/core/constants/text_styles.dart';
+import 'package:mvp/core/di/injection_container.dart' as di;
+import 'package:mvp/domain/engine/game_engine.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -46,6 +48,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final engine = di.sl<GameEngine>();
+
     final List<String> themes = [
       'Cultura',
       'Ciencias',
@@ -53,28 +57,43 @@ class HomePage extends StatelessWidget {
       'Hobbies',
     ];
 
-    final items = List.generate(30, (index) {
-      String theme = themes[index % themes.length];
-      return Node(
-        nodeId: index + 1,
-        title: theme,
-        description: '',
-        difficulty: Difficulty.easy,
-        poolQuestionIds: [],
-        questionsToShow: 0,
-      );
-    });
+    return StreamBuilder(
+      stream: engine.stateStream,
+      builder: (context, snapshot) {
+        final items = List.generate(30, (index) {
+          String theme = themes[index % themes.length];
+          return Node(
+            nodeId: index + 1,
+            title: theme,
+            description: '',
+            difficulty: Difficulty.easy,
+            poolQuestionIds: [],
+            questionsToShow: 0,
+          );
+        });
 
-    return Scaffold(
-      appBar: AppBar(title: const Text('MAPA', style: TextStyles.bar), backgroundColor: AppColor.backgroundVerde.withValues(), elevation: 50),
-      body: Stack(
-        children: [
-          Positioned.fill(child: background()),
-          SingleChildScrollView(
-            child: Column(children: buildLevelCards(items)),
+        return Scaffold(
+          appBar: AppBar(
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            title: const Text('Mapa', style: TextStyles.bar),
+            backgroundColor: AppColor.backgroundVerde.withValues(),
+            elevation: 0,
           ),
-        ],
-      ),
+          body: Stack(
+            children: [
+              Positioned.fill(child: background()),
+              SingleChildScrollView(
+                child: Column(children: buildLevelCards(items)),
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }
