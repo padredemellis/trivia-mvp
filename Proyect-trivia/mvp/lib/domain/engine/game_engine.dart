@@ -209,6 +209,11 @@ class GameEngine {
       errorMessage: null,
     );
   }
+  // Actualiza los datos del jugador tras un inicio de sesión exitoso.
+  /// Esto reemplaza al initialPlayer con los datos reales de Firestore.
+  void setAuthenticatedPlayer(Player loggedInPlayer) {
+    _update(player: loggedInPlayer);
+  }
 
   /// Obtiene la pregunta actual del nodo.
   Question? getCurrentQuestion() {
