@@ -1,1 +1,0 @@
-This directory contains the entire process of creating our final project.
