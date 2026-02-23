@@ -81,7 +81,7 @@ class HomePage extends StatelessWidget {
               },
             ),
             title: const Text('Mapa', style: TextStyles.bar),
-            backgroundColor: AppColor.backgroundVerde.withValues(),
+            backgroundColor: const Color.fromARGB(255, 118, 135, 61).withValues(),
             elevation: 0,
           ),
           body: Stack(

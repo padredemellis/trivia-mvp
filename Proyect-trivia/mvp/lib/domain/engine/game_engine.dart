@@ -126,8 +126,9 @@ class GameEngine {
   /// - Gestiona pérdida de vidas y Game Over.
   /// - Avanza a la siguiente pregunta o finaliza el nodo.
   Future<void> answerQuestion(String userAnswer) async {
-    if (_state.currentQuestions == null || _state.currentSession == null)
+    if (_state.currentQuestions == null || _state.currentSession == null) {
       return;
+    }
 
     final question = _state.currentQuestions![_state.currentQuestionIndex];
 

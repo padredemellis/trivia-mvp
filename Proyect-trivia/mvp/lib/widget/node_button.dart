@@ -5,6 +5,7 @@ import 'package:mvp/core/constants/text_styles.dart';
 import 'package:mvp/core/di/injection_container.dart' as di;
 import 'package:mvp/domain/engine/game_engine.dart';
 
+
 class NodeButton extends StatefulWidget {
   const NodeButton({super.key, required this.box});
   final Node box;
@@ -19,12 +20,8 @@ class _NodeButtonState extends State<NodeButton> {
   @override
   Widget build(BuildContext context) {
     final engine = di.sl<GameEngine>();
-
-    final bool isUnlocked =
-        engine.isNodeUnlocked(widget.box.nodeId);
-
-    final bool isCompleted =
-        engine.isNodeCompleted(widget.box.nodeId);
+    final bool isUnlocked = engine.isNodeUnlocked(widget.box.nodeId);
+    final bool isCompleted = engine.isNodeCompleted(widget.box.nodeId);
 
     return MouseRegion(
       onEnter: (_) {
@@ -34,9 +31,7 @@ class _NodeButtonState extends State<NodeButton> {
       },
       onExit: (_) => setState(() => isHovering = false),
       child: GestureDetector(
-        onTap: isUnlocked
-            ? () => engine.startNode(widget.box.nodeId)
-            : null,
+        onTap: isUnlocked ? () => engine.startNode(widget.box.nodeId) : null,
         child: Column(
           children: [
             AnimatedContainer(
@@ -48,9 +43,8 @@ class _NodeButtonState extends State<NodeButton> {
                   BoxShadow(
                     color: isUnlocked
                         ? (isHovering
-                            ? Colors.yellow.withOpacity(0.5)
-                            : const Color.fromARGB(255, 106, 169, 70)
-                                .withOpacity(0.1))
+                              ? Colors.yellow.withOpacity(0.5)
+                              : const Color.fromARGB(255, 84, 135, 55).withOpacity(0.1))
                         : Colors.transparent,
                     spreadRadius: isHovering ? 6 : 3,
                     blurRadius: isHovering ? 40 : 5,
@@ -67,22 +61,28 @@ class _NodeButtonState extends State<NodeButton> {
                           'assets/images/default.png',
                       fit: BoxFit.contain,
                     ),
-
-                    if (!isUnlocked)
-                      const Icon(
-                        Icons.lock,
-                        size: 28,
-                        color: Colors.white,
+                    Text(
+                      '${widget.box.nodeId}',
+                      style: TextStyles.bar.copyWith(
+                        shadows: [
+                          Shadow(
+                            blurRadius: 6,
+                            color: Colors.black,
+                            offset: Offset(0, 2),
+                          ),
+                        ],
                       ),
+                    ),
+                    if (!isUnlocked)
+                      const Icon(Icons.lock, size: 28, color: Colors.white),
 
                     if (isCompleted)
-                      const Positioned(
-                        bottom: 4,
-                        right: 4,
+                       Container(
+                        alignment: Alignment.center,
                         child: Icon(
                           Icons.check_circle,
-                          color: Colors.green,
-                          size: 20,
+                          color: Colors.amberAccent,
+                          size: 30,
                         ),
                       ),
                   ],
@@ -90,14 +90,7 @@ class _NodeButtonState extends State<NodeButton> {
               ),
             ),
             SizedBox(height: kDouble5),
-            Text(
-              'Level ${widget.box.nodeId}',
-              style: TextStyles.level,
-            ),
-            Text(
-              widget.box.title,
-              style: TextStyles.categoria,
-            ),
+            Text(widget.box.title, style: TextStyles.categoria),
           ],
         ),
       ),

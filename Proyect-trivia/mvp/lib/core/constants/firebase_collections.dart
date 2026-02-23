@@ -2,6 +2,7 @@
 ///
 /// Centraliza todos los nombres de colecciones para evitar typos
 /// y facilitar mantenimiento.
+library;
 
 class FirebaseCollections {
   FirebaseCollections._();
