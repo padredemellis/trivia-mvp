@@ -10,142 +10,148 @@ class LevelGenerator extends StatefulWidget {
 
 class _LevelGeneratorState extends State<LevelGenerator> {
   bool _uploading = false;
-  String _status = "Listo para generar 30 niveles temáticos";
+  String _status = "Listo para generar 30 niveles con pools de 10 preguntas";
 
-  // Temas que coinciden con las categorías de tus preguntas en el JSON
-  final List<String> themes = ['Cultura', 'Ciencias', 'Actualidad', 'Hobbies'];
+  // Categorías exactas de tu JSON de 600 preguntas
+  final List<String> themes = [
+    'Historia',
+    'Actualidad',
+    'Arte y Entretenimiento',
+    'Ciencias Naturales',
+    'Ciencias Sociales',
+    'Deportes'
+  ];
 
   Future<void> generateAndUploadLevels() async {
     setState(() {
       _uploading = true;
-      _status = "1. Leyendo preguntas de Firebase...";
+      _status = "1. Leyendo base de datos de preguntas...";
     });
 
     final firestore = FirebaseFirestore.instance;
-    
-    try {
-      // 1. Descargamos TODAS las preguntas que subiste para clasificarlas
-      final questionsSnap = await firestore.collection('questions').get();
-      final allQuestions = questionsSnap.docs;
 
-      if (allQuestions.isEmpty) {
-        throw "No se encontraron preguntas en la colección 'questions'. Súbelas primero con el DataUploader.";
+    try {
+      // 1. Descargar todas las preguntas para clasificarlas en memoria
+      final questionsSnap = await firestore.collection('questions').get();
+      final allDocs = questionsSnap.docs;
+
+      if (allDocs.isEmpty) {
+        throw "No hay preguntas en 'questions'. Súbelas primero.";
       }
 
-      // 2. Organizamos los IDs de las preguntas en "bolsas" por categoría
-      Map<String, List<String>> questionsByCategory = {
-        'Cultura': [],
-        'Ciencias': [],
-        'Actualidad': [],
-        'Hobbies': [],
-      };
+      // 2. Organizar IDs por categoría
+      Map<String, List<String>> questionsByCategory = {};
+      for (var theme in themes) {
+        questionsByCategory[theme] = [];
+      }
 
-      for (var doc in allQuestions) {
+      for (var doc in allDocs) {
         final data = doc.data();
-        String cat = data['category'] ?? 'Cultura'; // Por defecto Cultura si no tiene
-        
+        String cat = data['category'] ?? 'Historia';
         if (questionsByCategory.containsKey(cat)) {
           questionsByCategory[cat]!.add(doc.id);
         }
       }
 
       setState(() {
-        _status = "2. Clasificación lista. Subiendo niveles...";
+        _status = "2. Clasificación completa. Subiendo nodos...";
       });
 
       final batch = firestore.batch();
 
-      // 3. Generamos los 30 niveles con lógica de filtrado
+      // 3. Generar 30 niveles temáticos
       for (int i = 1; i <= 30; i++) {
-        // Determinamos el tema del nivel según el orden del mapa (1:Cultura, 2:Ciencias...)
-        String currentTheme = themes[(i - 1) % themes.length]; 
+        // Rotación de temas (1: Historia, 2: Actualidad, etc.)
+        String currentTheme = themes[(i - 1) % themes.length];
         
-        // Obtenemos las preguntas que pertenecen SOLO a este tema
+        // Obtener preguntas del tema y mezclarlas
         List<String> thematicPool = List.from(questionsByCategory[currentTheme] ?? []);
-        
-        // Mezclamos las preguntas del tema para que no siempre salgan las mismas
         thematicPool.shuffle();
         
-        // Tomamos hasta 4 preguntas para el pool de este nivel (el motor elegirá 2 al azar luego)
-        List<String> selectedPoolIds = thematicPool.take(4).toList();
+        // --- CONFIGURACIÓN DE POOL (10) Y MUESTRA (3) ---
+        List<String> selectedIds = thematicPool.take(10).toList();
 
-        // Si el pool temático está vacío (error de carga), usamos preguntas aleatorias como backup
-        if (selectedPoolIds.isEmpty) {
-          selectedPoolIds = (allQuestions..shuffle()).take(3).map((d) => d.id).toList();
+        // Fallback: Si por alguna razón hay menos de 10 en la categoría, rellenar con azar
+        if (selectedIds.length < 10) {
+          var randomBackfill = (allDocs.toList()..shuffle())
+              .take(10 - selectedIds.length)
+              .map((d) => d.id);
+          selectedIds.addAll(randomBackfill);
         }
 
-        // Configuración progresiva
+        // Dificultad y recompensas según el progreso
         String difficulty = "easy";
         int coins = 100;
         if (i > 10) { difficulty = "medium"; coins = 200; }
         if (i > 20) { difficulty = "hard"; coins = 300; }
 
         DocumentReference docRef = firestore.collection('nodes').doc(i.toString());
-        
+
         batch.set(docRef, {
-          "nodeId": i,                 // int
-          "title": currentTheme,       // string
-          "description": "Desafío de $currentTheme",
+          "nodeId": i,
+          "title": "Nivel $i: $currentTheme",
+          "description": "Reto de $currentTheme",
+          "category": currentTheme,
           "difficulty": difficulty,
-          "questionsToShow": 2,        // int (cuántas preguntas debe responder el usuario)
-          "rewardCoins": coins,        // int
-          "poolQuestionIds": selectedPoolIds, // array de strings (IDs de preguntas del tema)
+          "questionsToShow": 3,      
+          "rewardCoins": coins,
+          "poolQuestionIds": selectedIds, 
         });
       }
 
-      // 4. Ejecutar la subida masiva
+      // 4. Commit final
       await batch.commit();
 
       setState(() {
-        _status = "¡Éxito! 30 niveles creados.\nCada nivel tiene sus temas correctos.";
+        _status = "¡Éxito! 30 niveles creados.\nCada uno con 10 preguntas de pool y 3 a responder.";
       });
 
     } catch (e) {
-      setState(() {
-        _status = "Error crítico: $e";
-      });
-      print(e);
+      setState(() => _status = "Error: $e");
+      print("Error en LevelGenerator: $e");
     } finally {
-      setState(() {
-        _uploading = false;
-      });
+      setState(() => _uploading = false);
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
-      appBar: AppBar(title: const Text("Generador de Niveles Pro")),
+      backgroundColor: const Color(0xFF121212),
+      appBar: AppBar(
+        title: const Text("Master Level Generator"),
+        backgroundColor: Colors.deepPurple,
+      ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.auto_awesome, size: 80, color: Colors.purpleAccent),
-              const SizedBox(height: 30),
-              Text(
-                _status,
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 18, color: Colors.white),
-              ),
-              const SizedBox(height: 40),
-              _uploading
-                  ? const CircularProgressIndicator(color: Colors.purpleAccent)
-                  : ElevatedButton.icon(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.layers_outlined, size: 80, color: Colors.amber),
+            const SizedBox(height: 20),
+            Text(
+              _status,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 18, color: Colors.white70),
+            ),
+            const SizedBox(height: 40),
+            _uploading
+                ? const CircularProgressIndicator(color: Colors.amber)
+                : SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton.icon(
                       onPressed: generateAndUploadLevels,
-                      icon: const Icon(Icons.rocket_launch),
-                      label: const Text("SINCRONIZAR 30 NIVELES TEMÁTICOS"),
+                      icon: const Icon(Icons.settings_suggest),
+                      label: const Text("RECONSTRUIR MAPA DE NIVELES"),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.purpleAccent,
-                        foregroundColor: Colors.white,
-                        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        backgroundColor: Colors.amber[700],
+                        foregroundColor: Colors.black,
+                        padding: const EdgeInsets.symmetric(vertical: 18),
+                        textStyle: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
-            ],
-          ),
+                  ),
+          ],
         ),
       ),
     );
