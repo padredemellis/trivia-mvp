@@ -1,5 +1,6 @@
 import 'package:mvp/core/enums/question_type.dart';
 
+
 /// Representa una pregunta de opción múltiple del juego.
 ///
 /// Se usa para configurar las preguntas en el juego

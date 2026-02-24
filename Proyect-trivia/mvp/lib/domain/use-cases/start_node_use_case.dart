@@ -39,7 +39,7 @@ class StartNodeUseCase {
   /// Proceso:
   /// 1. Obtiene el nodo desde Firestore
   /// 2. Valida que el nodo existe
-  /// 3. Selecciona 5 preguntas al azar del pool
+  /// 3. Selecciona la cantidad de preguntas definida en el nodo (questionsToShow) al azar del pool
   /// 4. Obtiene las preguntas completas
   /// 5. Crea una nueva GameSession
   /// 6. Guarda la sesión y limpia sesiones antiguas
@@ -52,7 +52,7 @@ class StartNodeUseCase {
     if (node == null) {
       throw Exception('Node $nodeId not found');
     }
-    List<String> selectedIds = node.poolQuestionIds.sample(3);
+    List<String> selectedIds = node.poolQuestionIds.sample(node.questionsToShow);
     List<Question> questions = await _questionRepository.getQuestionsByIds(
       selectedIds,
     );

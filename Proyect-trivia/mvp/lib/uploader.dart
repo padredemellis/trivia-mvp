@@ -1,7 +1,8 @@
-import 'dart:io';
+//import 'dart:io';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 class DataUploader extends StatefulWidget {
   const DataUploader({super.key});
@@ -16,8 +17,7 @@ class _DataUploaderState extends State<DataUploader> {
 
   // --- Aqui va el pool de preguntas ---
   Future<List<dynamic>> readJson(String filePath) async {
-      final file = File(filePath);
-      final String content = await file.readAsString();
+      final content = await rootBundle.loadString(filePath);
       return jsonDecode(content);
   }
   // -----------------------------------
@@ -30,7 +30,7 @@ class _DataUploaderState extends State<DataUploader> {
 
     try {
       // 1. Convertimos el texto JSON a una lista de Dart
-      final data = await readJson('questions.json');
+      final data = await readJson('lib/questions.json');
       final firestore = FirebaseFirestore.instance;
 
       // 2. Recorremos cada elemento y lo subimos
