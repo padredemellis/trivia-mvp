@@ -1,0 +1,4802 @@
+[
+  {
+    "questionId": "q_001",
+    "category": "Historia",
+    "text": "¿En qué año comenzó la Primera Guerra Mundial?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1914",
+    "options": ["1912", "1914", "1916", "1918"]
+  },
+  {
+    "questionId": "q_002",
+    "category": "Historia",
+    "text": "¿Quién fue el primer presidente de los Estados Unidos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "George Washington",
+    "options": ["Thomas Jefferson", "Abraham Lincoln", "George Washington", "John Adams"]
+  },
+  {
+    "questionId": "q_003",
+    "category": "Historia",
+    "text": "¿En qué año llegó el hombre a la Luna por primera vez?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1969",
+    "options": ["1965", "1969", "1971", "1975"]
+  },
+  {
+    "questionId": "q_004",
+    "category": "Historia",
+    "text": "¿Qué civilización construyó las pirámides de Guiza?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Egipcia",
+    "options": ["Maya", "Azteca", "Egipcia", "Mesopotámica"]
+  },
+  {
+    "questionId": "q_005",
+    "category": "Historia",
+    "text": "¿En qué año se produjo la Revolución Francesa?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1789",
+    "options": ["1776", "1789", "1804", "1812"]
+  },
+  {
+    "questionId": "q_006",
+    "category": "Historia",
+    "text": "¿Quién era el líder de la Unión Soviética durante la mayor parte de la Segunda Guerra Mundial?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Iósif Stalin",
+    "options": ["Vladimir Lenin", "León Trotski", "Iósif Stalin", "Nikita Jrushchov"]
+  },
+  {
+    "questionId": "q_007",
+    "category": "Historia",
+    "text": "¿Qué imperio fue gobernado por Julio César?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Imperio Romano",
+    "options": ["Imperio Griego", "Imperio Romano", "Imperio Persa", "Imperio Bizantino"]
+  },
+  {
+    "questionId": "q_008",
+    "category": "Historia",
+    "text": "¿Cuál fue el nombre de la ruta comercial que conectaba China con Europa en la antigüedad?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ruta de la Seda",
+    "options": ["Ruta de las Especias", "Ruta de la Seda", "Ruta de Oro", "Ruta Transahariana"]
+  },
+  {
+    "questionId": "q_009",
+    "category": "Historia",
+    "text": "¿En qué año cayó el Imperio Romano de Occidente?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "476 d.C.",
+    "options": ["395 d.C.", "410 d.C.", "476 d.C.", "527 d.C."]
+  },
+  {
+    "questionId": "q_010",
+    "category": "Historia",
+    "text": "¿Quién fue el responsable de la unificación de Alemania en 1871?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Otto von Bismarck",
+    "options": ["Guillermo II", "Otto von Bismarck", "Adolf Hitler", "Federico el Grande"]
+  },
+  {
+    "questionId": "q_011",
+    "category": "Historia",
+    "text": "¿Qué evento marcó el inicio de la Edad Moderna en 1492?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El descubrimiento de América",
+    "options": ["La caída de Constantinopla", "La invención de la imprenta", "El descubrimiento de América", "La Reforma Protestante"]
+  },
+  {
+    "questionId": "q_012",
+    "category": "Historia",
+    "text": "¿Quién escribió 'El Manifiesto Comunista' junto a Friedrich Engels?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Karl Marx",
+    "options": ["Vladimir Lenin", "Karl Marx", "Mijaíl Bakunin", "Adam Smith"]
+  },
+  {
+    "questionId": "q_013",
+    "category": "Historia",
+    "text": "¿Qué guerra terminó con el Tratado de Versalles en 1919?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Primera Guerra Mundial",
+    "options": ["Guerra Franco-Prusiana", "Segunda Guerra Mundial", "Guerra de Crimea", "Primera Guerra Mundial"]
+  },
+  {
+    "questionId": "q_014",
+    "category": "Historia",
+    "text": "¿En qué ciudad japonesa se lanzó la primera bomba atómica en 1945?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Hiroshima",
+    "options": ["Nagasaki", "Tokio", "Hiroshima", "Osaka"]
+  },
+  {
+    "questionId": "q_015",
+    "category": "Historia",
+    "text": "¿Qué civilización antigua habitó en la región de Mesopotamia entre los ríos Tigris y Éufrates?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sumeria",
+    "options": ["Egipcia", "Inca", "Sumeria", "Fenicia"]
+  },
+  {
+    "questionId": "q_016",
+    "category": "Historia",
+    "text": "¿Quién fue la última reina de Francia antes de la Revolución?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "María Antonieta",
+    "options": ["Catalina de Médici", "María Antonieta", "Ana de Austria", "Josefina de Beauharnais"]
+  },
+  {
+    "questionId": "q_017",
+    "category": "Historia",
+    "text": "¿En qué año se disolvió oficialmente la Unión Soviética (URSS)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1991",
+    "options": ["1989", "1990", "1991", "1993"]
+  },
+  {
+    "questionId": "q_018",
+    "category": "Historia",
+    "text": "¿Cómo se llamó el sistema de segregación racial en Sudáfrica abolido en los años 90?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Apartheid",
+    "options": ["Sionismo", "Apartheid", "Castas", "Ghetto"]
+  },
+  {
+    "questionId": "q_019",
+    "category": "Historia",
+    "text": "¿Cuál fue el principal motivo de la Guerra de los Cien Años entre Francia e Inglaterra?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Disputas por la sucesión al trono francés",
+    "options": ["Diferencias religiosas", "Disputas por la sucesión al trono francés", "Control de las rutas hacia América", "La invasión de los vikingos"]
+  },
+  {
+    "questionId": "q_020",
+    "category": "Historia",
+    "text": "¿Qué famoso conquistador macedonio llegó hasta las fronteras de la India?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Alejandro Magno",
+    "options": ["Napoleón Bonaparte", "Julio César", "Alejandro Magno", "Aníbal Barca"]
+  },
+  {
+    "questionId": "q_021",
+    "category": "Historia",
+    "text": "¿En qué año comenzó la Revolución Mexicana?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1910",
+    "options": ["1810", "1905", "1910", "1920"]
+  },
+  {
+    "questionId": "q_022",
+    "category": "Historia",
+    "text": "¿Qué país invadió Alemania en septiembre de 1939, iniciando la Segunda Guerra Mundial?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Polonia",
+    "options": ["Francia", "Austria", "Polonia", "Checoslovaquia"]
+  },
+  {
+    "questionId": "q_023",
+    "category": "Historia",
+    "text": "¿Quién lideró la independencia de la India mediante la resistencia no violenta?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mahatma Gandhi",
+    "options": ["Jawaharlal Nehru", "Indira Gandhi", "Mahatma Gandhi", "Nelson Mandela"]
+  },
+  {
+    "questionId": "q_024",
+    "category": "Historia",
+    "text": "¿Qué nombre recibió la serie de conflictos por el control de Tierra Santa entre cristianos y musulmanes?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Las Cruzadas",
+    "options": ["Guerra de los Treinta Años", "Las Cruzadas", "Reconquista", "Guerra Santa"]
+  },
+  {
+    "questionId": "q_025",
+    "category": "Historia",
+    "text": "¿Quién fue el emperador de Francia que conquistó gran parte de Europa a inicios del siglo XIX?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Napoleón Bonaparte",
+    "options": ["Luis XIV", "Napoleón Bonaparte", "Carlos Magno", "Felipe II"]
+  },
+  {
+    "questionId": "q_026",
+    "category": "Historia",
+    "text": "¿En qué país surgió el Renacimiento en el siglo XIV?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Italia",
+    "options": ["Francia", "España", "Grecia", "Italia"]
+  },
+  {
+    "questionId": "q_027",
+    "category": "Historia",
+    "text": "¿Cuál fue el primer metal que el ser humano aprendió a fundir?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Cobre",
+    "options": ["Hierro", "Bronce", "Cobre", "Oro"]
+  },
+  {
+    "questionId": "q_028",
+    "category": "Historia",
+    "text": "¿Qué documento firmado en 1215 limitó los poderes del rey de Inglaterra por primera vez?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Carta Magna",
+    "options": ["Declaración de Derechos", "Edicto de Milán", "Carta Magna", "Tratado de Tordesillas"]
+  },
+  {
+    "questionId": "q_029",
+    "category": "Historia",
+    "text": "¿Qué cultura construyó la ciudadela de Machu Picchu?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Inca",
+    "options": ["Maya", "Azteca", "Inca", "Moche"]
+  },
+  {
+    "questionId": "q_030",
+    "category": "Historia",
+    "text": "¿En qué año se produjo el ataque a Pearl Harbor?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1941",
+    "options": ["1939", "1941", "1942", "1945"]
+  },
+  {
+    "questionId": "q_031",
+    "category": "Historia",
+    "text": "¿Quién fue el primer emperador romano?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Augusto",
+    "options": ["Julio César", "Nerón", "Augusto", "Trajano"]
+  },
+  {
+    "questionId": "q_032",
+    "category": "Historia",
+    "text": "¿Cuál fue el principal imperio rival de los griegos durante las Guerras Médicas?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Imperio Persa",
+    "options": ["Imperio Romano", "Imperio Persa", "Imperio Egipcio", "Imperio Cartaginés"]
+  },
+  {
+    "questionId": "q_033",
+    "category": "Historia",
+    "text": "¿En qué año se hundió el Titanic?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1912",
+    "options": ["1905", "1912", "1914", "1918"]
+  },
+  {
+    "questionId": "q_034",
+    "category": "Historia",
+    "text": "¿Quién lideró la Revolución de Cuba en 1959?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Fidel Castro",
+    "options": ["Che Guevara", "Fulgencio Batista", "Fidel Castro", "Hugo Chávez"]
+  },
+  {
+    "questionId": "q_035",
+    "category": "Historia",
+    "text": "¿Qué país colonizó la mayor parte de lo que hoy es Brasil?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Portugal",
+    "options": ["España", "Francia", "Portugal", "Holanda"]
+  },
+  {
+    "questionId": "q_036",
+    "category": "Historia",
+    "text": "¿Cómo se llama el periodo de la prehistoria caracterizado por el uso de herramientas de piedra tallada?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Paleolítico",
+    "options": ["Neolítico", "Paleolítico", "Mesolítico", "Edad de Bronce"]
+  },
+  {
+    "questionId": "q_037",
+    "category": "Historia",
+    "text": "¿Quién fue el monarca conocido como el 'Rey Sol'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Luis XIV",
+    "options": ["Felipe II", "Luis XIV", "Enrique VIII", "Carlos V"]
+  },
+  {
+    "questionId": "q_038",
+    "category": "Historia",
+    "text": "¿Qué ciudad fue la capital del Imperio Bizantino?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Constantinopla",
+    "options": ["Atenas", "Roma", "Constantinopla", "Alejandría"]
+  },
+  {
+    "questionId": "q_039",
+    "category": "Historia",
+    "text": "¿En qué año se fundó la Organización de las Naciones Unidas (ONU)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1945",
+    "options": ["1918", "1945", "1948", "1950"]
+  },
+  {
+    "questionId": "q_040",
+    "category": "Historia",
+    "text": "¿Quién fue el autor de las '95 tesis', iniciando la Reforma Protestante?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Martín Lutero",
+    "options": ["Juan Calvino", "Enrique VIII", "Martín Lutero", "Erasmo de Rotterdam"]
+  },
+  {
+    "questionId": "q_041",
+    "category": "Historia",
+    "text": "¿Qué civilización precolombina utilizaba un sistema de escritura jeroglífica y calendarios precisos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Maya",
+    "options": ["Inca", "Maya", "Azteca", "Tolteca"]
+  },
+  {
+    "questionId": "q_042",
+    "category": "Historia",
+    "text": "¿Cuál fue la causa principal de la Guerra Civil estadounidense (1861-1865)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "La esclavitud y los derechos de los estados",
+    "options": ["La independencia de Inglaterra", "La esclavitud y los derechos de los estados", "La disputa por Texas", "La fiebre del oro"]
+  },
+  {
+    "questionId": "q_043",
+    "category": "Historia",
+    "text": "¿Qué mujer fue apodada 'La Dama de Hierro' y fue Primera Ministra del Reino Unido?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Margaret Thatcher",
+    "options": ["Angela Merkel", "Theresa May", "Margaret Thatcher", "Indira Gandhi"]
+  },
+  {
+    "questionId": "q_044",
+    "category": "Historia",
+    "text": "¿En qué año terminó la Guerra de Vietnam?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1975",
+    "options": ["1968", "1973", "1975", "1980"]
+  },
+  {
+    "questionId": "q_045",
+    "category": "Historia",
+    "text": "¿Qué evento histórico inició con la toma de la Bastilla?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Revolución Francesa",
+    "options": ["Independencia de EE.UU.", "Revolución Francesa", "Revolución Industrial", "Comuna de París"]
+  },
+  {
+    "questionId": "q_046",
+    "category": "Historia",
+    "text": "¿Quién fue el líder del movimiento de derechos civiles en EE.UU. famoso por su discurso 'I Have a Dream'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Martin Luther King Jr.",
+    "options": ["Malcolm X", "Martin Luther King Jr.", "Rosa Parks", "Nelson Mandela"]
+  },
+  {
+    "questionId": "q_047",
+    "category": "Historia",
+    "text": "¿Cuál era el nombre de la red de túneles y caminos que los norvietnamitas usaban para suministros?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ruta Ho Chi Minh",
+    "options": ["Ruta de la Victoria", "Línea Maginot", "Ruta Ho Chi Minh", "Muro de Berlín"]
+  },
+  {
+    "questionId": "q_048",
+    "category": "Historia",
+    "text": "¿Qué emperador romano legalizó el cristianismo con el Edicto de Milán?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Constantino el Grande",
+    "options": ["Nerón", "Constantino el Grande", "Marco Aurelio", "Teodosio"]
+  },
+  {
+    "questionId": "q_049",
+    "category": "Historia",
+    "text": "¿En qué año se firmó la Declaración de Independencia de los Estados Unidos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1776",
+    "options": ["1770", "1776", "1783", "1789"]
+  },
+  {
+    "questionId": "q_050",
+    "category": "Historia",
+    "text": "¿Quién fue la reina de Egipto que tuvo relaciones políticas y personales con Julio César y Marco Antonio?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Cleopatra",
+    "options": ["Nefertiti", "Cleopatra", "Hatsepsut", "Arsínoe"]
+  },
+  {
+    "questionId": "q_051",
+    "category": "Historia",
+    "text": "¿Qué invento de Johannes Gutenberg revolucionó la difusión del conocimiento en el siglo XV?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "La imprenta",
+    "options": ["El telescopio", "La brújula", "La imprenta", "El papel"]
+  },
+  {
+    "questionId": "q_052",
+    "category": "Historia",
+    "text": "¿En qué país comenzó la Revolución Industrial?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Gran Bretaña",
+    "options": ["Francia", "Estados Unidos", "Alemania", "Gran Bretaña"]
+  },
+  {
+    "questionId": "q_053",
+    "category": "Historia",
+    "text": "¿Qué nombre recibió la política de distensión entre EE.UU. y la URSS en los años 70?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Détente",
+    "options": ["Perestroika", "Glasnost", "Détente", "Ostpolitik"]
+  },
+  {
+    "questionId": "q_054",
+    "category": "Historia",
+    "text": "¿Quién fue el principal libertador de los países del norte de Sudamérica?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Simón Bolívar",
+    "options": ["José de San Martín", "Simón Bolívar", "Bernardo O'Higgins", "Miguel Hidalgo"]
+  },
+  {
+    "questionId": "q_055",
+    "category": "Historia",
+    "text": "¿En qué año se produjo la caída de Constantinopla a manos de los turcos otomanos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1453",
+    "options": ["1453", "1492", "1517", "1204"]
+  },
+  {
+    "questionId": "q_056",
+    "category": "Historia",
+    "text": "¿Quién fue el primer ser humano en viajar al espacio exterior?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Yuri Gagarin",
+    "options": ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "John Glenn"]
+  },
+  {
+    "questionId": "q_057",
+    "category": "Historia",
+    "text": "¿Cuál fue el objetivo principal de la expedición de Magallanes y Elcano?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Circunnavegar la Tierra",
+    "options": ["Descubrir América", "Conquistar México", "Circunnavegar la Tierra", "Encontrar la fuente de la juventud"]
+  },
+  {
+    "questionId": "q_058",
+    "category": "Historia",
+    "text": "¿Qué filósofo griego fue el maestro de Alejandro Magno?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Aristóteles",
+    "options": ["Sócrates", "Platón", "Aristóteles", "Epicuro"]
+  },
+  {
+    "questionId": "q_059",
+    "category": "Historia",
+    "text": "¿En qué ciudad se firmó el tratado que puso fin a la Segunda Guerra Mundial en Europa?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Berlín",
+    "options": ["Yalta", "Potsdam", "Berlín", "París"]
+  },
+  {
+    "questionId": "q_060",
+    "category": "Historia",
+    "text": "¿Cuál era la principal unidad militar del ejército de la Antigua Roma?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Legión",
+    "options": ["Falange", "Legión", "Centuria", "Cohorte"]
+  },
+  {
+    "questionId": "q_061",
+    "category": "Historia",
+    "text": "¿Quién fue la enfermera británica famosa por su labor durante la Guerra de Crimea?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Florence Nightingale",
+    "options": ["Clara Barton", "Florence Nightingale", "Marie Curie", "Madre Teresa"]
+  },
+  {
+    "questionId": "q_062",
+    "category": "Historia",
+    "text": "¿Qué dinastía gobernaba China durante la construcción de la mayor parte de la Gran Muralla?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ming",
+    "options": ["Han", "Tang", "Ming", "Qing"]
+  },
+  {
+    "questionId": "q_063",
+    "category": "Historia",
+    "text": "¿Qué nombre recibió el plan de rescate económico de EE.UU. para Europa tras la 2ª Guerra Mundial?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Plan Marshall",
+    "options": ["Plan Truman", "Plan Marshall", "New Deal", "Plan Molotov"]
+  },
+  {
+    "questionId": "q_064",
+    "category": "Historia",
+    "text": "¿Qué conflicto enfrentó a Inglaterra y Argentina en 1982?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Guerra de las Malvinas",
+    "options": ["Guerra de las Malvinas", "Guerra del Chaco", "Guerra de los Balcanes", "Guerra de Suez"]
+  },
+  {
+    "questionId": "q_065",
+    "category": "Historia",
+    "text": "¿Quién fue el explorador veneciano que viajó a la corte de Kublai Khan en China?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Marco Polo",
+    "options": ["Vasco de Gama", "Marco Polo", "Cristóbal Colón", "Amerérico Vespucio"]
+  },
+  {
+    "questionId": "q_066",
+    "category": "Historia",
+    "text": "¿Qué papa convocó la Primera Cruzada en el Concilio de Clermont?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Urbano II",
+    "options": ["Inocencio III", "Gregorio VII", "Urbano II", "León X"]
+  },
+  {
+    "questionId": "q_067",
+    "category": "Historia",
+    "text": "¿En qué año se fundó el Estado de Israel?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1948",
+    "options": ["1945", "1948", "1950", "1967"]
+  },
+  {
+    "questionId": "q_068",
+    "category": "Historia",
+    "text": "¿Quién fue el líder de la Alemania nazi?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Adolf Hitler",
+    "options": ["Benito Mussolini", "Adolf Hitler", "Joseph Goebbels", "Heinrich Himmler"]
+  },
+  {
+    "questionId": "q_069",
+    "category": "Historia",
+    "text": "¿Qué civilización inventó el sistema de escritura cuneiforme?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sumeria",
+    "options": ["Egipcia", "Persa", "Sumeria", "Griega"]
+  },
+  {
+    "questionId": "q_070",
+    "category": "Historia",
+    "text": "¿Qué batalla napoleónica fue la derrota final de Napoleón Bonaparte?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Waterloo",
+    "options": ["Austerlitz", "Leipzig", "Waterloo", "Trafalgar"]
+  },
+  {
+    "questionId": "q_071",
+    "category": "Historia",
+    "text": "¿Cuál fue el nombre del barco que llevó a los peregrinos a América en 1620?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mayflower",
+    "options": ["Santa María", "Mayflower", "Beagle", "Endeavour"]
+  },
+  {
+    "questionId": "q_072",
+    "category": "Historia",
+    "text": "¿Quién fue el presidente de EE.UU. durante la Gran Depresión y la 2ª Guerra Mundial?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Franklin D. Roosevelt",
+    "options": ["Herbert Hoover", "Harry S. Truman", "Franklin D. Roosevelt", "Dwight Eisenhower"]
+  },
+  {
+    "questionId": "q_073",
+    "category": "Historia",
+    "text": "¿Qué ciudad-estado griega era famosa por su disciplina militar y austeridad?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Esparta",
+    "options": ["Atenas", "Tebas", "Corinto", "Esparta"]
+  },
+  {
+    "questionId": "q_074",
+    "category": "Historia",
+    "text": "¿En qué año se produjo la caída del Muro de Berlín?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1989",
+    "options": ["1987", "1989", "1991", "1993"]
+  },
+  {
+    "questionId": "q_075",
+    "category": "Historia",
+    "text": "¿Cómo se llamaba el parlamento de la Rusia zarista?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Duma",
+    "options": ["Duma", "Soviet", "Politburó", "Kremlin"]
+  },
+  {
+    "questionId": "q_076",
+    "category": "Historia",
+    "text": "¿Qué explorador español lideró la conquista del Imperio Azteca?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Hernán Cortés",
+    "options": ["Francisco Pizarro", "Hernán Cortés", "Juan Ponce de León", "Vasco Núñez de Balboa"]
+  },
+  {
+    "questionId": "q_077",
+    "category": "Historia",
+    "text": "¿Qué país fue el principal escenario de la Revolución de los Claveles en 1974?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Portugal",
+    "options": ["España", "Portugal", "Grecia", "Brasil"]
+  },
+  {
+    "questionId": "q_078",
+    "category": "Historia",
+    "text": "¿Cuál fue la religión oficial del Imperio Bizantino?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Cristianismo Ortodoxo",
+    "options": ["Cristianismo Católico", "Cristianismo Ortodoxo", "Islam", "Judaísmo"]
+  },
+  {
+    "questionId": "q_079",
+    "category": "Historia",
+    "text": "¿Quién fue el emperador azteca cuando llegaron los españoles?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Moctezuma II",
+    "options": ["Atahualpa", "Moctezuma II", "Cuauhtémoc", "Tízoc"]
+  },
+  {
+    "questionId": "q_080",
+    "category": "Historia",
+    "text": "¿Qué evento puso fin a la Guerra Fría?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "La disolución de la Unión Soviética",
+    "options": ["La caída del Muro de Berlín", "La guerra de Corea", "La disolución de la Unión Soviética", "El fin de la guerra de Vietnam"]
+  },
+  {
+    "questionId": "q_081",
+    "category": "Historia",
+    "text": "¿En qué siglo ocurrió la Peste Negra en Europa?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Siglo XIV",
+    "options": ["Siglo XII", "Siglo XIII", "Siglo XIV", "Siglo XV"]
+  },
+  {
+    "questionId": "q_082",
+    "category": "Historia",
+    "text": "¿Quién fue el autor de la obra 'El Príncipe'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Nicolás Maquiavelo",
+    "options": ["Erasmo de Rotterdam", "Nicolás Maquiavelo", "Thomas Hobbes", "Dante Alighieri"]
+  },
+  {
+    "questionId": "q_083",
+    "category": "Historia",
+    "text": "¿Qué país europeo se unificó gracias a la labor de Giuseppe Garibaldi?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Italia",
+    "options": ["Francia", "Italia", "España", "Bélgica"]
+  },
+  {
+    "questionId": "q_084",
+    "category": "Historia",
+    "text": "¿Qué nombre recibió la expedición militar para recuperar Jerusalén en 1096?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Primera Cruzada",
+    "options": ["Primera Cruzada", "Cruzada de los Niños", "Reconquista", "Quinta Cruzada"]
+  },
+  {
+    "questionId": "q_085",
+    "category": "Historia",
+    "text": "¿Quién fue el zar que modernizó Rusia y fundó San Petersburgo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Pedro el Grande",
+    "options": ["Iván el Terrible", "Pedro el Grande", "Alejandro II", "Nicolás II"]
+  },
+  {
+    "questionId": "q_086",
+    "category": "Historia",
+    "text": "¿Qué tratado dividió el 'Nuevo Mundo' entre España y Portugal en 1494?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Tratado de Tordesillas",
+    "options": ["Tratado de Utrecht", "Tratado de Madrid", "Tratado de Tordesillas", "Bula Inter Caetera"]
+  },
+  {
+    "questionId": "q_087",
+    "category": "Historia",
+    "text": "¿Cuál fue el principal general de las fuerzas confederadas en la Guerra Civil de EE.UU.?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Robert E. Lee",
+    "options": ["Ulysses S. Grant", "Robert E. Lee", "William Sherman", "Stonewall Jackson"]
+  },
+  {
+    "questionId": "q_088",
+    "category": "Historia",
+    "text": "¿En qué año ocurrió el atentado a las Torres Gemelas en Nueva York?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "2001",
+    "options": ["1999", "2001", "2003", "2005"]
+  },
+  {
+    "questionId": "q_089",
+    "category": "Historia",
+    "text": "¿Quién fue el líder del fascismo en Italia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Benito Mussolini",
+    "options": ["Adolf Hitler", "Benito Mussolini", "Francisco Franco", "Victor Manuel III"]
+  },
+  {
+    "questionId": "q_090",
+    "category": "Historia",
+    "text": "¿Qué civilización inventó el concepto del número cero?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Maya e India",
+    "options": ["Egipcia", "Griega", "Maya e India", "Romana"]
+  },
+  {
+    "questionId": "q_091",
+    "category": "Historia",
+    "text": "¿Qué guerra enfrentó a las casas de Lancaster y York en Inglaterra?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Guerra de las Dos Rosas",
+    "options": ["Guerra de los Cien Años", "Guerra de las Dos Rosas", "Guerra Civil Inglesa", "Guerra de los Treinta Años"]
+  },
+  {
+    "questionId": "q_092",
+    "category": "Historia",
+    "text": "¿Quién fue la primera mujer en ganar un Premio Nobel?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Marie Curie",
+    "options": ["Marie Curie", "Rosalind Franklin", "Ada Lovelace", "Irene Joliot-Curie"]
+  },
+  {
+    "questionId": "q_093",
+    "category": "Historia",
+    "text": "¿Cuál fue el primer país en otorgar el derecho al voto a las mujeres en 1893?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Nueva Zelanda",
+    "options": ["Reino Unido", "Estados Unidos", "Nueva Zelanda", "Finlandia"]
+  },
+  {
+    "questionId": "q_094",
+    "category": "Historia",
+    "text": "¿En qué año se fundó la Unión Europea (mediante el Tratado de Maastricht)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1993",
+    "options": ["1957", "1989", "1991", "1993"]
+  },
+  {
+    "questionId": "q_095",
+    "category": "Historia",
+    "text": "¿Qué explorador portugués llegó a la India rodeando África por primera vez?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Vasco de Gama",
+    "options": ["Bartolomé Díaz", "Vasco de Gama", "Fernando de Magallanes", "Pedro Álvares Cabral"]
+  },
+  {
+    "questionId": "q_096",
+    "category": "Historia",
+    "text": "¿Qué ciudad alemana fue dividida por un muro durante la Guerra Fría?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Berlín",
+    "options": ["Múnich", "Hamburgo", "Berlín", "Bonn"]
+  },
+  {
+    "questionId": "q_097",
+    "category": "Historia",
+    "text": "¿Quién fue el rey macedonio que conquistó el Imperio Persa?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Alejandro Magno",
+    "options": ["Filipo II", "Alejandro Magno", "Pericles", "Leonidas"]
+  },
+  {
+    "questionId": "q_098",
+    "category": "Historia",
+    "text": "¿Cuál fue el principal aliado de EE.UU. en la invasión de Irak en 2003?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Reino Unido",
+    "options": ["Francia", "Alemania", "Reino Unido", "Canadá"]
+  },
+  {
+    "questionId": "q_099",
+    "category": "Historia",
+    "text": "¿Qué nombre recibió la política de apertura económica en la URSS impulsada por Gorbachov?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Perestroika",
+    "options": ["Glasnost", "Perestroika", "Comunismo", "Duma"]
+  },
+  {
+    "questionId": "q_100",
+    "category": "Historia",
+    "text": "¿Quién fue el líder espiritual y político del Tíbet que se exilió en 1959?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Dalai Lama",
+    "options": ["Panchen Lama", "Dalai Lama", "Mahatma Gandhi", "Mao Zedong"]
+  },
+  {
+    "questionId": "q_101",
+    "category": "Actualidad",
+    "text": "¿Quién asumió la presidencia de Argentina en diciembre de 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Javier Milei",
+    "options": ["Sergio Massa", "Javier Milei", "Patricia Bullrich", "Alberto Fernández"]
+  },
+  {
+    "questionId": "q_102",
+    "category": "Actualidad",
+    "text": "¿Qué país fue el anfitrión de los Juegos Olímpicos de Verano en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Francia",
+    "options": ["Japón", "Estados Unidos", "Francia", "Australia"]
+  },
+  {
+    "questionId": "q_103",
+    "category": "Actualidad",
+    "text": "¿Cuál es el nombre del modelo de lenguaje de IA lanzado por Google para competir con GPT-4?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Gemini",
+    "options": ["Bard", "Gemini", "Llama", "Claude"]
+  },
+  {
+    "questionId": "q_104",
+    "category": "Actualidad",
+    "text": "¿Quién ganó las elecciones presidenciales de Estados Unidos en noviembre de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Donald Trump",
+    "options": ["Joe Biden", "Kamala Harris", "Donald Trump", "Ron DeSantis"]
+  },
+  {
+    "questionId": "q_105",
+    "category": "Actualidad",
+    "text": "¿Qué red social lanzó Meta en 2023 para competir directamente con X (antes Twitter)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Threads",
+    "options": ["Mastodon", "BlueSky", "Threads", "Instagram Reels"]
+  },
+  {
+    "questionId": "q_106",
+    "category": "Actualidad",
+    "text": "¿En qué país se celebró la cumbre climática COP29 a finales de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Azerbaiyán",
+    "options": ["Egipto", "Brasil", "Azerbaiyán", "Emiratos Árabes Unidos"]
+  },
+  {
+    "questionId": "q_107",
+    "category": "Actualidad",
+    "text": "¿Qué empresa se convirtió en 2024 en la más valiosa del mundo gracias al auge de los chips para IA?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "NVIDIA",
+    "options": ["Apple", "Microsoft", "NVIDIA", "Tesla"]
+  },
+  {
+    "questionId": "q_108",
+    "category": "Actualidad",
+    "text": "¿Quién se convirtió en la primera mujer presidenta de México en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Claudia Sheinbaum",
+    "options": ["Xóchitl Gálvez", "Claudia Sheinbaum", "Margarita Zavala", "Beatriz Paredes"]
+  },
+  {
+    "questionId": "q_109",
+    "category": "Actualidad",
+    "text": "¿Qué conflicto bélico internacional escaló significativamente tras los ataques del 7 de octubre de 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Conflicto Israel-Gaza",
+    "options": ["Guerra de Ucrania", "Guerra Civil Siria", "Conflicto Israel-Gaza", "Guerra de Yemen"]
+  },
+  {
+    "questionId": "q_110",
+    "category": "Actualidad",
+    "text": "¿Cuál es el nombre del dispositivo de 'computación espacial' lanzado por Apple en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Vision Pro",
+    "options": ["Quest 3", "Vision Pro", "iGlass", "AirPod View"]
+  },
+  {
+    "questionId": "q_111",
+    "category": "Actualidad",
+    "text": "¿Qué país se unió oficialmente a la OTAN en marzo de 2024 como su miembro número 32?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Suecia",
+    "options": ["Finlandia", "Ucrania", "Suecia", "Austria"]
+  },
+  {
+    "questionId": "q_112",
+    "category": "Actualidad",
+    "text": "¿Qué misión de SpaceX realizó la primera caminata espacial privada de la historia en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Polaris Dawn",
+    "options": ["Crew-7", "Artemis II", "Polaris Dawn", "Inspiration4"]
+  },
+  {
+    "questionId": "q_113",
+    "category": "Actualidad",
+    "text": "¿Quién fue coronado oficialmente como rey del Reino Unido en mayo de 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Carlos III",
+    "options": ["Guillermo V", "Carlos III", "Felipe VI", "Eduardo IX"]
+  },
+  {
+    "questionId": "q_114",
+    "category": "Actualidad",
+    "text": "¿Qué película dominó la taquilla mundial y el fenómeno cultural de 2023 junto a 'Oppenheimer'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Barbie",
+    "options": ["Dune", "Avatar 2", "Barbie", "Super Mario Bros"]
+  },
+  {
+    "questionId": "q_115",
+    "category": "Actualidad",
+    "text": "¿Qué país suramericano sufrió devastadores incendios forestales en la región de Valparaíso a inicios de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Chile",
+    "options": ["Argentina", "Chile", "Brasil", "Colombia"]
+  },
+  {
+    "questionId": "q_116",
+    "category": "Actualidad",
+    "text": "¿Cuál es el nombre de la IA generativa de video presentada por OpenAI a principios de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sora",
+    "options": ["Lumiere", "Sora", "Runway", "Pika"]
+  },
+  {
+    "questionId": "q_117",
+    "category": "Actualidad",
+    "text": "¿Quién ganó el Balón de Oro masculino en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Rodri",
+    "options": ["Vinícius Júnior", "Lionel Messi", "Rodri", "Erling Haaland"]
+  },
+  {
+    "questionId": "q_118",
+    "category": "Actualidad",
+    "text": "¿Qué país organizó la Copa América de fútbol en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Estados Unidos",
+    "options": ["Brasil", "Argentina", "Estados Unidos", "Colombia"]
+  },
+  {
+    "questionId": "q_119",
+    "category": "Actualidad",
+    "text": "¿Qué líder político ruso murió en prisión en el Ártico en febrero de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Alekséi Navalni",
+    "options": ["Yevgueni Prigozhin", "Alekséi Navalni", "Borís Nemtsov", "Mijaíl Jodorkovski"]
+  },
+  {
+    "questionId": "q_120",
+    "category": "Actualidad",
+    "text": "¿Cuál fue el principal tema de la Cumbre del G20 celebrada en Brasil en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Lucha contra el hambre y la pobreza",
+    "options": ["Regulación de la IA", "Lucha contra el hambre y la pobreza", "Ciberseguridad", "Exploración de Marte"]
+  },
+  {
+    "questionId": "q_121",
+    "category": "Actualidad",
+    "text": "¿Qué criptomoneda alcanzó un nuevo máximo histórico tras la aprobación de los ETFs en EE.UU. a inicios de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Bitcoin",
+    "options": ["Ethereum", "Bitcoin", "Solana", "Dogecoin"]
+  },
+  {
+    "questionId": "q_122",
+    "category": "Actualidad",
+    "text": "¿Quién es el actual CEO de OpenAI (a inicios de 2026)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sam Altman",
+    "options": ["Elon Musk", "Satya Nadella", "Sam Altman", "Mira Murati"]
+  },
+  {
+    "questionId": "q_123",
+    "category": "Actualidad",
+    "text": "¿Qué selección ganó la Eurocopa masculina 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "España",
+    "options": ["Inglaterra", "Francia", "España", "Alemania"]
+  },
+  {
+    "questionId": "q_124",
+    "category": "Actualidad",
+    "text": "¿Qué hito espacial alcanzó la misión Chang'e 6 de China en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Traer muestras de la cara oculta de la Luna",
+    "options": ["Aterrizar en Marte", "Traer muestras de la cara oculta de la Luna", "Llegar a Júpiter", "Construir una base lunar"]
+  },
+  {
+    "questionId": "q_125",
+    "category": "Actualidad",
+    "text": "¿Qué país europeo aprobó una ley pionera para regular la Inteligencia Artificial en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Unión Europea",
+    "options": ["Estados Unidos", "China", "Unión Europea", "Reino Unido"]
+  },
+  {
+    "questionId": "q_126",
+    "category": "Actualidad",
+    "text": "¿Qué evento astronómico fue visible de costa a costa en Norteamérica en abril de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Eclipse solar total",
+    "options": ["Paso de un cometa", "Eclipse solar total", "Lluvia de meteoros", "Superluna de sangre"]
+  },
+  {
+    "questionId": "q_127",
+    "category": "Actualidad",
+    "text": "¿Quién ganó el Premio Nobel de la Paz en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Nihon Hidankyo",
+    "options": ["Narges Mohammadi", "Nihon Hidankyo", "Volodímir Zelenski", "Acnur"]
+  },
+  {
+    "questionId": "q_128",
+    "category": "Actualidad",
+    "text": "¿En qué país se produjo una serie de protestas masivas contra una ley de agentes extranjeros en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Georgia",
+    "options": ["Polonia", "Georgia", "Turquía", "Hungría"]
+  },
+  {
+    "questionId": "q_129",
+    "category": "Actualidad",
+    "text": "¿Qué ciudad fue designada Capital Mundial del Libro en 2025?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Río de Janeiro",
+    "options": ["Madrid", "Río de Janeiro", "Estrasburgo", "Guadalajara"]
+  },
+  {
+    "questionId": "q_130",
+    "category": "Actualidad",
+    "text": "¿Qué famoso telescopio espacial reveló imágenes detalladas de los 'Pilares de la Creación' a partir de 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "James Webb",
+    "options": ["Hubble", "Spitzer", "James Webb", "Euclid"]
+  },
+  {
+    "questionId": "q_131",
+    "category": "Actualidad",
+    "text": "¿Cuál es la capital del país que acogió la COP30 en 2025?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Belém (Brasil)",
+    "options": ["Brasilia", "Belém (Brasil)", "Río de Janeiro", "São Paulo"]
+  },
+  {
+    "questionId": "q_132",
+    "category": "Actualidad",
+    "text": "¿Qué aerolínea fue noticia en 2024 por múltiples incidentes técnicos en sus aviones modelo 737 Max?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Boeing",
+    "options": ["Airbus", "Boeing", "Embraer", "Lockheed Martin"]
+  },
+  {
+    "questionId": "q_133",
+    "category": "Actualidad",
+    "text": "¿Quién es la artista femenina que rompió récords históricos con su gira 'The Eras Tour' entre 2023 y 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Taylor Swift",
+    "options": ["Beyoncé", "Taylor Swift", "Adele", "Dua Lipa"]
+  },
+  {
+    "questionId": "q_134",
+    "category": "Actualidad",
+    "text": "¿Qué país asiático superó a China como el más poblado del mundo en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "India",
+    "options": ["Indonesia", "India", "Pakistán", "Nigeria"]
+  },
+  {
+    "questionId": "q_135",
+    "category": "Actualidad",
+    "text": "¿Qué nombre recibe la variante de COVID-19 que fue objeto de vigilancia a finales de 2023 y 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Pirola (BA.2.86)",
+    "options": ["Delta", "Ómicron", "Pirola (BA.2.86)", "Eris"]
+  },
+  {
+    "questionId": "q_136",
+    "category": "Actualidad",
+    "text": "¿Qué banco estadounidense colapsó en marzo de 2023, provocando temor a una crisis financiera?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Silicon Valley Bank",
+    "options": ["Lehman Brothers", "Silicon Valley Bank", "JP Morgan", "Wells Fargo"]
+  },
+  {
+    "questionId": "q_137",
+    "category": "Actualidad",
+    "text": "¿En qué año se prevé que la misión Artemis II de la NASA envíe astronautas alrededor de la Luna?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "2025",
+    "options": ["2024", "2025", "2026", "2030"]
+  },
+  {
+    "questionId": "q_138",
+    "category": "Actualidad",
+    "text": "¿Qué país centroamericano inauguró una 'megacárcel' llamada CECOT en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El Salvador",
+    "options": ["Honduras", "Guatemala", "El Salvador", "Nicaragua"]
+  },
+  {
+    "questionId": "q_139",
+    "category": "Actualidad",
+    "text": "¿Qué fenómeno climático causó temperaturas récord globales en 2023 y parte de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El Niño",
+    "options": ["La Niña", "El Niño", "Vórtice Polar", "Monzón"]
+  },
+  {
+    "questionId": "q_140",
+    "category": "Actualidad",
+    "text": "¿Qué plataforma de streaming eliminó la posibilidad de compartir cuentas de forma gratuita en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Netflix",
+    "options": ["Disney+", "HBO Max", "Netflix", "Amazon Prime"]
+  },
+  {
+    "questionId": "q_141",
+    "category": "Actualidad",
+    "text": "¿Quién ganó el Oscar a Mejor Actor en 2024 por su papel en 'Oppenheimer'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Cillian Murphy",
+    "options": ["Robert Downey Jr.", "Bradley Cooper", "Cillian Murphy", "Paul Giamatti"]
+  },
+  {
+    "questionId": "q_142",
+    "category": "Actualidad",
+    "text": "¿Qué país africano sufrió un golpe de Estado en julio de 2023, alterando la geopolítica del Sahel?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Níger",
+    "options": ["Mali", "Níger", "Gabón", "Senegal"]
+  },
+  {
+    "questionId": "q_143",
+    "category": "Actualidad",
+    "text": "¿Cuál es el nuevo nombre que Elon Musk le dio a Twitter en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "X",
+    "options": ["TWT", "X", "SpaceX Connect", "Universe"]
+  },
+  {
+    "questionId": "q_144",
+    "category": "Actualidad",
+    "text": "¿Qué ciudad de Florida fue devastada por el huracán Milton en octubre de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Tampa",
+    "options": ["Miami", "Orlando", "Tampa", "Jacksonville"]
+  },
+  {
+    "questionId": "q_145",
+    "category": "Actualidad",
+    "text": "¿Cuál fue el principal hallazgo de la misión OSIRIS-REx de la NASA que regresó en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Muestras del asteroide Bennu",
+    "options": ["Hielo en Marte", "Muestras del asteroide Bennu", "Atmósfera en Titán", "Polvo estelar de otra galaxia"]
+  },
+  {
+    "questionId": "q_146",
+    "category": "Actualidad",
+    "text": "¿Qué país europeo legalizó el consumo recreativo de cannabis en abril de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Alemania",
+    "options": ["Francia", "España", "Alemania", "Italia"]
+  },
+  {
+    "questionId": "q_147",
+    "category": "Actualidad",
+    "text": "¿Quién ganó el torneo de Wimbledon masculino en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Carlos Alcaraz",
+    "options": ["Novak Djokovic", "Carlos Alcaraz", "Jannik Sinner", "Daniil Medvedev"]
+  },
+  {
+    "questionId": "q_148",
+    "category": "Actualidad",
+    "text": "¿Qué empresa aeroespacial logró aterrizar con éxito el cohete Starship en su cuarto vuelo de prueba en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "SpaceX",
+    "options": ["Blue Origin", "NASA", "SpaceX", "Virgin Galactic"]
+  },
+  {
+    "questionId": "q_149",
+    "category": "Actualidad",
+    "text": "¿Qué país de Oriente Medio normalizó relaciones con Irán en 2023 bajo mediación de China?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Arabia Saudita",
+    "options": ["Israel", "Arabia Saudita", "Egipto", "Emiratos Árabes Unidos"]
+  },
+  {
+    "questionId": "q_150",
+    "category": "Actualidad",
+    "text": "¿Qué videojuego se convirtió en el fenómeno de ventas más rápido de 2024, siendo apodado 'Pokémon con armas'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Palworld",
+    "options": ["Starfield", "Helldivers 2", "Palworld", "Elden Ring"]
+  },
+  {
+    "questionId": "q_151",
+    "category": "Actualidad",
+    "text": "¿Quién es el actual Secretario General de la ONU (a inicios de 2026)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "António Guterres",
+    "options": ["Ban Ki-moon", "António Guterres", "Kofi Annan", "Tedros Adhanom"]
+  },
+  {
+    "questionId": "q_152",
+    "category": "Actualidad",
+    "text": "¿Qué país organizó la Copa del Mundo de Baloncesto en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Filipinas, Japón e Indonesia",
+    "options": ["España", "China", "Filipinas, Japón e Indonesia", "Estados Unidos"]
+  },
+  {
+    "questionId": "q_153",
+    "category": "Actualidad",
+    "text": "¿Qué nombre recibe el ambicioso proyecto ferroviario que conecta el sureste de México, inaugurado parcialmente en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Tren Maya",
+    "options": ["Tren del Sol", "Tren Maya", "Expreso Mexicano", "Ruta Quetzal"]
+  },
+  {
+    "questionId": "q_154",
+    "category": "Actualidad",
+    "text": "¿Cuál es la moneda que Croacia adoptó el 1 de enero de 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Euro",
+    "options": ["Kuna", "Euro", "Libra", "Franco"]
+  },
+  {
+    "questionId": "q_155",
+    "category": "Actualidad",
+    "text": "¿Qué país sufrió un devastador terremoto de magnitud 7.8 en febrero de 2023, afectando también a Siria?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Turquía",
+    "options": ["Grecia", "Turquía", "Irán", "Marruecos"]
+  },
+  {
+    "questionId": "q_156",
+    "category": "Actualidad",
+    "text": "¿Cuál fue el equipo ganador de la Super Bowl LIX en 2025?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Kansas City Chiefs",
+    "options": ["San Francisco 49ers", "Kansas City Chiefs", "Philadelphia Eagles", "Baltimore Ravens"]
+  },
+  {
+    "questionId": "q_157",
+    "category": "Actualidad",
+    "text": "¿Qué ciudad europea fue la sede de la final de la UEFA Champions League en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Londres",
+    "options": ["París", "Estambul", "Londres", "Múnich"]
+  },
+  {
+    "questionId": "q_158",
+    "category": "Actualidad",
+    "text": "¿Quién es el presidente de Ucrania que ha liderado el país durante la invasión rusa iniciada en 2022?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Volodímir Zelenski",
+    "options": ["Petró Poroshenko", "Víktor Yanukóvich", "Volodímir Zelenski", "Vitali Klichkó"]
+  },
+  {
+    "questionId": "q_159",
+    "category": "Actualidad",
+    "text": "¿Qué país celebró un referéndum sobre el Esequibo en diciembre de 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Venezuela",
+    "options": ["Guyana", "Venezuela", "Colombia", "Surinam"]
+  },
+  {
+    "questionId": "q_160",
+    "category": "Actualidad",
+    "text": "¿Cuál es el nombre de la misión de la India que aterrizó con éxito en el polo sur de la Luna en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Chandrayaan-3",
+    "options": ["Mangalyaan", "Chandrayaan-3", "Artemis", "Aditya-L1"]
+  },
+  {
+    "questionId": "q_161",
+    "category": "Actualidad",
+    "text": "¿Qué famoso festival de música fue cancelado o reprogramado en varias ciudades por condiciones climáticas extremas en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Burning Man",
+    "options": ["Coachella", "Lollapalooza", "Burning Man", "Tomorrowland"]
+  },
+  {
+    "questionId": "q_162",
+    "category": "Actualidad",
+    "text": "¿Quién es el actual Primer Ministro del Reino Unido (a inicios de 2026)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Keir Starmer",
+    "options": ["Rishi Sunak", "Boris Johnson", "Keir Starmer", "Jeremy Hunt"]
+  },
+  {
+    "questionId": "q_163",
+    "category": "Actualidad",
+    "text": "¿Qué país latinoamericano sufrió un intento de golpe de Estado en enero de 2023 con el asalto a sus sedes de poder?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Brasil",
+    "options": ["Perú", "Brasil", "Ecuador", "Bolivia"]
+  },
+  {
+    "questionId": "q_164",
+    "category": "Actualidad",
+    "text": "¿Qué tecnología fue protagonista en la huelga de actores y guionistas de Hollywood en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Inteligencia Artificial",
+    "options": ["Streaming masivo", "Inteligencia Artificial", "CGI 4K", "Metaverso"]
+  },
+  {
+    "questionId": "q_165",
+    "category": "Actualidad",
+    "text": "¿Qué país ganó la Copa Mundial Femenina de la FIFA en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "España",
+    "options": ["Inglaterra", "Estados Unidos", "España", "Australia"]
+  },
+  {
+    "questionId": "q_166",
+    "category": "Actualidad",
+    "text": "¿En qué año se firmó el acuerdo histórico entre la UE y el Mercosur, que sigue en debate en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "2019 (con ratificación pendiente)",
+    "options": ["2023", "2024", "2019 (con ratificación pendiente)", "2021"]
+  },
+  {
+    "questionId": "q_167",
+    "category": "Actualidad",
+    "text": "¿Qué multimillonario compró la plataforma Twitter por 44.000 millones de dólares?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Elon Musk",
+    "options": ["Jeff Bezos", "Bill Gates", "Elon Musk", "Mark Zuckerberg"]
+  },
+  {
+    "questionId": "q_168",
+    "category": "Actualidad",
+    "text": "¿Qué país europeo sufrió una grave crisis de sequía que limitó el tráfico en el Canal de Panamá en 2023-2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Panamá (Efectos globales)",
+    "options": ["España", "Panamá (Efectos globales)", "Egipto", "México"]
+  },
+  {
+    "questionId": "q_169",
+    "category": "Actualidad",
+    "text": "¿Quién ganó el Premio Nobel de Literatura en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Jon Fosse",
+    "options": ["Annie Ernaux", "Jon Fosse", "Han Kang", "Salman Rushdie"]
+  },
+  {
+    "questionId": "q_170",
+    "category": "Actualidad",
+    "text": "¿Cuál es el nombre del rover de la NASA que sigue explorando el cráter Jezero en Marte en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Perseverance",
+    "options": ["Curiosity", "Opportunity", "Perseverance", "Spirit"]
+  },
+  {
+    "questionId": "q_171",
+    "category": "Actualidad",
+    "text": "¿Qué país de los BRICS se retiró de su ingreso planeado tras el cambio de gobierno a finales de 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Argentina",
+    "options": ["Egipto", "Irán", "Argentina", "Etiopía"]
+  },
+  {
+    "questionId": "q_172",
+    "category": "Actualidad",
+    "text": "¿Qué ley de amnistía generó fuertes protestas y debates en España durante 2023 y 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Amnistía por el procés catalán",
+    "options": ["Ley de Vivienda", "Amnistía por el procés catalán", "Ley Trans", "Ley de Educación"]
+  },
+  {
+    "questionId": "q_173",
+    "category": "Actualidad",
+    "text": "¿Cuál es la capital de Ucrania, que ha resistido múltiples ataques con drones en los últimos años?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Kiev",
+    "options": ["Járkov", "Odesa", "Kiev", "Leópolis"]
+  },
+  {
+    "questionId": "q_174",
+    "category": "Actualidad",
+    "text": "¿Qué país lanzó la primera red 6G comercial de prueba en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "China",
+    "options": ["Estados Unidos", "Corea del Sur", "China", "Japón"]
+  },
+  {
+    "questionId": "q_175",
+    "category": "Actualidad",
+    "text": "¿Qué volcán en Islandia entró en erupción repetidamente entre finales de 2023 y mediados de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Fagradalsfjall / Sundhnúkur",
+    "options": ["Etna", "Kilauea", "Fagradalsfjall / Sundhnúkur", "Popocatépetl"]
+  },
+  {
+    "questionId": "q_176",
+    "category": "Actualidad",
+    "text": "¿Quién ganó el Gran Premio de Fórmula 1 de Mónaco en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Charles Leclerc",
+    "options": ["Max Verstappen", "Lewis Hamilton", "Charles Leclerc", "Lando Norris"]
+  },
+  {
+    "questionId": "q_177",
+    "category": "Actualidad",
+    "text": "¿Qué evento deportivo mundial se celebró en diversas ciudades de Australia y Nueva Zelanda en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mundial de Fútbol Femenino",
+    "options": ["Juegos de la Commonwealth", "Mundial de Rugby", "Mundial de Fútbol Femenino", "Open de Tenis"]
+  },
+  {
+    "questionId": "q_178",
+    "category": "Actualidad",
+    "text": "¿Qué país aprobó una ley que prohíbe TikTok si no se desvincula de su matriz china en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Estados Unidos",
+    "options": ["India", "Estados Unidos", "Reino Unido", "Canadá"]
+  },
+  {
+    "questionId": "q_179",
+    "category": "Actualidad",
+    "text": "¿Quién es el actual presidente de Chile (a inicios de 2026)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Gabriel Boric",
+    "options": ["Sebastián Piñera", "Gabriel Boric", "José Antonio Kast", "Michelle Bachelet"]
+  },
+  {
+    "questionId": "q_180",
+    "category": "Actualidad",
+    "text": "¿Qué famoso monumento parisino fue reabierto al público tras su restauración tras el incendio, a finales de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Catedral de Notre Dame",
+    "options": ["Torre Eiffel", "Catedral de Notre Dame", "Museo del Louvre", "Arco del Triunfo"]
+  },
+  {
+    "questionId": "q_181",
+    "category": "Actualidad",
+    "text": "¿En qué país se celebró la Eurocopa de Fútbol de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Alemania",
+    "options": ["Francia", "Alemania", "Inglaterra", "Italia"]
+  },
+  {
+    "questionId": "q_182",
+    "category": "Actualidad",
+    "text": "¿Qué película de animación rompió récords de taquilla en 2024 convirtiéndose en la más exitosa de la historia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Inside Out 2 (Del Revés 2)",
+    "options": ["Super Mario Bros", "Inside Out 2 (Del Revés 2)", "Frozen 2", "Toy Story 4"]
+  },
+  {
+    "questionId": "q_183",
+    "category": "Actualidad",
+    "text": "¿Qué país suramericano sufrió un grave conflicto interno de seguridad con la toma de un canal de televisión en vivo a inicios de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ecuador",
+    "options": ["Colombia", "Perú", "Ecuador", "Bolivia"]
+  },
+  {
+    "questionId": "q_184",
+    "category": "Actualidad",
+    "text": "¿Qué empresa lanzó el chip 'H100', fundamental para el entrenamiento de grandes modelos de IA en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "NVIDIA",
+    "options": ["Intel", "AMD", "NVIDIA", "Qualcomm"]
+  },
+  {
+    "questionId": "q_185",
+    "category": "Actualidad",
+    "text": "¿Quién ganó el Premio Nobel de Economía en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Daron Acemoglu, Simon Johnson y James A. Robinson",
+    "options": ["Claudia Goldin", "Daron Acemoglu, Simon Johnson y James A. Robinson", "Ben Bernanke", "Paul Krugman"]
+  },
+  {
+    "questionId": "q_186",
+    "category": "Actualidad",
+    "text": "¿Qué país europeo anunció su salida del Tratado sobre Fuerzas Armadas Convencionales tras la tensión con la OTAN en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Rusia",
+    "options": ["Bielorrusia", "Rusia", "Ucrania", "Turquía"]
+  },
+  {
+    "questionId": "q_187",
+    "category": "Actualidad",
+    "text": "¿Qué ciudad de Marruecos fue el epicentro de un terremoto devastador en septiembre de 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Marrakech (región de Al Haouz)",
+    "options": ["Casablanca", "Marrakech (región de Al Haouz)", "Rabat", "Tánger"]
+  },
+  {
+    "questionId": "q_188",
+    "category": "Actualidad",
+    "text": "¿Cuál es el nombre de la nueva serie de televisión basada en el videojuego 'Fallout' que fue tendencia en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Fallout",
+    "options": ["The Last of Us", "Fallout", "Halo", "Cyberpunk"]
+  },
+  {
+    "questionId": "q_189",
+    "category": "Actualidad",
+    "text": "¿Qué país asiático anunció en 2024 el fin de su política de tipos de interés negativos tras 17 años?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Japón",
+    "options": ["China", "Corea del Sur", "Japón", "Singapur"]
+  },
+  {
+    "questionId": "q_190",
+    "category": "Actualidad",
+    "text": "¿Qué país acogió la primera edición de los Juegos Olímpicos de Esports en 2025?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Arabia Saudita",
+    "options": ["Corea del Sur", "Estados Unidos", "Arabia Saudita", "Japón"]
+  },
+  {
+    "questionId": "q_191",
+    "category": "Actualidad",
+    "text": "¿Quién es el presidente de El Salvador reelecto con una amplia mayoría en febrero de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Nayib Bukele",
+    "options": ["Mauricio Funes", "Nayib Bukele", "Félix Ulloa", "Rodrigo Chaves"]
+  },
+  {
+    "questionId": "q_192",
+    "category": "Actualidad",
+    "text": "¿Qué misión espacial de la ESA (Agencia Espacial Europea) fue lanzada en 2023 para estudiar las lunas de Júpiter?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "JUICE",
+    "options": ["Juno", "JUICE", "Europa Clipper", "Galileo"]
+  },
+  {
+    "questionId": "q_193",
+    "category": "Actualidad",
+    "text": "¿Cuál es el nombre del primer paciente humano en recibir un implante cerebral de Neuralink en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Noland Arbaugh",
+    "options": ["Noland Arbaugh", "Elon Musk", "Bryan Johnson", "Sam Manyon"]
+  },
+  {
+    "questionId": "q_194",
+    "category": "Actualidad",
+    "text": "¿Qué selección de rugby ganó el Mundial masculino celebrado en Francia a finales de 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sudáfrica (Springboks)",
+    "options": ["Nueva Zelanda", "Sudáfrica (Springboks)", "Francia", "Irlanda"]
+  },
+  {
+    "questionId": "q_195",
+    "category": "Actualidad",
+    "text": "¿En qué ciudad se celebró el festival de Eurovisión 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Malmö (Suecia)",
+    "options": ["Liverpool", "Malmö (Suecia)", "Estocolmo", "Oslo"]
+  },
+  {
+    "questionId": "q_196",
+    "category": "Actualidad",
+    "text": "¿Qué país de la Unión Europea fue gobernado por Robert Fico tras ganar las elecciones a finales de 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Eslovaquia",
+    "options": ["Eslovenia", "Eslovaquia", "República Checa", "Hungría"]
+  },
+  {
+    "questionId": "q_197",
+    "category": "Actualidad",
+    "text": "¿Cuál fue el principal motivo de la crisis diplomática entre México y Ecuador en abril de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Asalto a la embajada de México en Quito",
+    "options": ["Disputas comerciales", "Asalto a la embajada de México en Quito", "Crisis migratoria", "Diferencias sobre la OEA"]
+  },
+  {
+    "questionId": "q_198",
+    "category": "Actualidad",
+    "text": "¿Qué tenista español ganó Roland Garros en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Carlos Alcaraz",
+    "options": ["Rafael Nadal", "Carlos Alcaraz", "Novak Djokovic", "Alexander Zverev"]
+  },
+  {
+    "questionId": "q_199",
+    "category": "Actualidad",
+    "text": "¿Cuál es el nombre del gasoducto que sufrió sabotajes en el Mar Báltico, tema de investigación constante entre 2023 y 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Nord Stream",
+    "options": ["Nord Stream", "South Stream", "Nabucco", "Transgas"]
+  },
+  {
+    "questionId": "q_200",
+    "category": "Actualidad",
+    "text": "¿Qué país asiático celebró sus elecciones generales más grandes del mundo en abril-mayo de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "India",
+    "options": ["Indonesia", "India", "Pakistán", "Filipinas"]
+  },
+  {
+    "questionId": "q_201",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué director dirigió la película 'Oppenheimer' (2023)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Christopher Nolan",
+    "options": ["Quentin Tarantino", "Christopher Nolan", "Steven Spielberg", "Martin Scorsese"]
+  },
+  {
+    "questionId": "q_202",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es el nombre del mundo ficticio donde transcurre la saga de videojuegos 'The Legend of Zelda'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Hyrule",
+    "options": ["Azeroth", "Hyrule", "Tamriel", "Narnia"]
+  },
+  {
+    "questionId": "q_203",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué artista pintó la famosa obra 'La joven de la perla'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Johannes Vermeer",
+    "options": ["Rembrandt", "Vincent van Gogh", "Johannes Vermeer", "Leonardo da Vinci"]
+  },
+  {
+    "questionId": "q_204",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es la serie de HBO basada en una familia dueña de un imperio de medios que finalizó en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Succession",
+    "options": ["The Bear", "Succession", "Billions", "The White Lotus"]
+  },
+  {
+    "questionId": "q_205",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué banda de rock británica lanzó el álbum 'The Dark Side of the Moon' en 1973?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Pink Floyd",
+    "options": ["Led Zeppelin", "The Rolling Stones", "Pink Floyd", "Queen"]
+  },
+  {
+    "questionId": "q_206",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién escribió la obra de teatro 'Hamlet'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "William Shakespeare",
+    "options": ["Molière", "William Shakespeare", "Oscar Wilde", "Samuel Beckett"]
+  },
+  {
+    "questionId": "q_207",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cómo se llama el protagonista de la serie de videojuegos 'God of War'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Kratos",
+    "options": ["Atreus", "Zeus", "Kratos", "Ares"]
+  },
+  {
+    "questionId": "q_208",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué técnica artística utilizaba Jackson Pollock para crear sus obras?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Action Painting (goteo)",
+    "options": ["Cubismo", "Action Painting (goteo)", "Puntillismo", "Fauvismo"]
+  },
+  {
+    "questionId": "q_209",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es la película más taquillera de la historia (sin ajustar por inflación)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Avatar",
+    "options": ["Avengers: Endgame", "Titanic", "Avatar", "Star Wars: Episode VII"]
+  },
+  {
+    "questionId": "q_210",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué actor interpreta a Joel Miller en la serie 'The Last of Us' de HBO?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Pedro Pascal",
+    "options": ["Oscar Isaac", "Pedro Pascal", "Troy Baker", "Nikolaj Coster-Waldau"]
+  },
+  {
+    "questionId": "q_211",
+    "category": "Arte y Entretenimiento",
+    "text": "¿En qué ciudad se encuentra el Museo del Prado?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Madrid",
+    "options": ["Barcelona", "París", "Madrid", "Roma"]
+  },
+  {
+    "questionId": "q_212",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es el nombre artístico del músico Stefani Joanne Angelina Germanotta?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Lady Gaga",
+    "options": ["Madonna", "Lady Gaga", "Katy Perry", "Adele"]
+  },
+  {
+    "questionId": "q_213",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué musical de Broadway cuenta la historia de los padres fundadores de EE.UU. a ritmo de hip-hop?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Hamilton",
+    "options": ["Wicked", "Hamilton", "Les Misérables", "The Phantom of the Opera"]
+  },
+  {
+    "questionId": "q_214",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cómo se llama la consola híbrida lanzada por Nintendo en 2017?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Nintendo Switch",
+    "options": ["Wii U", "Nintendo 3DS", "Nintendo Switch", "GameCube"]
+  },
+  {
+    "questionId": "q_215",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién pintó 'El jardín de las delicias'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El Bosco",
+    "options": ["Sandro Botticelli", "El Bosco", "Pieter Brueghel", "Francisco de Goya"]
+  },
+  {
+    "questionId": "q_216",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué película de 2023 narra la historia de la creadora de la muñeca más famosa del mundo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Barbie",
+    "options": ["Priscilla", "Barbie", "Poor Things", "Past Lives"]
+  },
+  {
+    "questionId": "q_217",
+    "category": "Arte y Entretenimiento",
+    "text": "¿En qué serie de televisión aparece el personaje de 'Eleven'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Stranger Things",
+    "options": ["Dark", "Stranger Things", "The Umbrella Academy", "Black Mirror"]
+  },
+  {
+    "questionId": "q_218",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué instrumento musical tocaba el legendario Jimi Hendrix?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Guitarra eléctrica",
+    "options": ["Bajo", "Piano", "Guitarra eléctrica", "Batería"]
+  },
+  {
+    "questionId": "q_219",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién es el creador del manga 'Dragon Ball'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Akira Toriyama",
+    "options": ["Eiichiro Oda", "Masashi Kishimoto", "Akira Toriyama", "Hajime Isayama"]
+  },
+  {
+    "questionId": "q_220",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué corriente artística lideró Salvador Dalí?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Surrealismo",
+    "options": ["Impresionismo", "Cubismo", "Surrealismo", "Expresionismo"]
+  },
+  {
+    "questionId": "q_221",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué actor dio vida a Jack Sparrow en la saga 'Piratas del Caribe'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Johnny Depp",
+    "options": ["Orlando Bloom", "Johnny Depp", "Brad Pitt", "Geoffrey Rush"]
+  },
+  {
+    "questionId": "q_222",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es la plataforma de streaming de Disney?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Disney+",
+    "options": ["Hulu", "Disney+", "Paramount+", "Starz"]
+  },
+  {
+    "questionId": "q_223",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué compositor escribió 'La Quinta Sinfonía'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ludwig van Beethoven",
+    "options": ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Johann Sebastian Bach", "Frédéric Chopin"]
+  },
+  {
+    "questionId": "q_224",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué videojuego de 2022 presenta un mundo abierto llamado 'Tierras Intermedias'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Elden Ring",
+    "options": ["Dark Souls", "Elden Ring", "Skyrim", "Bloodborne"]
+  },
+  {
+    "questionId": "q_225",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién esculpió el 'David' que se encuentra en la Galería de la Academia de Florencia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Miguel Ángel",
+    "options": ["Donatello", "Bernini", "Miguel Ángel", "Leonardo da Vinci"]
+  },
+  {
+    "questionId": "q_226",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué película ganó el Oscar a Mejor Película en 2020, siendo la primera de habla no inglesa en lograrlo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Parasite",
+    "options": ["Roma", "Parasite", "The Shape of Water", "Minari"]
+  },
+  {
+    "questionId": "q_227",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cómo se llama el reino ficticio donde ocurre la serie 'Game of Thrones'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Westeros (Poniente)",
+    "options": ["Essos", "Westeros (Poniente)", "Middle Earth", "Skyrim"]
+  },
+  {
+    "questionId": "q_228",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué cantante es conocida como la 'Reina del Pop'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Madonna",
+    "options": ["Cher", "Whitney Houston", "Madonna", "Britney Spears"]
+  },
+  {
+    "questionId": "q_229",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es el videojuego de construcción de bloques más vendido de todos los tiempos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Minecraft",
+    "options": ["Roblox", "Minecraft", "Tetris", "Grand Theft Auto V"]
+  },
+  {
+    "questionId": "q_230",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué pintor español es famoso por sus obras cubistas como 'El Guernica'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Pablo Picasso",
+    "options": ["Joan Miró", "Diego Velázquez", "Pablo Picasso", "Salvador Dalí"]
+  },
+  {
+    "questionId": "q_231",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién interpretó a la 'Maléfica' de Disney en la versión live-action?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Angelina Jolie",
+    "options": ["Cate Blanchett", "Angelina Jolie", "Charlize Theron", "Julia Roberts"]
+  },
+  {
+    "questionId": "q_232",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué serie de Netflix gira en torno a un juego mortal basado en juegos infantiles coreanos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El Juego del Calamar",
+    "options": ["Alice in Borderland", "El Juego del Calamar", "All of Us Are Dead", "Kingdom"]
+  },
+  {
+    "questionId": "q_233",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué género musical nació en los barrios de Nueva York en la década de 1970?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Hip-hop",
+    "options": ["Jazz", "Hip-hop", "Punk", "Disco"]
+  },
+  {
+    "questionId": "q_234",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es el nombre del ratón más famoso de Disney?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mickey Mouse",
+    "options": ["Jerry", "Mickey Mouse", "Stuart Little", "Speedy Gonzales"]
+  },
+  {
+    "questionId": "q_235",
+    "category": "Arte y Entretenimiento",
+    "text": "¿En qué museo se encuentra la 'Mona Lisa'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Museo del Louvre",
+    "options": ["Museo Británico", "Museo del Louvre", "Metropolitan Museum", "Hermitage"]
+  },
+  {
+    "questionId": "q_236",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué actor protagonizó la película 'The Whale' (2022)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Brendan Fraser",
+    "options": ["Austin Butler", "Brendan Fraser", "Colin Farrell", "Paul Mescal"]
+  },
+  {
+    "questionId": "q_237",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué serie de comedia trata sobre un equipo de fútbol inglés y su entrenador estadounidense?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ted Lasso",
+    "options": ["Sunderland 'Til I Die", "Ted Lasso", "The Champions", "Welcome to Wrexham"]
+  },
+  {
+    "questionId": "q_238",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién es el autor de la canción 'Bohemian Rhapsody'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Freddie Mercury",
+    "options": ["David Bowie", "Freddie Mercury", "Elton John", "Mick Jagger"]
+  },
+  {
+    "questionId": "q_239",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué estudio de animación creó 'El viaje de Chihiro'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Studio Ghibli",
+    "options": ["Pixar", "Studio Ghibli", "DreamWorks", "Madhouse"]
+  },
+  {
+    "questionId": "q_240",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién pintó 'La noche estrellada'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Vincent van Gogh",
+    "options": ["Claude Monet", "Vincent van Gogh", "Paul Cézanne", "Edvard Munch"]
+  },
+  {
+    "questionId": "q_241",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué película de 2024 es la secuela de la épica de ciencia ficción 'Dune'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Dune: Part Two",
+    "options": ["Dune: Messiah", "Dune: Part Two", "Rebel Moon", "Furiosa"]
+  },
+  {
+    "questionId": "q_242",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué serie antológica de Netflix explora los efectos oscuros de la tecnología?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Black Mirror",
+    "options": ["Electric Dreams", "Black Mirror", "Love, Death & Robots", "The Twilight Zone"]
+  },
+  {
+    "questionId": "q_243",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién es conocido como el 'Rey del Rock and Roll'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Elvis Presley",
+    "options": ["Chuck Berry", "Elvis Presley", "Little Richard", "Buddy Holly"]
+  },
+  {
+    "questionId": "q_244",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué videojuego de 2023 permite construir estructuras complejas con la habilidad 'Ultramano'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Zelda: Tears of the Kingdom",
+    "options": ["Starfield", "Zelda: Tears of the Kingdom", "Minecraft Legends", "Fortnite"]
+  },
+  {
+    "questionId": "q_245",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué artista mexicana es famosa por sus autorretratos y su relación con Diego Rivera?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Frida Kahlo",
+    "options": ["Remedios Varo", "Frida Kahlo", "Leonora Carrington", "Tarsila do Amaral"]
+  },
+  {
+    "questionId": "q_246",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué actor interpreta al superhéroe 'Spider-Man' en el Universo Cinematográfico de Marvel actual?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Tom Holland",
+    "options": ["Andrew Garfield", "Tobey Maguire", "Tom Holland", "Miles Morales"]
+  },
+  {
+    "questionId": "q_247",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es la serie precuela de 'Game of Thrones' centrada en la casa Targaryen?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "House of the Dragon",
+    "options": ["The Hedge Knight", "House of the Dragon", "Fire & Blood", "The Long Night"]
+  },
+  {
+    "questionId": "q_248",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué cantante lanzó el exitoso álbum 'Renaissance' en 2022?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Beyoncé",
+    "options": ["Rihanna", "Beyoncé", "SZA", "Lizzo"]
+  },
+  {
+    "questionId": "q_249",
+    "category": "Arte y Entretenimiento",
+    "text": "¿En qué año se lanzó originalmente el videojuego 'Pac-Man'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1980",
+    "options": ["1978", "1980", "1982", "1985"]
+  },
+  {
+    "questionId": "q_250",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué arquitecto diseñó la Sagrada Familia en Barcelona?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Antoni Gaudí",
+    "options": ["Le Corbusier", "Antoni Gaudí", "Frank Gehry", "Oscar Niemeyer"]
+  },
+  {
+    "questionId": "q_251",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué película ganó el Óscar a Mejor Película de Animación en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El chico y la garza",
+    "options": ["Spider-Man: Across the Spider-Verse", "El chico y la garza", "Elemental", "Nimona"]
+  },
+  {
+    "questionId": "q_252",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué serie de Apple TV+ protagoniza Jennifer Aniston y Reese Witherspoon?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "The Morning Show",
+    "options": ["Severance", "The Morning Show", "Silo", "Foundation"]
+  },
+  {
+    "questionId": "q_253",
+    "category": "Arte y Entretenimiento",
+    "text": "¿A qué género musical pertenece el artista Bad Bunny?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Reggaetón / Trap Latino",
+    "options": ["Salsa", "Rock", "Reggaetón / Trap Latino", "Pop"]
+  },
+  {
+    "questionId": "q_254",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cómo se llama el villano principal de la saga 'Star Wars' que es el padre de Luke Skywalker?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Darth Vader",
+    "options": ["Darth Maul", "Darth Vader", "Palpatine", "Kylo Ren"]
+  },
+  {
+    "questionId": "q_255",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién pintó 'La libertad guiando al pueblo'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Eugène Delacroix",
+    "options": ["Jean-Auguste-Dominique Ingres", "Eugène Delacroix", "Jacques-Louis David", "Théodore Géricault"]
+  },
+  {
+    "questionId": "q_256",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué actriz ganó el Óscar a Mejor Actriz en 2024 por 'Poor Things'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Emma Stone",
+    "options": ["Lily Gladstone", "Emma Stone", "Sandra Hüller", "Annette Bening"]
+  },
+  {
+    "questionId": "q_257",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué serie de televisión narra la vida de la Reina Isabel II del Reino Unido?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "The Crown",
+    "options": ["Victoria", "The Crown", "The Windsors", "Reign"]
+  },
+  {
+    "questionId": "q_258",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué festival de música se celebra anualmente en Indio, California?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Coachella",
+    "options": ["Glastonbury", "Lollapalooza", "Coachella", "Tomorrowland"]
+  },
+  {
+    "questionId": "q_259",
+    "category": "Arte y Entretenimiento",
+    "text": "¿En qué año se lanzó la PlayStation 5?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "2020",
+    "options": ["2019", "2020", "2021", "2022"]
+  },
+  {
+    "questionId": "q_260",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué escultor creó 'El Pensador'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Auguste Rodin",
+    "options": ["Alberto Giacometti", "Auguste Rodin", "Henry Moore", "Constantin Brâncuși"]
+  },
+  {
+    "questionId": "q_261",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué película de 2023 fue la primera incursión de Super Mario en el cine de animación moderno?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Super Mario Bros. La película",
+    "options": ["Sonic the Hedgehog", "Super Mario Bros. La película", "Detective Pikachu", "The Legend of Zelda"]
+  },
+  {
+    "questionId": "q_262",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué actor interpreta a Geralt de Rivia en las primeras temporadas de 'The Witcher'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Henry Cavill",
+    "options": ["Liam Hemsworth", "Henry Cavill", "Mads Mikkelsen", "Jason Momoa"]
+  },
+  {
+    "questionId": "q_263",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es el álbum más vendido de la historia de la música?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Thriller (Michael Jackson)",
+    "options": ["Back in Black (AC/DC)", "The Dark Side of the Moon (Pink Floyd)", "Thriller (Michael Jackson)", "Rumours (Fleetwood Mac)"]
+  },
+  {
+    "questionId": "q_264",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cómo se llama el creador de la serie 'Metal Gear Solid'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Hideo Kojima",
+    "options": ["Shigeru Miyamoto", "Hideo Kojima", "Tetsuya Nomura", "Shinji Mikami"]
+  },
+  {
+    "questionId": "q_265",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué movimiento artístico se caracteriza por el uso de puntos de color puro?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Puntillismo",
+    "options": ["Impresionismo", "Puntillismo", "Fauvismo", "Cubismo"]
+  },
+  {
+    "questionId": "q_266",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué película de terror de 2022 presenta a un muñeca con inteligencia artificial?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "M3GAN",
+    "options": ["Annabelle", "M3GAN", "Chucky", "Smile"]
+  },
+  {
+    "questionId": "q_267",
+    "category": "Arte y Entretenimiento",
+    "text": "¿En qué serie de televisión el protagonista es un profesor de química que produce metanfetamina?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Breaking Bad",
+    "options": ["Better Call Saul", "Breaking Bad", "Ozark", "Narcos"]
+  },
+  {
+    "questionId": "q_268",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién es el cantante principal de la banda U2?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Bono",
+    "options": ["The Edge", "Bono", "Sting", "Phil Collins"]
+  },
+  {
+    "questionId": "q_269",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué videojuego popularizó el género 'Battle Royale' en 2017?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "PUBG / Fortnite",
+    "options": ["Apex Legends", "PUBG / Fortnite", "Call of Duty", "Overwatch"]
+  },
+  {
+    "questionId": "q_270",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué artista es conocido por sus latas de sopa Campbell y su estilo Pop Art?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Andy Warhol",
+    "options": ["Roy Lichtenstein", "Andy Warhol", "Keith Haring", "Jean-Michel Basquiat"]
+  },
+  {
+    "questionId": "q_271",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué película ganó el León de Oro en el Festival de Venecia 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "La habitación de al lado",
+    "options": ["Joker: Folie à Deux", "La habitación de al lado", "The Brutalist", "Maria"]
+  },
+  {
+    "questionId": "q_272",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué serie de Disney+ forma parte del universo de 'Star Wars' y presenta a 'Grogu'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "The Mandalorian",
+    "options": ["Andor", "Ahsoka", "The Mandalorian", "Obi-Wan Kenobi"]
+  },
+  {
+    "questionId": "q_273",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué grupo de K-pop es el primero en encabezar el festival Coachella (2023)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "BLACKPINK",
+    "options": ["BTS", "BLACKPINK", "NewJeans", "Twice"]
+  },
+  {
+    "questionId": "q_274",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es el nombre del protagonista de 'Grand Theft Auto V' que es un ex-ladrón de bancos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Michael De Santa",
+    "options": ["Franklin Clinton", "Trevor Philips", "Michael De Santa", "Niko Bellic"]
+  },
+  {
+    "questionId": "q_275",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién pintó 'Las Meninas'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Diego Velázquez",
+    "options": ["Bartolomé Esteban Murillo", "Diego Velázquez", "Francisco de Zurbarán", "El Greco"]
+  },
+  {
+    "questionId": "q_276",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué película de 2022 es la secuela largamente esperada de 'Top Gun'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Top Gun: Maverick",
+    "options": ["Top Gun: Maverick", "Mission Impossible 7", "Interceptor", "Devotion"]
+  },
+  {
+    "questionId": "q_277",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué serie de televisión de 2022 se centra en la familia Addams, específicamente en la hija?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Wednesday (Miércoles)",
+    "options": ["The Addams Family", "Wednesday (Miércoles)", "Chilling Adventures of Sabrina", "Yellowjackets"]
+  },
+  {
+    "questionId": "q_278",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién es el autor de la famosa ópera 'Carmen'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Georges Bizet",
+    "options": ["Giuseppe Verdi", "Georges Bizet", "Giacomo Puccini", "Richard Wagner"]
+  },
+  {
+    "questionId": "q_279",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué empresa es la dueña de la franquicia 'Call of Duty'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Activision Blizzard",
+    "options": ["Electronic Arts", "Ubisoft", "Activision Blizzard", "Take-Two"]
+  },
+  {
+    "questionId": "q_280",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué artista urbano es famoso por sus obras con grafiti y por mantener su identidad en secreto?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Banksy",
+    "options": ["Shepard Fairey", "Banksy", "Invader", "Stik"]
+  },
+  {
+    "questionId": "q_281",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué película de Pixar de 2024 explora las nuevas emociones de Riley durante la pubertad?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Inside Out 2",
+    "options": ["Inside Out 2", "Turning Red", "Luca", "Soul"]
+  },
+  {
+    "questionId": "q_282",
+    "category": "Arte y Entretenimiento",
+    "text": "¿En qué serie de Netflix un grupo de ladrones asalta la Fábrica Nacional de Moneda y Timbre?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "La Casa de Papel",
+    "options": ["Vis a Vis", "Elite", "La Casa de Papel", "Lupin"]
+  },
+  {
+    "questionId": "q_283",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué cantante británica lanzó el álbum '30' en 2021?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Adele",
+    "options": ["Dua Lipa", "Adele", "Ellie Goulding", "Florence Welch"]
+  },
+  {
+    "questionId": "q_284",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cómo se llama el mundo de 'World of Warcraft'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Azeroth",
+    "options": ["Draenor", "Azeroth", "Outland", "Pandaria"]
+  },
+  {
+    "questionId": "q_285",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué pintor impresionista es famoso por su serie de 'Los nenúfares'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Claude Monet",
+    "options": ["Pierre-Auguste Renoir", "Claude Monet", "Edgar Degas", "Camille Pissarro"]
+  },
+  {
+    "questionId": "q_286",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué película de 2023 dirigida por Martin Scorsese trata sobre los asesinatos de la nación Osage?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Killers of the Flower Moon",
+    "options": ["The Irishman", "Killers of the Flower Moon", "Silence", "The Wolf of Wall Street"]
+  },
+  {
+    "questionId": "q_287",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué serie de Apple TV+ trata sobre empleados cuyos recuerdos laborales y personales están separados?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Severance",
+    "options": ["Dark Matter", "Severance", "Silo", "Foundation"]
+  },
+  {
+    "questionId": "q_288",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién es el bajista de los Beatles?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Paul McCartney",
+    "options": ["John Lennon", "George Harrison", "Ringo Starr", "Paul McCartney"]
+  },
+  {
+    "questionId": "q_289",
+    "category": "Arte y Entretenimiento",
+    "text": "¿En qué videojuego los jugadores intentan sobrevivir en una isla mientras una tormenta se cierra sobre ellos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Fortnite",
+    "options": ["Roblox", "Fortnite", "Apex Legends", "Call of Duty: Warzone"]
+  },
+  {
+    "questionId": "q_290",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué artista renacentista pintó 'El nacimiento de Venus'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sandro Botticelli",
+    "options": ["Rafael", "Sandro Botticelli", "Tiziano", "Miguel Ángel"]
+  },
+  {
+    "questionId": "q_291",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué actor protagonizó la película de 2024 'The Fall Guy'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ryan Gosling",
+    "options": ["Ryan Reynolds", "Ryan Gosling", "Chris Evans", "Tom Cruise"]
+  },
+  {
+    "questionId": "q_292",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué serie de televisión de 2023 se basa en la vida de un chef que regresa a Chicago para dirigir la tienda de sándwiches de su familia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "The Bear",
+    "options": ["Chef's Table", "The Bear", "Kitchen Confidential", "Boiling Point"]
+  },
+  {
+    "questionId": "q_293",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué instrumento toca el músico de jazz Miles Davis?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Trompeta",
+    "options": ["Saxo", "Piano", "Trompeta", "Contrabajo"]
+  },
+  {
+    "questionId": "q_294",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es el nombre del primer videojuego de la historia (creado en 1958)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Tennis for Two",
+    "options": ["Pong", "Tennis for Two", "Spacewar!", "Computer Space"]
+  },
+  {
+    "questionId": "q_295",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué museo de Nueva York tiene un diseño en espiral creado por Frank Lloyd Wright?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Museo Guggenheim",
+    "options": ["MoMA", "Metropolitan Museum", "Museo Guggenheim", "Whitney Museum"]
+  },
+  {
+    "questionId": "q_296",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué película de 2023 ganó el León de Oro en el Festival de Venecia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Poor Things",
+    "options": ["Oppenheimer", "Poor Things", "Anatomy of a Fall", "Priscilla"]
+  },
+  {
+    "questionId": "q_297",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué serie de televisión de HBO es una sátira social ambientada en hoteles de lujo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "The White Lotus",
+    "options": ["Succession", "The White Lotus", "Euphoria", "Big Little Lies"]
+  },
+  {
+    "questionId": "q_298",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Quién es el vocalista de la banda británica Coldplay?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Chris Martin",
+    "options": ["Thom Yorke", "Chris Martin", "Matt Bellamy", "Alex Turner"]
+  },
+  {
+    "questionId": "q_299",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Cuál es el nombre del estudio que desarrolló el videojuego 'The Witcher 3' y 'Cyberpunk 2077'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "CD Projekt Red",
+    "options": ["Ubisoft", "CD Projekt Red", "Rockstar Games", "Bethesda"]
+  },
+  {
+    "questionId": "q_300",
+    "category": "Arte y Entretenimiento",
+    "text": "¿Qué artista esculpió el 'Éxtasis de Santa Teresa'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Gian Lorenzo Bernini",
+    "options": ["Miguel Ángel", "Canova", "Gian Lorenzo Bernini", "Donatello"]
+  },
+  {
+    "questionId": "q_301",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es la unidad básica de la vida?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "La célula",
+    "options": ["El átomo", "El tejido", "La célula", "El órgano"]
+  },
+  {
+    "questionId": "q_302",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué orgánulo celular es conocido como la 'central energética' de la célula?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mitocondria",
+    "options": ["Ribosoma", "Mitocondria", "Núcleo", "Aparato de Golgi"]
+  },
+  {
+    "questionId": "q_303",
+    "category": "Ciencias Naturales",
+    "text": "En el sistema periódico, ¿cuál es el símbolo químico del oro?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Au",
+    "options": ["Ag", "Au", "Fe", "Pb"]
+  },
+  {
+    "questionId": "q_304",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es la velocidad de la luz en el vacío aproximadamente?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "300,000 km/s",
+    "options": ["150,000 km/s", "300,000 km/s", "1,000,000 km/s", "30,000 km/s"]
+  },
+  {
+    "questionId": "q_305",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué gas es esencial para que los humanos realicen la respiración celular?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Oxígeno",
+    "options": ["Dióxido de carbono", "Nitrógeno", "Oxígeno", "Argón"]
+  },
+  {
+    "questionId": "q_306",
+    "category": "Ciencias Naturales",
+    "text": "Lógica: Si todos los mamíferos tienen pulmones y un delfín es un mamífero, ¿qué se deduce?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El delfín tiene pulmones",
+    "options": ["El delfín vive en el agua", "El delfín tiene pulmones", "Todos los animales con pulmones son delfines", "Ninguna de las anteriores"]
+  },
+  {
+    "questionId": "q_307",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el pH del agua pura a 25°C?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "7",
+    "options": ["0", "5", "7", "14"]
+  },
+  {
+    "questionId": "q_308",
+    "category": "Ciencias Naturales",
+    "text": "¿Quién propuso la teoría de la selección natural en su libro 'El origen de las especies'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Charles Darwin",
+    "options": ["Gregor Mendel", "Louis Pasteur", "Charles Darwin", "Jean-Baptiste Lamarck"]
+  },
+  {
+    "questionId": "q_309",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué planeta del sistema solar es conocido como el 'Planeta Rojo'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Marte",
+    "options": ["Júpiter", "Venus", "Marte", "Saturno"]
+  },
+  {
+    "questionId": "q_310",
+    "category": "Ciencias Naturales",
+    "text": "Física: ¿Cuál es la fuerza que atrae los objetos hacia el centro de la Tierra?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Gravedad",
+    "options": ["Magnetismo", "Fricción", "Gravedad", "Inercia"]
+  },
+  {
+    "questionId": "q_311",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué tipo de enlace químico ocurre cuando dos átomos comparten electrones?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Enlace covalente",
+    "options": ["Enlace iónico", "Enlace covalente", "Enlace metálico", "Puente de hidrógeno"]
+  },
+  {
+    "questionId": "q_312",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el hueso más largo del cuerpo humano?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Fémur",
+    "options": ["Húmero", "Tibia", "Fémur", "Radio"]
+  },
+  {
+    "questionId": "q_313",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué proceso utilizan las plantas para convertir la luz solar en energía química?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Fotosíntesis",
+    "options": ["Respiración", "Fermentación", "Fotosíntesis", "Quimiosíntesis"]
+  },
+  {
+    "questionId": "q_314",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué partícula subatómica tiene carga eléctrica negativa?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Electrón",
+    "options": ["Protón", "Neutrón", "Electrón", "Positrón"]
+  },
+  {
+    "questionId": "q_315",
+    "category": "Ciencias Naturales",
+    "text": "Lógica: Todos los metales conducen electricidad. El mercurio es un metal. Por lo tanto...",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El mercurio conduce electricidad",
+    "options": ["El mercurio es sólido", "El mercurio conduce electricidad", "El mercurio es un imán", "La electricidad crea metales"]
+  },
+  {
+    "questionId": "q_316",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el componente principal de la atmósfera terrestre?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Nitrógeno",
+    "options": ["Oxígeno", "Dióxido de carbono", "Nitrógeno", "Hidrógeno"]
+  },
+  {
+    "questionId": "q_317",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué escala se utiliza para medir la magnitud de los terremotos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Escala de Richter",
+    "options": ["Escala Celsius", "Escala de Richter", "Escala de Beaufort", "Escala Kelvin"]
+  },
+  {
+    "questionId": "q_318",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué vitamina es producida por el cuerpo humano cuando se expone a la luz solar?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Vitamina D",
+    "options": ["Vitamina A", "Vitamina C", "Vitamina D", "Vitamina B12"]
+  },
+  {
+    "questionId": "q_319",
+    "category": "Ciencias Naturales",
+    "text": "¿Cómo se llama el cambio de estado de gas a líquido?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Condensación",
+    "options": ["Evaporación", "Sublimación", "Fusión", "Condensación"]
+  },
+  {
+    "questionId": "q_320",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el grupo sanguíneo conocido como 'donante universal'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "O negativo",
+    "options": ["AB positivo", "A positivo", "O negativo", "B negativo"]
+  },
+  {
+    "questionId": "q_321",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué rama de la biología estudia la herencia y la variación de los organismos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Genética",
+    "options": ["Ecología", "Genética", "Paleontología", "Botánica"]
+  },
+  {
+    "questionId": "q_322",
+    "category": "Ciencias Naturales",
+    "text": "Física: Según la ley de Ohm, ¿cuál es la relación entre Voltaje (V), Corriente (I) y Resistencia (R)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "V = I * R",
+    "options": ["V = I / R", "V = I + R", "V = I * R", "V = R / I"]
+  },
+  {
+    "questionId": "q_323",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el elemento más abundante en el universo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Hidrógeno",
+    "options": ["Helio", "Oxígeno", "Hidrógeno", "Carbono"]
+  },
+  {
+    "questionId": "q_324",
+    "category": "Ciencias Naturales",
+    "text": "¿En qué parte del cuerpo humano se produce la insulina?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Páncreas",
+    "options": ["Hígado", "Riñones", "Páncreas", "Bazo"]
+  },
+  {
+    "questionId": "q_325",
+    "category": "Ciencias Naturales",
+    "text": "Lógica: Si el hierro se oxida con el oxígeno y este clavo está hecho de hierro, ¿qué sucederá si se deja a la intemperie?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Se oxidará",
+    "options": ["Se derretirá", "Se oxidará", "Se volverá magnético", "No pasará nada"]
+  },
+  {
+    "questionId": "q_326",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué tipo de roca se forma a partir del enfriamiento del magma o lava?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ígnea",
+    "options": ["Sedimentaria", "Metamórfica", "Ígnea", "Caliza"]
+  },
+  {
+    "questionId": "q_327",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es la función principal de los glóbulos rojos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Transportar oxígeno",
+    "options": ["Combatir infecciones", "Coagular la sangre", "Transportar oxígeno", "Producir hormonas"]
+  },
+  {
+    "questionId": "q_328",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué científico formuló la teoría de la Relatividad?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Albert Einstein",
+    "options": ["Isaac Newton", "Albert Einstein", "Stephen Hawking", "Niels Bohr"]
+  },
+  {
+    "questionId": "q_329",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el metal que es líquido a temperatura ambiente?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mercurio",
+    "options": ["Galio", "Mercurio", "Potasio", "Litio"]
+  },
+  {
+    "questionId": "q_330",
+    "category": "Ciencias Naturales",
+    "text": "¿Cómo se llama la capa externa de la Tierra?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Corteza",
+    "options": ["Manto", "Núcleo", "Corteza", "Tropósfera"]
+  },
+  {
+    "questionId": "q_331",
+    "category": "Ciencias Naturales",
+    "text": "Lógica: Si un cultivo requiere agua para crecer y no ha llovido ni se ha regado, ¿cuál es la conclusión lógica?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El cultivo no crecerá",
+    "options": ["El cultivo crecerá más lento", "El cultivo no crecerá", "El cultivo cambiará de color", "El suelo es fértil"]
+  },
+  {
+    "questionId": "q_332",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué compuesto químico tiene la fórmula H2SO4?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ácido sulfúrico",
+    "options": ["Ácido clorhídrico", "Ácido nítrico", "Ácido sulfúrico", "Ácido acético"]
+  },
+  {
+    "questionId": "q_333",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el órgano más grande del cuerpo humano?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "La piel",
+    "options": ["El hígado", "El intestino delgado", "La piel", "Los pulmones"]
+  },
+  {
+    "questionId": "q_334",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué nombre recibe el movimiento de los planetas alrededor del sol?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Traslación",
+    "options": ["Rotación", "Nutación", "Traslación", "Precesión"]
+  },
+  {
+    "questionId": "q_335",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué científico es conocido como el padre de la genética por sus experimentos con guisantes?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Gregor Mendel",
+    "options": ["Thomas Hunt Morgan", "Francis Crick", "Gregor Mendel", "James Watson"]
+  },
+  {
+    "questionId": "q_336",
+    "category": "Ciencias Naturales",
+    "text": "Física: ¿Qué unidad se utiliza para medir la fuerza?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Newton",
+    "options": ["Julio", "Vatio", "Newton", "Pascal"]
+  },
+  {
+    "questionId": "q_337",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es la sustancia más dura que se encuentra en la naturaleza?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Diamante",
+    "options": ["Grafito", "Cuarzo", "Diamante", "Corindón"]
+  },
+  {
+    "questionId": "q_338",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué gas absorben las plantas de la atmósfera para realizar la fotosíntesis?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Dióxido de carbono",
+    "options": ["Oxígeno", "Dióxido de carbono", "Monóxido de carbono", "Ozono"]
+  },
+  {
+    "questionId": "q_339",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué estructura celular contiene la información genética (ADN)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El núcleo",
+    "options": ["El citoplasma", "El núcleo", "La membrana", "El lisosoma"]
+  },
+  {
+    "questionId": "q_340",
+    "category": "Ciencias Naturales",
+    "text": "Lógica: Todos los mamíferos son vertebrados. Algunos vertebrados son peces. ¿Se puede concluir que algunos mamíferos son peces?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "No",
+    "options": ["Sí", "No", "Solo en el agua", "Solo si son ballenas"]
+  },
+  {
+    "questionId": "q_341",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el valor aproximado de la constante Pi ($π$)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "3.1416",
+    "options": ["3.1214", "3.1416", "3.1614", "3.1816"]
+  },
+  {
+    "questionId": "q_342",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué tipo de sangre tiene una persona si se le considera 'receptor universal'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "AB positivo",
+    "options": ["O negativo", "AB positivo", "A negativo", "B positivo"]
+  },
+  {
+    "questionId": "q_343",
+    "category": "Ciencias Naturales",
+    "text": "¿Cómo se llama la energía que posee un cuerpo debido a su movimiento?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Energía cinética",
+    "options": ["Energía potencial", "Energía térmica", "Energía cinética", "Energía elástica"]
+  },
+  {
+    "questionId": "q_344",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué elemento de la tabla periódica tiene el número atómico 1?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Hidrógeno",
+    "options": ["Helio", "Oxígeno", "Hidrógeno", "Carbono"]
+  },
+  {
+    "questionId": "q_345",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es la función de los glóbulos blancos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Defender el cuerpo de infecciones",
+    "options": ["Transportar nutrientes", "Defender el cuerpo de infecciones", "Producir energía", "Limpiar los pulmones"]
+  },
+  {
+    "questionId": "q_346",
+    "category": "Ciencias Naturales",
+    "text": "Física: ¿A qué temperatura en grados Celsius hierve el agua a nivel del mar?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "100°C",
+    "options": ["90°C", "100°C", "110°C", "120°C"]
+  },
+  {
+    "questionId": "q_347",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué capa de la atmósfera contiene la mayor parte del ozono?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Estratósfera",
+    "options": ["Tropósfera", "Mesósfera", "Estratósfera", "Termósfera"]
+  },
+  {
+    "questionId": "q_348",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué instrumento se usa para medir la presión atmosférica?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Barómetro",
+    "options": ["Termómetro", "Barómetro", "Higrómetro", "Anemómetro"]
+  },
+  {
+    "questionId": "q_349",
+    "category": "Ciencias Naturales",
+    "text": "¿Cómo se llama el proceso por el cual el agua pasa a través de una membrana de una zona de baja concentración a una de alta concentración de soluto?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ósmosis",
+    "options": ["Difusión", "Ósmosis", "Filtración", "Evaporación"]
+  },
+  {
+    "questionId": "q_350",
+    "category": "Ciencias Naturales",
+    "text": "Lógica: Si el animal A es más grande que el animal B, y el animal B es más grande que el animal C, ¿cuál es el más pequeño?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El animal C",
+    "options": ["El animal A", "El animal B", "El animal C", "No se puede saber"]
+  },
+  {
+    "questionId": "q_351",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué planeta tiene el día más largo del sistema solar?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Venus",
+    "options": ["Mercurio", "Júpiter", "Venus", "Marte"]
+  },
+  {
+    "questionId": "q_352",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el componente químico principal de las uñas y el pelo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Queratina",
+    "options": ["Colágeno", "Queratina", "Melanina", "Quitina"]
+  },
+  {
+    "questionId": "q_353",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué ley física establece que 'a toda acción le corresponde una reacción igual y opuesta'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Tercera Ley de Newton",
+    "options": ["Primera Ley de Newton", "Segunda Ley de Newton", "Tercera Ley de Newton", "Ley de la Inercia"]
+  },
+  {
+    "questionId": "q_354",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es la fórmula química del metano?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "CH4",
+    "options": ["CO2", "CH4", "NH3", "H2O"]
+  },
+  {
+    "questionId": "q_355",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué parte de la flor se convierte en fruto después de la fecundación?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El ovario",
+    "options": ["El estambre", "El pétalo", "El ovario", "El polen"]
+  },
+  {
+    "questionId": "q_356",
+    "category": "Ciencias Naturales",
+    "text": "Lógica: En una cadena alimenticia, si desaparece el depredador tope, ¿qué sucede inicialmente con la población de sus presas?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Aumenta",
+    "options": ["Disminuye", "Aumenta", "Se mantiene igual", "Se extingue"]
+  },
+  {
+    "questionId": "q_357",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el principal tipo de azúcar que circula en la sangre humana?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Glucosa",
+    "options": ["Fructosa", "Sacarosa", "Glucosa", "Lactosa"]
+  },
+  {
+    "questionId": "q_358",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué galaxia es la más cercana a la Vía Láctea?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Andrómeda",
+    "options": ["Sombrero", "Andrómeda", "Triángulo", "Magallanes"]
+  },
+  {
+    "questionId": "q_359",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué metal es el mejor conductor de la electricidad?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Plata",
+    "options": ["Cobre", "Oro", "Plata", "Aluminio"]
+  },
+  {
+    "questionId": "q_360",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué hormona es conocida como la 'hormona del estrés'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Cortisol",
+    "options": ["Adrenalina", "Cortisol", "Dopamina", "Serotonina"]
+  },
+  {
+    "questionId": "q_361",
+    "category": "Ciencias Naturales",
+    "text": "Física: ¿Qué fenómeno ocurre cuando la luz cambia de dirección al pasar de un medio a otro (ej. de aire a agua)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Refracción",
+    "options": ["Reflexión", "Refracción", "Difracción", "Dispersión"]
+  },
+  {
+    "questionId": "q_362",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el proceso de división celular que produce células sexuales (gametos)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Meiosis",
+    "options": ["Mitosis", "Meiosis", "Bipartición", "Fisión"]
+  },
+  {
+    "questionId": "q_363",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué científico descubrió la penicilina?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Alexander Fleming",
+    "options": ["Marie Curie", "Alexander Fleming", "Robert Koch", "Louis Pasteur"]
+  },
+  {
+    "questionId": "q_364",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué elemento químico es esencial para la formación de los huesos y dientes?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Calcio",
+    "options": ["Hierro", "Fósforo", "Calcio", "Magnesio"]
+  },
+  {
+    "questionId": "q_365",
+    "category": "Ciencias Naturales",
+    "text": "Lógica: Si lanzas una moneda 10 veces y las 10 veces sale cara, ¿cuál es la probabilidad de que salga cruz en el lanzamiento 11?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "50%",
+    "options": ["100%", "50%", "10%", "0.5%"]
+  },
+  {
+    "questionId": "q_366",
+    "category": "Ciencias Naturales",
+    "text": "¿Cómo se llama la capa de aire que rodea la Tierra?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Atmósfera",
+    "options": ["Hidrósfera", "Biósfera", "Atmósfera", "Litósfera"]
+  },
+  {
+    "questionId": "q_367",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué planeta es famoso por sus grandes anillos visibles?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Saturno",
+    "options": ["Júpiter", "Neptuno", "Saturno", "Urano"]
+  },
+  {
+    "questionId": "q_368",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el proceso por el cual un líquido se convierte en gas sin necesariamente hervir?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Evaporación",
+    "options": ["Ebullición", "Evaporación", "Sublimación", "Fusión"]
+  },
+  {
+    "questionId": "q_369",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué parte del cerebro humano controla el equilibrio y la coordinación?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Cerebelo",
+    "options": ["Cerebro", "Tronco encefálico", "Cerebelo", "Hipotálamo"]
+  },
+  {
+    "questionId": "q_370",
+    "category": "Ciencias Naturales",
+    "text": "Física: ¿Qué establece el principio de Arquímedes?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Todo cuerpo sumergido recibe un empuje hacia arriba",
+    "options": ["La presión es igual en todos los puntos", "Todo cuerpo sumergido recibe un empuje hacia arriba", "La energía no se crea ni se destruye", "La luz viaja en línea recta"]
+  },
+  {
+    "questionId": "q_371",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es la fórmula química del amoníaco?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "NH3",
+    "options": ["CH4", "NH3", "NaCl", "HCl"]
+  },
+  {
+    "questionId": "q_372",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué tipo de energía se obtiene del calor interno de la Tierra?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Geotérmica",
+    "options": ["Solar", "Eólica", "Geotérmica", "Hidráulica"]
+  },
+  {
+    "questionId": "q_373",
+    "category": "Ciencias Naturales",
+    "text": "¿En qué orgánulo ocurre la fotosíntesis?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Cloroplasto",
+    "options": ["Mitocondria", "Cloroplasto", "Vacuola", "Núcleo"]
+  },
+  {
+    "questionId": "q_374",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué nombre recibe el científico que estudia los fósiles?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Paleontólogo",
+    "options": ["Arqueólogo", "Paleontólogo", "Geólogo", "Antropólogo"]
+  },
+  {
+    "questionId": "q_375",
+    "category": "Ciencias Naturales",
+    "text": "Lógica: Si todos los A son B, y ningún B es C, entonces...",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ningún A es C",
+    "options": ["Algún A es C", "Ningún A es C", "Todo C es A", "No se puede concluir"]
+  },
+  {
+    "questionId": "q_376",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es el principal gas causante del efecto invernadero por actividad humana?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Dióxido de carbono",
+    "options": ["Metano", "Ozono", "Dióxido de carbono", "Vapor de agua"]
+  },
+  {
+    "questionId": "q_377",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué sistema del cuerpo humano se encarga de eliminar los desechos líquidos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sistema urinario/excretor",
+    "options": ["Sistema digestivo", "Sistema circulatorio", "Sistema urinario/excretor", "Sistema linfático"]
+  },
+  {
+    "questionId": "q_378",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué unidad mide la intensidad de la corriente eléctrica?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Amperio",
+    "options": ["Voltio", "Amperio", "Ohmio", "Vatio"]
+  },
+  {
+    "questionId": "q_379",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es la estrella más cercana a la Tierra?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El Sol",
+    "options": ["Próxima Centauri", "Sirio", "El Sol", "Polaris"]
+  },
+  {
+    "questionId": "q_380",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué compuesto químico es conocido comúnmente como sal de mesa?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Cloruro de sodio",
+    "options": ["Bicarbonato de sodio", "Cloruro de sodio", "Sulfato de magnesio", "Nitrato de potasio"]
+  },
+  {
+    "questionId": "q_381",
+    "category": "Ciencias Naturales",
+    "text": "Física: ¿Qué color de luz tiene la longitud de onda más larga en el espectro visible?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Rojo",
+    "options": ["Violeta", "Azul", "Rojo", "Verde"]
+  },
+  {
+    "questionId": "q_382",
+    "category": "Ciencias Naturales",
+    "text": "¿Cómo se llama la relación entre dos especies donde ambas salen beneficiadas?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mutualismo",
+    "options": ["Parasitismo", "Comensalismo", "Mutualismo", "Competencia"]
+  },
+  {
+    "questionId": "q_383",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué parte de la célula vegetal le da rigidez y soporte?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Pared celular",
+    "options": ["Membrana celular", "Pared celular", "Citoplasma", "Cloroplasto"]
+  },
+  {
+    "questionId": "q_384",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuántas cámaras tiene el corazón humano?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "4",
+    "options": ["2", "3", "4", "5"]
+  },
+  {
+    "questionId": "q_385",
+    "category": "Ciencias Naturales",
+    "text": "Lógica: Si un material es aislante térmico, ¿qué sucede con la transferencia de calor a través de él?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Es muy lenta o nula",
+    "options": ["Es instantánea", "Es muy lenta o nula", "Aumenta la temperatura", "Genera energía"]
+  },
+  {
+    "questionId": "q_386",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué elemento es fundamental para la química orgánica?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Carbono",
+    "options": ["Hidrógeno", "Oxígeno", "Carbono", "Nitrógeno"]
+  },
+  {
+    "questionId": "q_387",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué tipo de eclipse ocurre cuando la Luna se interpone entre la Tierra y el Sol?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Eclipse solar",
+    "options": ["Eclipse lunar", "Eclipse solar", "Eclipse estelar", "Tránsito"]
+  },
+  {
+    "questionId": "q_388",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es la función principal del intestino grueso?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Absorber agua",
+    "options": ["Digerir proteínas", "Absorber agua", "Producir bilis", "Absorber grasas"]
+  },
+  {
+    "questionId": "q_389",
+    "category": "Ciencias Naturales",
+    "text": "¿En qué unidad se mide la frecuencia de una onda?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Hercio (Hz)",
+    "options": ["Decibelio", "Hercio (Hz)", "Metro", "Segundo"]
+  },
+  {
+    "questionId": "q_390",
+    "category": "Ciencias Naturales",
+    "text": "¿Cómo se llama el proceso por el cual los insectos cambian de forma durante su crecimiento?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Metamorfosis",
+    "options": ["Mutación", "Metamorfosis", "Evolución", "Mitosis"]
+  },
+  {
+    "questionId": "q_391",
+    "category": "Ciencias Naturales",
+    "text": "Física: ¿Qué descubrió Isaac Newton al observar una manzana caer?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "La ley de la gravitación universal",
+    "options": ["La presión atmosférica", "La ley de la gravitación universal", "La composición de la luz", "El vacío"]
+  },
+  {
+    "questionId": "q_392",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué metal se extrae principalmente del mineral llamado bauxita?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Aluminio",
+    "options": ["Hierro", "Cobre", "Aluminio", "Estaño"]
+  },
+  {
+    "questionId": "q_393",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es la función de los estomas en las plantas?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Intercambio gaseoso",
+    "options": ["Absorber agua", "Sujetar la planta", "Intercambio gaseoso", "Producir semillas"]
+  },
+  {
+    "questionId": "q_394",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué planeta es conocido por tener una 'Gran Mancha Roja' (una tormenta gigante)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Júpiter",
+    "options": ["Marte", "Júpiter", "Saturno", "Neptuno"]
+  },
+  {
+    "questionId": "q_395",
+    "category": "Ciencias Naturales",
+    "text": "Lógica: Si el punto de ebullición del agua es 100°C y tenemos un recipiente con agua a 105°C a nivel del mar, ¿en qué estado se encuentra?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Gaseoso",
+    "options": ["Líquido", "Sólido", "Gaseoso", "Plasma"]
+  },
+  {
+    "questionId": "q_396",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué órgano del cuerpo humano es responsable de filtrar la sangre para producir orina?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Los riñones",
+    "options": ["El hígado", "Los riñones", "La vejiga", "El bazo"]
+  },
+  {
+    "questionId": "q_397",
+    "category": "Ciencias Naturales",
+    "text": "¿Cuál es la fórmula química del dióxido de carbono?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "CO2",
+    "options": ["CO", "CO2", "C2O", "O2C"]
+  },
+  {
+    "questionId": "q_398",
+    "category": "Ciencias Naturales",
+    "text": "¿Qué tipo de lente se usa para corregir la miopía?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Divergente (Cóncava)",
+    "options": ["Convergente (Convexa)", "Divergente (Cóncava)", "Plana", "Bifocal"]
+  },
+  {
+    "questionId": "q_399",
+    "category": "Ciencias Naturales",
+    "text": "¿Cómo se llama el pigmento que da color a la piel humana y protege de los rayos UV?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Melanina",
+    "options": ["Caroteno", "Melanina", "Hemoglobina", "Bilirrubina"]
+  },
+  {
+    "questionId": "q_400",
+    "category": "Ciencias Naturales",
+    "text": "Lógica Final: Si la fotosíntesis produce oxígeno y las plantas son los principales organismos fotosintéticos, ¿qué sucedería con los niveles de oxígeno si desaparecieran todas las plantas?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Disminuirían drásticamente",
+    "options": ["Aumentarían", "Se mantendrían igual", "Disminuirían drásticamente", "Se volverían tóxicos"]
+  },
+  {
+    "questionId": "q_401",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el río más largo del mundo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Amazonas",
+    "options": ["Nilo", "Amazonas", "Misisipi", "Yangtsé"]
+  },
+  {
+    "questionId": "q_402",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué ciencia estudia el comportamiento humano en sociedad y las estructuras sociales?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sociología",
+    "options": ["Antropología", "Psicología", "Sociología", "Ciencia Política"]
+  },
+  {
+    "questionId": "q_403",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué indicador económico mide el valor total de los bienes y servicios producidos en un país en un año?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "PIB (Producto Interno Bruto)",
+    "options": ["IPC", "PIB (Producto Interno Bruto)", "Tasa de desempleo", "IDH"]
+  },
+  {
+    "questionId": "q_404",
+    "category": "Ciencias Sociales",
+    "text": "¿Quién es considerado el padre del psicoanálisis?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sigmund Freud",
+    "options": ["Carl Jung", "Jean Piaget", "Sigmund Freud", "B.F. Skinner"]
+  },
+  {
+    "questionId": "q_405",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el continente más poblado del mundo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Asia",
+    "options": ["África", "Europa", "Asia", "América"]
+  },
+  {
+    "questionId": "q_406",
+    "category": "Ciencias Sociales",
+    "text": "En economía, ¿cómo se llama la situación donde la demanda de un producto supera a la oferta?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Escasez",
+    "options": ["Superávit", "Deflación", "Escasez", "Equilibrio"]
+  },
+  {
+    "questionId": "q_407",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué país tiene la mayor extensión territorial del mundo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Rusia",
+    "options": ["Canadá", "China", "Rusia", "Estados Unidos"]
+  },
+  {
+    "questionId": "q_408",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué concepto sociológico se refiere al proceso por el cual un individuo aprende las normas y valores de su cultura?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Socialización",
+    "options": ["Globalización", "Urbanización", "Socialización", "Estratificación"]
+  },
+  {
+    "questionId": "q_409",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Australia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Canberra",
+    "options": ["Sídney", "Melbourne", "Canberra", "Perth"]
+  },
+  {
+    "questionId": "q_410",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué rama de la psicología estudia procesos como la memoria, el lenguaje y el pensamiento?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Psicología cognitiva",
+    "options": ["Psicología clínica", "Psicología cognitiva", "Conductismo", "Psicología social"]
+  },
+  {
+    "questionId": "q_411",
+    "category": "Ciencias Sociales",
+    "text": "¿Cómo se llama el sistema económico basado en la propiedad privada y el libre mercado?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Capitalismo",
+    "options": ["Socialismo", "Capitalismo", "Feudalismo", "Comunismo"]
+  },
+  {
+    "questionId": "q_412",
+    "category": "Ciencias Sociales",
+    "text": "¿En qué cordillera se encuentra el monte Aconcagua?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Andes",
+    "options": ["Himalaya", "Alpes", "Andes", "Pirineos"]
+  },
+  {
+    "questionId": "q_413",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué término describe el aumento generalizado y sostenido de los precios de bienes y servicios?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Inflación",
+    "options": ["Recesión", "Inflación", "Devaluación", "Inversión"]
+  },
+  {
+    "questionId": "q_414",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la fosa oceánica más profunda del planeta?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Fosa de las Marianas",
+    "options": ["Fosa de Puerto Rico", "Fosa de Java", "Fosa de las Marianas", "Fosa de Tonga"]
+  },
+  {
+    "questionId": "q_415",
+    "category": "Ciencias Sociales",
+    "text": "¿Quién escribió 'La riqueza de las naciones', sentando las bases de la economía moderna?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Adam Smith",
+    "options": ["Karl Marx", "David Ricardo", "Adam Smith", "John Maynard Keynes"]
+  },
+  {
+    "questionId": "q_416",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué desierto es el más árido del mundo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Desierto de Atacama",
+    "options": ["Sahara", "Gobi", "Desierto de Atacama", "Kalahari"]
+  },
+  {
+    "questionId": "q_417",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué psicólogo es famoso por sus experimentos sobre el condicionamiento clásico con perros?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ivan Pavlov",
+    "options": ["Abraham Maslow", "Ivan Pavlov", "Albert Bandura", "Erik Erikson"]
+  },
+  {
+    "questionId": "q_418",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué país tiene la mayor cantidad de volcanes activos en el mundo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Indonesia",
+    "options": ["Japón", "Islandia", "Chile", "Indonesia"]
+  },
+  {
+    "questionId": "q_419",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué organización internacional se encarga de regular el comercio global?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "OMC",
+    "options": ["FMI", "Banco Mundial", "OMC", "OCDE"]
+  },
+  {
+    "questionId": "q_420",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el punto más alto de la Tierra sobre el nivel del mar?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Monte Everest",
+    "options": ["K2", "Monte Everest", "Annapurna", "Makalu"]
+  },
+  {
+    "questionId": "q_421",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué concepto se refiere al conjunto de creencias, costumbres y objetos compartidos por un grupo social?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Cultura",
+    "options": ["Política", "Economía", "Cultura", "Religión"]
+  },
+  {
+    "questionId": "q_422",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la moneda oficial de Japón?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Yen",
+    "options": ["Won", "Yuan", "Yen", "Baht"]
+  },
+  {
+    "questionId": "q_423",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué estrecho separa el continente africano del europeo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Estrecho de Gibraltar",
+    "options": ["Estrecho de Magallanes", "Estrecho de Bering", "Estrecho de Gibraltar", "Estrecho de Ormuz"]
+  },
+  {
+    "questionId": "q_424",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué teoría psicológica propone una jerarquía de necesidades humanas representada en una pirámide?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Pirámide de Maslow",
+    "options": ["Teoría del Apego", "Pirámide de Maslow", "Psicoanálisis", "Teoría Gestalt"]
+  },
+  {
+    "questionId": "q_425",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué país europeo tiene la mayor economía (PIB) del continente?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Alemania",
+    "options": ["Francia", "Reino Unido", "Alemania", "Italia"]
+  },
+  {
+    "questionId": "q_426",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el océano más grande del mundo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Océano Pacífico",
+    "options": ["Océano Atlántico", "Océano Índico", "Océano Pacífico", "Océano Ártico"]
+  },
+  {
+    "questionId": "q_427",
+    "category": "Ciencias Sociales",
+    "text": "¿Cómo se llama la línea imaginaria que divide la Tierra en Hemisferio Norte y Hemisferio Sur?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ecuador",
+    "options": ["Meridiano de Greenwich", "Trópico de Cáncer", "Ecuador", "Trópico de Capricornio"]
+  },
+  {
+    "questionId": "q_428",
+    "category": "Ciencias Sociales",
+    "text": "En economía, ¿qué ley establece que, ceteris paribus, a mayor precio de un bien, los productores ofrecerán más?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ley de la oferta",
+    "options": ["Ley de la demanda", "Ley de la oferta", "Ley de rendimientos decrecientes", "Ley de Gresham"]
+  },
+  {
+    "questionId": "q_429",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el país con la mayor cantidad de habitantes en el mundo actualmente?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "India",
+    "options": ["China", "India", "Estados Unidos", "Indonesia"]
+  },
+  {
+    "questionId": "q_430",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué filósofo y sociólogo alemán escribió 'El Capital'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Karl Marx",
+    "options": ["Max Weber", "Karl Marx", "Friedrich Nietzsche", "Émile Durkheim"]
+  },
+  {
+    "questionId": "q_431",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Canadá?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ottawa",
+    "options": ["Toronto", "Montreal", "Ottawa", "Vancouver"]
+  },
+  {
+    "questionId": "q_432",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué rama de la geografía estudia el relieve, el clima y la vegetación?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Geografía física",
+    "options": ["Geografía humana", "Geografía física", "Cartografía", "Geopolítica"]
+  },
+  {
+    "questionId": "q_433",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué término psicológico describe la tendencia a buscar información que confirme nuestras creencias previas?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sesgo de confirmación",
+    "options": ["Disonancia cognitiva", "Sesgo de confirmación", "Efecto placebo", "Efecto halo"]
+  },
+  {
+    "questionId": "q_434",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el lago más grande del mundo (por superficie)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mar Caspio",
+    "options": ["Lago Superior", "Lago Victoria", "Mar Caspio", "Lago Baikal"]
+  },
+  {
+    "questionId": "q_435",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué institución financiera central regula la cantidad de dinero en circulación en EE.UU.?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Reserva Federal (Fed)",
+    "options": ["Tesoro Nacional", "Banco Mundial", "Reserva Federal (Fed)", "FMI"]
+  },
+  {
+    "questionId": "q_436",
+    "category": "Ciencias Sociales",
+    "text": "¿En qué país se encuentra la ciudad perdida de Petra?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Jordania",
+    "options": ["Egipto", "Jordania", "Irak", "Siria"]
+  },
+  {
+    "questionId": "q_437",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué concepto sociológico se refiere a la creciente interconexión e interdependencia de las naciones?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Globalización",
+    "options": ["Industrialización", "Globalización", "Imperialismo", "Neoliberalismo"]
+  },
+  {
+    "questionId": "q_438",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Islandia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Reikiavik",
+    "options": ["Oslo", "Helsinki", "Reikiavik", "Copenhague"]
+  },
+  {
+    "questionId": "q_439",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué economista propuso que el Estado debe intervenir en la economía para evitar crisis de desempleo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "John Maynard Keynes",
+    "options": ["Milton Friedman", "John Maynard Keynes", "Thomas Malthus", "Joseph Schumpeter"]
+  },
+  {
+    "questionId": "q_440",
+    "category": "Ciencias Sociales",
+    "text": "¿Cómo se llama el proceso de desplazamiento de la población desde las zonas rurales a las ciudades?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Urbanización",
+    "options": ["Gentrificación", "Urbanización", "Migración", "Exilio"]
+  },
+  {
+    "questionId": "q_441",
+    "category": "Ciencias Sociales",
+    "text": "¿En qué continente se encuentra el Desierto del Gobi?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Asia",
+    "options": ["África", "Asia", "Oceanía", "Antártida"]
+  },
+  {
+    "questionId": "q_442",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué país de Sudamérica es el único que tiene costas tanto en el Océano Pacífico como en el Mar Caribe?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Colombia",
+    "options": ["Venezuela", "Panamá", "Colombia", "Ecuador"]
+  },
+  {
+    "questionId": "q_443",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué escuela psicológica se enfoca en que el todo es más que la suma de sus partes?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Gestalt",
+    "options": ["Funcionalismo", "Estructuralismo", "Gestalt", "Psicoanálisis"]
+  },
+  {
+    "questionId": "q_444",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Marruecos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Rabat",
+    "options": ["Casablanca", "Marrakech", "Rabat", "Tánger"]
+  },
+  {
+    "questionId": "q_445",
+    "category": "Ciencias Sociales",
+    "text": "¿Cómo se llama el impuesto que se aplica a los productos importados?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Arancel",
+    "options": ["IVA", "Impuesto sobre la renta", "Arancel", "Subsidio"]
+  },
+  {
+    "questionId": "q_446",
+    "category": "Ciencias Sociales",
+    "text": "¿Quién es considerado uno de los fundadores de la sociología por su estudio sobre el suicidio?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Émile Durkheim",
+    "options": ["Herbert Spencer", "Auguste Comte", "Émile Durkheim", "Talcott Parsons"]
+  },
+  {
+    "questionId": "q_447",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué volcán destruyó la ciudad romana de Pompeya?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Monte Vesubio",
+    "options": ["Etna", "Monte Vesubio", "Stromboli", "Krakatoa"]
+  },
+  {
+    "questionId": "q_448",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué país es el mayor exportador de petróleo en el mundo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Arabia Saudita",
+    "options": ["Rusia", "Estados Unidos", "Arabia Saudita", "Venezuela"]
+  },
+  {
+    "questionId": "q_449",
+    "category": "Ciencias Sociales",
+    "text": "¿Cómo se llama el fenómeno psicológico por el cual las personas tienden a seguir el comportamiento del grupo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Conformismo",
+    "options": ["Empatía", "Resiliencia", "Conformismo", "Altruismo"]
+  },
+  {
+    "questionId": "q_450",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Tailandia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Bangkok",
+    "options": ["Hanoi", "Yakarta", "Bangkok", "Manila"]
+  },
+  {
+    "questionId": "q_451",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el país más pequeño del mundo por superficie?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ciudad del Vaticano",
+    "options": ["Mónaco", "San Marino", "Ciudad del Vaticano", "Liechtenstein"]
+  },
+  {
+    "questionId": "q_452",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué cordillera separa la Rusia europea de la asiática?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Montes Urales",
+    "options": ["Montes Cáucaso", "Montes Urales", "Montes Apalaches", "Montes Altai"]
+  },
+  {
+    "questionId": "q_453",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué economista es conocido por su teoría sobre el crecimiento poblacional y la escasez de recursos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Thomas Malthus",
+    "options": ["John Stuart Mill", "Thomas Malthus", "Robert Owen", "Leon Walras"]
+  },
+  {
+    "questionId": "q_454",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la principal diferencia entre una democracia y una autocracia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "El origen y control del poder",
+    "options": ["El sistema económico", "La ubicación geográfica", "El origen y control del poder", "El idioma oficial"]
+  },
+  {
+    "questionId": "q_455",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué país tiene el Índice de Desarrollo Humano (IDH) más alto históricamente?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Noruega",
+    "options": ["Estados Unidos", "Suiza", "Noruega", "Japón"]
+  },
+  {
+    "questionId": "q_456",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué término sociológico describe la jerarquía de grupos sociales según el acceso a recursos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Estratificación social",
+    "options": ["Movilidad social", "Estratificación social", "Integración social", "Conflicto social"]
+  },
+  {
+    "questionId": "q_457",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Vietnam?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Hanoi",
+    "options": ["Ciudad Ho Chi Minh", "Da Nang", "Hanoi", "Hue"]
+  },
+  {
+    "questionId": "q_458",
+    "category": "Ciencias Sociales",
+    "text": "En microeconomía, ¿qué sucede con la demanda de un bien normal si el ingreso de los consumidores aumenta?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "La demanda aumenta",
+    "options": ["La demanda disminuye", "La demanda se mantiene igual", "La demanda desaparece", "La demanda aumenta"]
+  },
+  {
+    "questionId": "q_459",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué canal conecta el Océano Atlántico con el Océano Pacífico?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Canal de Panamá",
+    "options": ["Canal de Suez", "Canal de Corinto", "Canal de Panamá", "Canal de la Mancha"]
+  },
+  {
+    "questionId": "q_460",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué psicólogo suizo es famoso por su teoría de las etapas del desarrollo cognitivo en niños?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Jean Piaget",
+    "options": ["Lev Vygotsky", "Jean Piaget", "Erik Erikson", "Carl Rogers"]
+  },
+  {
+    "questionId": "q_461",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el río más caudaloso del mundo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Amazonas",
+    "options": ["Congo", "Ganges", "Amazonas", "Danubio"]
+  },
+  {
+    "questionId": "q_462",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué país se encuentra en dos continentes a la vez (Eurasia)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Turquía",
+    "options": ["Egipto", "Turquía", "Grecia", "Kazajistán"]
+  },
+  {
+    "questionId": "q_463",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué indicador económico mide la variación de los precios de una canasta de bienes y servicios?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "IPC (Índice de Precios al Consumidor)",
+    "options": ["PIB", "Tasa de interés", "IPC (Índice de Precios al Consumidor)", "Coeficiente de Gini"]
+  },
+  {
+    "questionId": "q_464",
+    "category": "Ciencias Sociales",
+    "text": "¿Cómo se llama el desplazamiento de personas de un país a otro con la intención de establecerse?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Emigración",
+    "options": ["Inmigración", "Emigración", "Turismo", "Peregrinación"]
+  },
+  {
+    "questionId": "q_465",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué concepto psicológico se refiere a la capacidad de una persona para superar traumas y adversidades?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Resiliencia",
+    "options": ["Autocontrol", "Resiliencia", "Introversion", "Asertividad"]
+  },
+  {
+    "questionId": "q_466",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Kenia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Nairobi",
+    "options": ["Mombasa", "Addis Abeba", "Nairobi", "Lagos"]
+  },
+  {
+    "questionId": "q_467",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué filósofo francés acuñó el término 'Sociología'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Auguste Comte",
+    "options": ["Montesquieu", "Rousseau", "Auguste Comte", "Voltaire"]
+  },
+  {
+    "questionId": "q_468",
+    "category": "Ciencias Sociales",
+    "text": "¿En qué país se encuentra la Gran Barrera de Coral?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Australia",
+    "options": ["Brasil", "Australia", "Sudáfrica", "Filipinas"]
+  },
+  {
+    "questionId": "q_469",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué país asiático es el principal socio comercial de la mayoría de las naciones del sudeste asiático?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "China",
+    "options": ["Japón", "India", "Corea del Sur", "China"]
+  },
+  {
+    "questionId": "q_470",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué teoría económica defiende la mínima intervención del Estado y el libre mercado extremo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Neoliberalismo",
+    "options": ["Mercantilismo", "Keynesianismo", "Neoliberalismo", "Fisiocracia"]
+  },
+  {
+    "questionId": "q_471",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el punto más bajo de la superficie terrestre emergida?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mar Muerto",
+    "options": ["Valle de la Muerte", "Mar Muerto", "Depresión de Afar", "Lago Eyre"]
+  },
+  {
+    "questionId": "q_472",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué psicólogo propuso la teoría del aprendizaje social, destacando la importancia de la observación?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Albert Bandura",
+    "options": ["John Watson", "Albert Bandura", "Abraham Maslow", "Carl Rogers"]
+  },
+  {
+    "questionId": "q_473",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Suiza?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Berna",
+    "options": ["Zúrich", "Ginebra", "Berna", "Basilea"]
+  },
+  {
+    "questionId": "q_474",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué región del mundo es conocida como el 'Creciente Fértil'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mesopotamia y Levante",
+    "options": ["Valle del Nilo", "Mesopotamia y Levante", "Sureste asiático", "Amazonía"]
+  },
+  {
+    "questionId": "q_475",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué economista ganó el Nobel por sus estudios sobre la pobreza y las hambrunas?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Amartya Sen",
+    "options": ["Joseph Stiglitz", "Amartya Sen", "Paul Krugman", "Elinor Ostrom"]
+  },
+  {
+    "questionId": "q_476",
+    "category": "Ciencias Sociales",
+    "text": "¿Cómo se llama el estudio de las poblaciones humanas según su tamaño, estructura y evolución?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Demografía",
+    "options": ["Etnografía", "Demografía", "Cartografía", "Biogeografía"]
+  },
+  {
+    "questionId": "q_477",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el archipiélago más grande del mundo por número de islas?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Indonesia",
+    "options": ["Filipinas", "Japón", "Indonesia", "Maldivas"]
+  },
+  {
+    "questionId": "q_478",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué concepto sociológico describe el cambio de posición de un individuo en la escala social?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Movilidad social",
+    "options": ["Movilidad social", "Estratificación", "Alienación", "Anomia"]
+  },
+  {
+    "questionId": "q_479",
+    "category": "Ciencias Sociales",
+    "text": "¿En qué país se originó la Revolución Industrial?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Inglaterra",
+    "options": ["Francia", "Estados Unidos", "Alemania", "Inglaterra"]
+  },
+  {
+    "questionId": "q_480",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué país europeo tiene la mayor superficie forestal?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Rusia (parte europea)",
+    "options": ["Suecia", "Finlandia", "Francia", "Rusia (parte europea)"]
+  },
+  {
+    "questionId": "q_481",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Corea del Sur?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Seúl",
+    "options": ["Busan", "Incheon", "Seúl", "Jeju"]
+  },
+  {
+    "questionId": "q_482",
+    "category": "Ciencias Sociales",
+    "text": "En economía, ¿cómo se llama el mercado donde hay un solo vendedor y muchos compradores?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Monopolio",
+    "options": ["Oligopolio", "Competencia perfecta", "Monopolio", "Monopsonio"]
+  },
+  {
+    "questionId": "q_483",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué mar separa Europa de África?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mar Mediterráneo",
+    "options": ["Mar Rojo", "Mar Caspio", "Mar Mediterráneo", "Mar Negro"]
+  },
+  {
+    "questionId": "q_484",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué psicólogo conductista diseñó la 'Caja de Skinner'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "B.F. Skinner",
+    "options": ["Edward Thorndike", "B.F. Skinner", "John Watson", "Clark Hull"]
+  },
+  {
+    "questionId": "q_485",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Argentina?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Buenos Aires",
+    "options": ["Córdoba", "Rosario", "Buenos Aires", "Mendoza"]
+  },
+  {
+    "questionId": "q_486",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué cordillera atraviesa todo el continente americano de norte a sur?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Andes / Rocosas",
+    "options": ["Himalaya", "Alpes", "Andes / Rocosas", "Urales"]
+  },
+  {
+    "questionId": "q_487",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué término económico se usa cuando el valor de las exportaciones de un país es mayor que el de sus importaciones?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Superávit comercial",
+    "options": ["Déficit comercial", "Superávit comercial", "Inflación", "Deuda externa"]
+  },
+  {
+    "questionId": "q_488",
+    "category": "Ciencias Sociales",
+    "text": "¿Cómo se llama la rama de la psicología que trata trastornos mentales y emocionales?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Psicología clínica",
+    "options": ["Psicología forense", "Psicología educativa", "Psicología clínica", "Neuropsicología"]
+  },
+  {
+    "questionId": "q_489",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el desierto más grande del mundo (incluyendo polares)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Antártida",
+    "options": ["Sahara", "Antártida", "Ártico", "Gobi"]
+  },
+  {
+    "questionId": "q_490",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Noruega?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Oslo",
+    "options": ["Bergen", "Estocolmo", "Oslo", "Copenhague"]
+  },
+  {
+    "questionId": "q_491",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué sociólogo introdujo el concepto de 'ética protestante' en relación al capitalismo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Max Weber",
+    "options": ["Karl Marx", "Max Weber", "Herbert Marcuse", "Pierre Bourdieu"]
+  },
+  {
+    "questionId": "q_492",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué país tiene la mayor cantidad de zonas horarias (12 en total)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Francia",
+    "options": ["Rusia", "Estados Unidos", "Francia", "China"]
+  },
+  {
+    "questionId": "q_493",
+    "category": "Ciencias Sociales",
+    "text": "¿En qué año se fundó el Banco Mundial?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1944",
+    "options": ["1918", "1944", "1948", "1960"]
+  },
+  {
+    "questionId": "q_494",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué rama de la psicología estudia cómo los pensamientos y sentimientos de las personas son influidos por la presencia de otros?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Psicología social",
+    "options": ["Psicología del desarrollo", "Psicología social", "Psicología evolutiva", "Psicología humanista"]
+  },
+  {
+    "questionId": "q_495",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es el lago navegable más alto del mundo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Lago Titicaca",
+    "options": ["Lago Victoria", "Lago Baikal", "Lago Titicaca", "Mar Muerto"]
+  },
+  {
+    "questionId": "q_496",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué país africano tiene el mayor número de pirámides?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sudán",
+    "options": ["Egipto", "Sudán", "Marruecos", "Etiopía"]
+  },
+  {
+    "questionId": "q_497",
+    "category": "Ciencias Sociales",
+    "text": "¿Cómo se llama el indicador que mide la desigualdad de ingresos en una población?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Coeficiente de Gini",
+    "options": ["Curva de Laffer", "Coeficiente de Gini", "Índice de miseria", "Curva de Phillips"]
+  },
+  {
+    "questionId": "q_498",
+    "category": "Ciencias Sociales",
+    "text": "¿Quién escribió el libro 'El yo y el ello'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sigmund Freud",
+    "options": ["Friedrich Nietzsche", "Sigmund Freud", "Immanuel Kant", "Jean-Paul Sartre"]
+  },
+  {
+    "questionId": "q_499",
+    "category": "Ciencias Sociales",
+    "text": "¿Cuál es la capital de Sudáfrica (administrativa)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Pretoria",
+    "options": ["Ciudad del Cabo", "Pretoria", "Johannesburgo", "Bloemfontein"]
+  },
+  {
+    "questionId": "q_500",
+    "category": "Ciencias Sociales",
+    "text": "¿Qué isla es la más grande del mundo (que no sea un continente)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Groenlandia",
+    "options": ["Australia", "Groenlandia", "Borneo", "Madagascar"]
+  },
+  {
+    "questionId": "q_501",
+    "category": "Deportes",
+    "text": "¿Qué selección nacional ha ganado más Copas del Mundo de la FIFA hasta la fecha?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Brasil",
+    "options": ["Alemania", "Italia", "Brasil", "Argentina"]
+  },
+  {
+    "questionId": "q_502",
+    "category": "Deportes",
+    "text": "¿Quién es el máximo anotador de la historia de la NBA?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "LeBron James",
+    "options": ["Michael Jordan", "Kareem Abdul-Jabbar", "LeBron James", "Kobe Bryant"]
+  },
+  {
+    "questionId": "q_503",
+    "category": "Deportes",
+    "text": "¿En qué torneo de Grand Slam se juega sobre superficie de hierba?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Wimbledon",
+    "options": ["Roland Garros", "US Open", "Wimbledon", "Australian Open"]
+  },
+  {
+    "questionId": "q_504",
+    "category": "Deportes",
+    "text": "¿Cuántos minutos dura un partido de fútbol profesional (tiempo reglamentario sin añadidos)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "90 minutos",
+    "options": ["80 minutos", "90 minutos", "100 minutos", "45 minutos"]
+  },
+  {
+    "questionId": "q_505",
+    "category": "Deportes",
+    "text": "¿Qué nadador ostenta el récord de más medallas de oro olímpicas en la historia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Michael Phelps",
+    "options": ["Mark Spitz", "Michael Phelps", "Ian Thorpe", "Caeleb Dressel"]
+  },
+  {
+    "questionId": "q_506",
+    "category": "Deportes",
+    "text": "¿Cómo se llama el trofeo que se entrega al campeón de la NFL en Estados Unidos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Vince Lombardi",
+    "options": ["Larry O'Brien", "Vince Lombardi", "Stanley Cup", "Commissioner's Trophy"]
+  },
+  {
+    "questionId": "q_507",
+    "category": "Deportes",
+    "text": "¿Qué tenista ha ganado más títulos de Roland Garros en la historia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Rafael Nadal",
+    "options": ["Roger Federer", "Novak Djokovic", "Rafael Nadal", "Björn Borg"]
+  },
+  {
+    "questionId": "q_508",
+    "category": "Deportes",
+    "text": "¿Qué equipo de fútbol tiene más títulos de la UEFA Champions League?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Real Madrid",
+    "options": ["AC Milan", "Bayern Múnich", "Real Madrid", "Liverpool"]
+  },
+  {
+    "questionId": "q_509",
+    "category": "Deportes",
+    "text": "¿En qué ciudad se celebraron los primeros Juegos Olímpicos de la era moderna en 1896?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Atenas",
+    "options": ["Roma", "París", "Londres", "Atenas"]
+  },
+  {
+    "questionId": "q_510",
+    "category": "Deportes",
+    "text": "¿Cuántos jugadores por equipo hay en la cancha en un partido de básquetbol?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "5",
+    "options": ["5", "6", "7", "11"]
+  },
+  {
+    "questionId": "q_511",
+    "category": "Deportes",
+    "text": "¿Quién es considerado el piloto con más títulos mundiales de Fórmula 1 (empatado con Lewis Hamilton)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Michael Schumacher",
+    "options": ["Ayrton Senna", "Sebastian Vettel", "Michael Schumacher", "Max Verstappen"]
+  },
+  {
+    "questionId": "q_512",
+    "category": "Deportes",
+    "text": "¿Qué país ganó la Eurocopa 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "España",
+    "options": ["Inglaterra", "Francia", "España", "Alemania"]
+  },
+  {
+    "questionId": "q_513",
+    "category": "Deportes",
+    "text": "¿A qué distancia se encuentra la portería desde el punto de penal en fútbol?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "11 metros",
+    "options": ["9 metros", "11 metros", "12 metros", "15 metros"]
+  },
+  {
+    "questionId": "q_514",
+    "category": "Deportes",
+    "text": "¿En qué deporte se utiliza el término 'Home Run'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Béisbol",
+    "options": ["Críquet", "Béisbol", "Softbol", "Golf"]
+  },
+  {
+    "questionId": "q_515",
+    "category": "Deportes",
+    "text": "¿Quién ganó el Mundial de Qatar 2022?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Argentina",
+    "options": ["Francia", "Brasil", "Argentina", "Croacia"]
+  },
+  {
+    "questionId": "q_516",
+    "category": "Deportes",
+    "text": "¿Cuál es el color del maillot que viste el líder de la clasificación general en el Tour de Francia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Amarillo",
+    "options": ["Rojo", "Verde", "Rosa", "Amarillo"]
+  },
+  {
+    "questionId": "q_517",
+    "category": "Deportes",
+    "text": "¿Cuántos anillos de campeonato de la NBA ganó Michael Jordan?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "6",
+    "options": ["4", "5", "6", "7"]
+  },
+  {
+    "questionId": "q_518",
+    "category": "Deportes",
+    "text": "¿Qué selección de fútbol femenina ha ganado más Mundiales?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Estados Unidos",
+    "options": ["Alemania", "Estados Unidos", "Brasil", "España"]
+  },
+  {
+    "questionId": "q_519",
+    "category": "Deportes",
+    "text": "¿Qué disciplina deportiva practica el esloveno Tadej Pogačar?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ciclismo",
+    "options": ["Esquí", "Ciclismo", "Atletismo", "Tenis"]
+  },
+  {
+    "questionId": "q_520",
+    "category": "Deportes",
+    "text": "¿En qué país se originó el deporte del Rugby?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Inglaterra",
+    "options": ["Escocia", "Gales", "Australia", "Inglaterra"]
+  },
+  {
+    "questionId": "q_521",
+    "category": "Deportes",
+    "text": "¿Quién ostenta el récord mundial de los 100 metros lisos masculinos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Usain Bolt",
+    "options": ["Tyson Gay", "Yohan Blake", "Usain Bolt", "Carl Lewis"]
+  },
+  {
+    "questionId": "q_522",
+    "category": "Deportes",
+    "text": "¿Cuál es la duración de un asalto en el boxeo profesional masculino?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "3 minutos",
+    "options": ["2 minutos", "3 minutos", "4 minutos", "5 minutos"]
+  },
+  {
+    "questionId": "q_523",
+    "category": "Deportes",
+    "text": "¿En qué ciudad se celebraron los Juegos Olímpicos de 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "París",
+    "options": ["Los Ángeles", "París", "Tokio", "Madrid"]
+  },
+  {
+    "questionId": "q_524",
+    "category": "Deportes",
+    "text": "¿Qué equipo de la NBA tiene el récord de más títulos ganados hasta 2025?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Boston Celtics",
+    "options": ["Los Angeles Lakers", "Chicago Bulls", "Golden State Warriors", "Boston Celtics"]
+  },
+  {
+    "questionId": "q_525",
+    "category": "Deportes",
+    "text": "¿Cómo se llama el golpe inicial en una jugada de tenis?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Saque",
+    "options": ["Volea", "Drive", "Saque", "Revés"]
+  },
+  {
+    "questionId": "q_526",
+    "category": "Deportes",
+    "text": "¿Qué futbolista es conocido como 'O Rei'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Pelé",
+    "options": ["Maradona", "Zico", "Pelé", "Ronaldinho"]
+  },
+  {
+    "questionId": "q_527",
+    "category": "Deportes",
+    "text": "¿Cuál es la distancia de una maratón oficial?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "42,195 km",
+    "options": ["21,097 km", "40,000 km", "42,195 km", "50,000 km"]
+  },
+  {
+    "questionId": "q_528",
+    "category": "Deportes",
+    "text": "¿En qué deporte destacó Tiger Woods?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Golf",
+    "options": ["Polo", "Golf", "Tenis", "Natación"]
+  },
+  {
+    "questionId": "q_529",
+    "category": "Deportes",
+    "text": "¿Cuál es el equipo de béisbol con más títulos de la Serie Mundial?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "New York Yankees",
+    "options": ["Boston Red Sox", "Los Angeles Dodgers", "New York Yankees", "San Francisco Giants"]
+  },
+  {
+    "questionId": "q_530",
+    "category": "Deportes",
+    "text": "¿Quién ganó el Balón de Oro masculino en 2023?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Lionel Messi",
+    "options": ["Erling Haaland", "Lionel Messi", "Kylian Mbappé", "Karim Benzema"]
+  },
+  {
+    "questionId": "q_531",
+    "category": "Deportes",
+    "text": "¿Qué selección nacional de básquetbol es conocida como el 'Dream Team' original?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Estados Unidos (1992)",
+    "options": ["Yugoslavia", "España", "Estados Unidos (1992)", "Argentina"]
+  },
+  {
+    "questionId": "q_532",
+    "category": "Deportes",
+    "text": "¿Cómo se llama el campo donde se juega al golf?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Links / Course",
+    "options": ["Court", "Links / Course", "Pitch", "Diamond"]
+  },
+  {
+    "questionId": "q_533",
+    "category": "Deportes",
+    "text": "¿En qué país se encuentra el famoso circuito de Spa-Francorchamps de F1?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Bélgica",
+    "options": ["Francia", "Alemania", "Bélgica", "Austria"]
+  },
+  {
+    "questionId": "q_534",
+    "category": "Deportes",
+    "text": "¿Qué selección nacional de fútbol ganó la Copa América 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Argentina",
+    "options": ["Colombia", "Brasil", "Uruguay", "Argentina"]
+  },
+  {
+    "questionId": "q_535",
+    "category": "Deportes",
+    "text": "¿Quién es el tenista con más títulos de Grand Slam masculinos en la historia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Novak Djokovic",
+    "options": ["Rafael Nadal", "Roger Federer", "Novak Djokovic", "Pete Sampras"]
+  },
+  {
+    "questionId": "q_536",
+    "category": "Deportes",
+    "text": "¿A cuántos pies de altura se encuentra el aro de básquetbol?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "10 pies",
+    "options": ["9 pies", "10 pies", "11 pies", "12 pies"]
+  },
+  {
+    "questionId": "q_537",
+    "category": "Deportes",
+    "text": "¿Qué gimnasta estadounidense regresó en 2024 para ganar múltiples oros olímpicos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Simone Biles",
+    "options": ["Nadia Comăneci", "Gabby Douglas", "Simone Biles", "Sunisa Lee"]
+  },
+  {
+    "questionId": "q_538",
+    "category": "Deportes",
+    "text": "¿Cuántos tiempos se juegan en un partido de básquetbol de la NBA?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "4 cuartos",
+    "options": ["2 tiempos", "4 cuartos", "3 periodos", "2 cuartos"]
+  },
+  {
+    "questionId": "q_539",
+    "category": "Deportes",
+    "text": "¿En qué deporte se compite por la Copa Davis?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Tenis",
+    "options": ["Golf", "Vela", "Tenis", "Polo"]
+  },
+  {
+    "questionId": "q_540",
+    "category": "Deportes",
+    "text": "¿Quién es el piloto con más victorias en la historia de la Fórmula 1?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Lewis Hamilton",
+    "options": ["Michael Schumacher", "Lewis Hamilton", "Max Verstappen", "Sebastian Vettel"]
+  },
+  {
+    "questionId": "q_541",
+    "category": "Deportes",
+    "text": "¿Qué país ha ganado más medallas en la historia de los Juegos Olímpicos de Verano?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Estados Unidos",
+    "options": ["China", "Rusia", "Reino Unido", "Estados Unidos"]
+  },
+  {
+    "questionId": "q_542",
+    "category": "Deportes",
+    "text": "¿Qué equipo de fútbol inglés es conocido como los 'Gunners'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Arsenal",
+    "options": ["Chelsea", "Manchester City", "Arsenal", "Tottenham"]
+  },
+  {
+    "questionId": "q_543",
+    "category": "Deportes",
+    "text": "¿Cómo se llama el estilo de natación más rápido?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Crol / Libre",
+    "options": ["Mariposa", "Espalda", "Braza", "Crol / Libre"]
+  },
+  {
+    "questionId": "q_544",
+    "category": "Deportes",
+    "text": "¿Quién fue el primer boxeador en ganar el título mundial de peso pesado tres veces?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Muhammad Ali",
+    "options": ["Mike Tyson", "Joe Frazier", "Muhammad Ali", "George Foreman"]
+  },
+  {
+    "questionId": "q_545",
+    "category": "Deportes",
+    "text": "¿Cuántos jugadores hay en un equipo de voleibol en pista?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "6",
+    "options": ["5", "6", "11", "2"]
+  },
+  {
+    "questionId": "q_546",
+    "category": "Deportes",
+    "text": "¿Qué selección de rugby es conocida como los 'All Blacks'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Nueva Zelanda",
+    "options": ["Sudáfrica", "Australia", "Nueva Zelanda", "Inglaterra"]
+  },
+  {
+    "questionId": "q_547",
+    "category": "Deportes",
+    "text": "¿En qué ciudad se encuentra el estadio de Wembley?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Londres",
+    "options": ["Mánchester", "Liverpool", "Londres", "Birmingham"]
+  },
+  {
+    "questionId": "q_548",
+    "category": "Deportes",
+    "text": "¿Qué tenista es conocida por haber ganado 23 títulos de Grand Slam en la era abierta?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Serena Williams",
+    "options": ["Steffi Graf", "Serena Williams", "Martina Navratilova", "Venus Williams"]
+  },
+  {
+    "questionId": "q_549",
+    "category": "Deportes",
+    "text": "¿Cuál es la puntuación máxima que se puede obtener en una sola tirada de bolos (bowling)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "30",
+    "options": ["10", "20", "30", "300"]
+  },
+  {
+    "questionId": "q_550",
+    "category": "Deportes",
+    "text": "¿Qué equipo de fútbol ganó el sextete (6 títulos en un año) por primera vez en la historia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "FC Barcelona",
+    "options": ["Real Madrid", "Bayern Múnich", "FC Barcelona", "Manchester City"]
+  },
+  {
+    "questionId": "q_551",
+    "category": "Deportes",
+    "text": "¿Quién es el actual número 1 del tenis masculino (a inicios de 2026)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Jannik Sinner",
+    "options": ["Carlos Alcaraz", "Novak Djokovic", "Jannik Sinner", "Daniil Medvedev"]
+  },
+  {
+    "questionId": "q_552",
+    "category": "Deportes",
+    "text": "¿Qué país organiza el Mundial de Fútbol de 2026?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "EE.UU., México y Canadá",
+    "options": ["Brasil", "China", "EE.UU., México y Canadá", "España y Portugal"]
+  },
+  {
+    "questionId": "q_553",
+    "category": "Deportes",
+    "text": "¿En qué deporte destaca Stephen Curry?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Básquetbol",
+    "options": ["Fútbol Americano", "Básquetbol", "Béisbol", "Golf"]
+  },
+  {
+    "questionId": "q_554",
+    "category": "Deportes",
+    "text": "¿Cómo se llama el trofeo del campeonato de hockey sobre hielo (NHL)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Stanley Cup",
+    "options": ["Vince Lombardi", "Stanley Cup", "World Cup", "Calder Cup"]
+  },
+  {
+    "questionId": "q_555",
+    "category": "Deportes",
+    "text": "¿Cuál es la superficie de la cancha en el Abierto de Australia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Dura / Cemento",
+    "options": ["Tierra batida", "Hierba", "Dura / Cemento", "Moqueta"]
+  },
+  {
+    "questionId": "q_556",
+    "category": "Deportes",
+    "text": "¿Cuántos jugadores por equipo juegan en un partido de fútbol americano?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "11",
+    "options": ["9", "11", "12", "15"]
+  },
+  {
+    "questionId": "q_557",
+    "category": "Deportes",
+    "text": "¿Quién ganó el Giro de Italia en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Tadej Pogačar",
+    "options": ["Jonas Vingegaard", "Primož Roglič", "Tadej Pogačar", "Geraint Thomas"]
+  },
+  {
+    "questionId": "q_558",
+    "category": "Deportes",
+    "text": "¿Qué ciudad albergará los Juegos Olímpicos de Verano 2028?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Los Ángeles",
+    "options": ["Brisbane", "Los Ángeles", "Berlín", "Seúl"]
+  },
+  {
+    "questionId": "q_559",
+    "category": "Deportes",
+    "text": "¿Cuántos puntos vale un tiro libre en básquetbol?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1",
+    "options": ["1", "2", "3", "0.5"]
+  },
+  {
+    "questionId": "q_560",
+    "category": "Deportes",
+    "text": "¿En qué equipo de fútbol juega actualmente Kylian Mbappé (2025/2026)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Real Madrid",
+    "options": ["PSG", "Real Madrid", "Liverpool", "Manchester City"]
+  },
+  {
+    "questionId": "q_561",
+    "category": "Deportes",
+    "text": "¿Qué selección de básquetbol masculino ganó el oro en los JJ.OO. de París 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Estados Unidos",
+    "options": ["Francia", "Serbia", "Alemania", "Estados Unidos"]
+  },
+  {
+    "questionId": "q_562",
+    "category": "Deportes",
+    "text": "¿Quién es el máximo ganador de la Champions League como entrenador (hasta 2025)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Carlo Ancelotti",
+    "options": ["Pep Guardiola", "Alex Ferguson", "Carlo Ancelotti", "Zinedine Zidane"]
+  },
+  {
+    "questionId": "q_563",
+    "category": "Deportes",
+    "text": "¿Cuál es el tiempo máximo de posesión para un equipo en la NBA antes de tirar al aro?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "24 segundos",
+    "options": ["20 segundos", "24 segundos", "30 segundos", "35 segundos"]
+  },
+  {
+    "questionId": "q_564",
+    "category": "Deportes",
+    "text": "¿En qué deporte se utiliza una 'piedra' y una 'escoba'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Curling",
+    "options": ["Hockey", "Curling", "Lacrosse", "Bolos sobre hierba"]
+  },
+  {
+    "questionId": "q_565",
+    "category": "Deportes",
+    "text": "¿Qué ciclista tiene el récord de más victorias de etapa en el Tour de Francia?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mark Cavendish",
+    "options": ["Eddy Merckx", "Mark Cavendish", "Bernard Hinault", "Lance Armstrong"]
+  },
+  {
+    "questionId": "q_566",
+    "category": "Deportes",
+    "text": "¿Qué selección nacional de fútbol es conocida como la 'Orange'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Países Bajos",
+    "options": ["Bélgica", "Sudáfrica", "Países Bajos", "Costa de Marfil"]
+  },
+  {
+    "questionId": "q_567",
+    "category": "Deportes",
+    "text": "¿Cuántos puntos se necesitan para ganar un set en tenis (sin contar el tie-break)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "6 juegos",
+    "options": ["4 juegos", "5 juegos", "6 juegos", "10 juegos"]
+  },
+  {
+    "questionId": "q_568",
+    "category": "Deportes",
+    "text": "¿Quién fue el MVP de las finales de la NBA en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Jaylen Brown",
+    "options": ["Jayson Tatum", "Jaylen Brown", "Nikola Jokic", "Luka Doncic"]
+  },
+  {
+    "questionId": "q_569",
+    "category": "Deportes",
+    "text": "¿Qué país ha ganado más Mundiales de Rugby masculinos?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Sudáfrica",
+    "options": ["Nueva Zelanda", "Australia", "Sudáfrica", "Inglaterra"]
+  },
+  {
+    "questionId": "q_570",
+    "category": "Deportes",
+    "text": "¿En qué ciudad se corre el Gran Premio de Mónaco de F1?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Montecarlo",
+    "options": ["Niza", "Menton", "Montecarlo", "Saint-Tropez"]
+  },
+  {
+    "questionId": "q_571",
+    "category": "Deportes",
+    "text": "¿Cómo se llama el área de 18 yardas en un campo de fútbol?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Área grande / de penalti",
+    "options": ["Área chica", "Área grande / de penalti", "Zona de gol", "Caja"]
+  },
+  {
+    "questionId": "q_572",
+    "category": "Deportes",
+    "text": "¿Qué arte marcial es conocido como el 'camino de la mano vacía'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Karate",
+    "options": ["Judo", "Taekwondo", "Karate", "Kung Fu"]
+  },
+  {
+    "questionId": "q_573",
+    "category": "Deportes",
+    "text": "¿Quién es el atleta con más oros olímpicos en atletismo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Carl Lewis / Usain Bolt (9)",
+    "options": ["Carl Lewis / Usain Bolt (9)", "Jesse Owens", "Mo Farah", "Eliud Kipchoge"]
+  },
+  {
+    "questionId": "q_574",
+    "category": "Deportes",
+    "text": "¿En qué año se celebró el primer Mundial de Fútbol?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "1930",
+    "options": ["1924", "1930", "1934", "1950"]
+  },
+  {
+    "questionId": "q_575",
+    "category": "Deportes",
+    "text": "¿Cómo se llama cuando un jugador de básquetbol anota tras saltar y meter el balón directamente hacia abajo?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Mate / Volcada",
+    "options": ["Bandeja", "Triple", "Mate / Volcada", "Gancho"]
+  },
+  {
+    "questionId": "q_576",
+    "category": "Deportes",
+    "text": "¿Qué tenista ganó el US Open masculino en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Jannik Sinner",
+    "options": ["Taylor Fritz", "Jannik Sinner", "Carlos Alcaraz", "Novak Djokovic"]
+  },
+  {
+    "questionId": "q_577",
+    "category": "Deportes",
+    "text": "¿Cuál es el peso de una pelota de tenis aproximadamente?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "56-59 gramos",
+    "options": ["40-45 gramos", "56-59 gramos", "70-75 gramos", "100 gramos"]
+  },
+  {
+    "questionId": "q_578",
+    "category": "Deportes",
+    "text": "¿Qué selección de fútbol tiene el apodo de 'La Roja'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "España / Chile",
+    "options": ["Portugal", "España / Chile", "México", "Bélgica"]
+  },
+  {
+    "questionId": "q_579",
+    "category": "Deportes",
+    "text": "¿Cuántos hoyos tiene un campo de golf estándar?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "18",
+    "options": ["9", "12", "18", "21"]
+  },
+  {
+    "questionId": "q_580",
+    "category": "Deportes",
+    "text": "¿En qué equipo de la NBA juega Nikola Jokić?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Denver Nuggets",
+    "options": ["Miami Heat", "Denver Nuggets", "Dallas Mavericks", "L.A. Clippers"]
+  },
+  {
+    "questionId": "q_581",
+    "category": "Deportes",
+    "text": "¿Qué país dominó el medallero de los JJ.OO. de Invierno 2022?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Noruega",
+    "options": ["Alemania", "Canadá", "EE.UU.", "Noruega"]
+  },
+  {
+    "questionId": "q_582",
+    "category": "Deportes",
+    "text": "¿Cuál es el récord de goles en un solo Mundial (Just Fontaine, 1958)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "13 goles",
+    "options": ["10 goles", "12 goles", "13 goles", "15 goles"]
+  },
+  {
+    "questionId": "q_583",
+    "category": "Deportes",
+    "text": "¿Qué distancia recorren los ciclistas en una etapa contrarreloj promedio?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "20-50 km",
+    "options": ["5-10 km", "20-50 km", "100-150 km", "200 km"]
+  },
+  {
+    "questionId": "q_584",
+    "category": "Deportes",
+    "text": "¿Quién es la máxima figura histórica de la gimnasia rumana?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Nadia Comăneci",
+    "options": ["Larisa Iordache", "Catalina Ponor", "Nadia Comăneci", "Simona Amanar"]
+  },
+  {
+    "questionId": "q_585",
+    "category": "Deportes",
+    "text": "¿En qué deporte se utiliza un 'puck'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Hockey sobre hielo",
+    "options": ["Lacrosse", "Hockey sobre hielo", "Polo", "Rugby"]
+  },
+  {
+    "questionId": "q_586",
+    "category": "Deportes",
+    "text": "¿Qué equipo ganó la Serie A italiana en la temporada 2023/24?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Inter de Milán",
+    "options": ["Juventus", "AC Milan", "Inter de Milán", "Napoli"]
+  },
+  {
+    "questionId": "q_587",
+    "category": "Deportes",
+    "text": "¿Cuál es la altura de una red de tenis en el centro?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "0,914 metros",
+    "options": ["1 metro", "0,914 metros", "0,80 metros", "1,10 metros"]
+  },
+  {
+    "questionId": "q_588",
+    "category": "Deportes",
+    "text": "¿Qué jugador tiene el récord de más triples anotados en la historia de la NBA?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Stephen Curry",
+    "options": ["Ray Allen", "Reggie Miller", "Stephen Curry", "James Harden"]
+  },
+  {
+    "questionId": "q_589",
+    "category": "Deportes",
+    "text": "¿Cuántas veces ha ganado la selección de Argentina la Copa del Mundo de fútbol (hasta 2025)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "3",
+    "options": ["2", "3", "4", "5"]
+  },
+  {
+    "questionId": "q_590",
+    "category": "Deportes",
+    "text": "¿En qué deporte se compite por la 'Jarra de las Cien Guineas'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Vela (Copa América)",
+    "options": ["Golf", "Polo", "Vela (Copa América)", "Tenis"]
+  },
+  {
+    "questionId": "q_591",
+    "category": "Deportes",
+    "text": "¿Quién ganó el torneo de Roland Garros femenino en 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Iga Świątek",
+    "options": ["Aryna Sabalenka", "Iga Świątek", "Coco Gauff", "Elena Rybakina"]
+  },
+  {
+    "questionId": "q_592",
+    "category": "Deportes",
+    "text": "¿Qué ciudad es la sede histórica del circuito de Interlagos en F1?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "São Paulo",
+    "options": ["Río de Janeiro", "São Paulo", "Brasilia", "Curitiba"]
+  },
+  {
+    "questionId": "q_593",
+    "category": "Deportes",
+    "text": "¿Cuál es el número máximo de sustituciones permitidas en un partido de fútbol oficial (regla estándar actual)?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "5",
+    "options": ["3", "4", "5", "6"]
+  },
+  {
+    "questionId": "q_594",
+    "category": "Deportes",
+    "text": "¿Qué país ganó el Mundial de Balonmano masculino en 2025?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Dinamarca",
+    "options": ["Francia", "Suecia", "Dinamarca", "España"]
+  },
+  {
+    "questionId": "q_595",
+    "category": "Deportes",
+    "text": "¿Quién es el máximo goleador histórico de las selecciones nacionales?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Cristiano Ronaldo",
+    "options": ["Lionel Messi", "Cristiano Ronaldo", "Ali Daei", "Pelé"]
+  },
+  {
+    "questionId": "q_596",
+    "category": "Deportes",
+    "text": "¿En qué ciudad se encuentra el Madison Square Garden?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Nueva York",
+    "options": ["Chicago", "Los Ángeles", "Nueva York", "Boston"]
+  },
+  {
+    "questionId": "q_597",
+    "category": "Deportes",
+    "text": "¿Qué nadadora rompió récords mundiales en los 400m libre en 2023 y 2024?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Ariarne Titmus / Katie Ledecky",
+    "options": ["Ariarne Titmus / Katie Ledecky", "Summer McIntosh", "Federica Pellegrini", "Katinka Hosszú"]
+  },
+  {
+    "questionId": "q_598",
+    "category": "Deportes",
+    "text": "¿En qué deporte se utiliza un 'bate' y un 'guante'?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Béisbol",
+    "options": ["Críquet", "Béisbol", "Tenis", "Golf"]
+  },
+  {
+    "questionId": "q_599",
+    "category": "Deportes",
+    "text": "¿Cuántos puntos vale un touchdown en el fútbol americano?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "6",
+    "options": ["3", "6", "7", "2"]
+  },
+  {
+    "questionId": "q_600",
+    "category": "Deportes",
+    "text": "¿Qué selección nacional de fútbol ganó el primer Mundial de la historia en 1930?",
+    "questionType": "multipleChoice",
+    "correctAnswer": "Uruguay",
+    "options": ["Argentina", "Brasil", "Uruguay", "Italia"]
+  }
+]
