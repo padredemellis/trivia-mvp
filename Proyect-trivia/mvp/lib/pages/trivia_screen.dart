@@ -53,7 +53,7 @@ class TriviaScreen extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/mockup.png'),
+                image: AssetImage('assets/images/background_quiz.png'),
                 fit: BoxFit.cover,
               ),
             ),
