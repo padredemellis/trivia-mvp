@@ -171,7 +171,7 @@ class _HomeState extends State<Home>
                   children: [
                     AnimatedIconButton(
                       imagePath: 'assets/images/play2.png',
-                      onPressed: currentCharacterIndex == 1
+                      onPressed: currentCharacterIndex == 4
                           ? null
                           : () {
                               final engine = di.sl<GameEngine>();
