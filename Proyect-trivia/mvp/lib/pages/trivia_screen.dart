@@ -68,7 +68,18 @@ class TriviaScreen extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.5,
               child: Padding(
                 padding: const EdgeInsets.only(left: 70.0, top: 35.0),
-                child: PreguntaWidget(texto: questionText),
+                child: Container(
+                  padding: const EdgeInsets.all(12.0),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.8),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: PreguntaWidget(texto: questionText),
+                  ),
+                ),
               ),
             ),
           ),
