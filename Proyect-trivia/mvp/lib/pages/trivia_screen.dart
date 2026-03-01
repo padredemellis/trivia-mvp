@@ -90,19 +90,26 @@ class TriviaScreen extends StatelessWidget {
             child: SizedBox(
               height: MediaQuery.of(context).size.height * 0.45,
               child: ListView.builder(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
                 itemCount: options.length,
                 itemBuilder: (context, index) {
-                  return RespuestasWidget(
-                    texto: options[index],
-                    esCorrecta: false,
-                    mostrarResultado: false,
-                    onTap: () => onOptionSelected(options[index]),
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 12.0),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: RespuestasWidget(
+                        texto: options[index],
+                        esCorrecta: false,
+                        mostrarResultado: false,
+                        onTap: () => onOptionSelected(options[index]),
+                      ),
+                    ),
                   );
                 },
               ),
             ),
           ),
-        ],
+      ],
       ),
     );
   }
