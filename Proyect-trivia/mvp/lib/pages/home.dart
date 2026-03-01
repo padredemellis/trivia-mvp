@@ -68,7 +68,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/fondo.png'),
+            image: AssetImage('assets/images/Background_forest.png'),
             fit: BoxFit.cover,
           ),
         ),
