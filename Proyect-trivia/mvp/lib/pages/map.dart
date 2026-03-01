@@ -1,4 +1,3 @@
-import 'package:mvp/core/constants/app_color.dart';
 import 'package:mvp/widget/node_button.dart';
 import 'package:flutter/material.dart';
 import 'package:mvp/data/models/node.dart';

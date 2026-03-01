@@ -3,7 +3,10 @@ import 'package:mvp/core/constants/text_styles.dart';
 import 'package:mvp/widget/animated_hover_button.dart';
 import 'package:mvp/core/constants/app_color.dart';
 import 'package:mvp/core/di/injection_container.dart' as di;
+import 'package:mvp/data/repositories/player_repository.dart';
+import 'package:mvp/data/models/player.dart';
 import 'package:mvp/domain/engine/game_engine.dart';
+import 'package:mvp/domain/use-cases/login_use_case.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -12,10 +15,9 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home>
-    with SingleTickerProviderStateMixin {
-
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   int currentCharacterIndex = 0;
+  bool _isLoading = false; // Variable de estado para el login
 
   late AnimationController _controller;
   late Animation<double> _breathingAnimation;
@@ -40,12 +42,7 @@ class _HomeState extends State<Home>
     _breathingAnimation = Tween<double>(
       begin: 0.98,
       end: 1.02,
-    ).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: Curves.easeInOut,
-      ),
-    );
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
   }
 
   @override
@@ -169,15 +166,75 @@ class _HomeState extends State<Home>
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    AnimatedIconButton(
-                      imagePath: 'assets/images/play2.png',
-                      onPressed: currentCharacterIndex == 4
-                          ? null
-                          : () {
-                              final engine = di.sl<GameEngine>();
-                              engine.goToMap();
-                            },
-                    ),
+                    // Renderizado condicional del botón PLAY
+                    _isLoading
+                        ? const SizedBox(
+                            width: 60,
+                            height: 60,
+                            child: CircularProgressIndicator(
+                              color: AppColor.amarillo,
+                              strokeWidth: 4,
+                            ),
+                          )
+                        : AnimatedIconButton(
+                            imagePath: 'assets/images/play2.png',
+                            onPressed: currentCharacterIndex == 1
+                                ? null
+                                : () async {
+                                    setState(() {
+                                      _isLoading = true;
+                                    });
+
+                                    final loginUseCase = di.sl<LoginUseCase>();
+                                    final userCredential = await loginUseCase();
+
+                                    if (mounted) {
+                                      setState(() {
+                                        _isLoading = false;
+                                      });
+                                    }
+
+                                    if (userCredential != null &&
+                                        userCredential.user != null) {
+                                      final engine = di.sl<GameEngine>();
+                                      final Player? myPlayer = await di
+                                          .sl<PlayerRepository>()
+                                          .getPlayer(userCredential.user!.uid);
+
+                                      if (myPlayer != null) {
+                                        engine.setAuthenticatedPlayer(myPlayer);
+                                      } else {
+                                        final newPlayer = Player(
+                                          userId: userCredential.user!.uid,
+                                          name:
+                                              userCredential
+                                                  .user!
+                                                  .displayName ??
+                                              'Jugador Nuevo',
+                                          lives: 3,
+                                        );
+                                        engine.setAuthenticatedPlayer(
+                                          newPlayer,
+                                        );
+                                      }
+
+                                      engine.goToMap();
+                                    } else {
+                                      if (mounted) {
+                                        ScaffoldMessenger.of(
+                                          context,
+                                        ).showSnackBar(
+                                          const SnackBar(
+                                            content: Text(
+                                              'No se pudo iniciar sesión. Intenta de nuevo.',
+                                            ),
+                                            backgroundColor: Colors.red,
+                                          ),
+                                        );
+                                      }
+                                    }
+                                  },
+                          ),
                     const SizedBox(width: 40),
                     AnimatedIconButton(
                       imagePath: 'assets/images/setting.png',
