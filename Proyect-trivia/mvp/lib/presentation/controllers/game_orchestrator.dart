@@ -59,7 +59,7 @@ class GameOrchestrator extends StatelessWidget {
             return TriviaScreen(
               questionText: currentQuestion.text,
               options: currentQuestion.options,
-              lives: state.player.lives,
+              player: state.player,
               category: currentQuestion.category,
               currentNode:
                   "${state.currentQuestionIndex + 1} / ${state.currentQuestions?.length ?? '?'}",

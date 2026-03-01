@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:mvp/widget/pregunta_widget.dart';
 import 'package:mvp/widget/respuesta_widget.dart';
+import 'package:mvp/widget/status_bar.dart';
+
+import 'package:mvp/data/models/player.dart';
 
 class TriviaScreen extends StatelessWidget {
   final String questionText;
   final List<String> options;
-  final int lives;
+  final Player player;
   final String category;
   final String currentNode;
   final Function(String) onOptionSelected;
@@ -15,7 +18,7 @@ class TriviaScreen extends StatelessWidget {
     super.key,
     required this.questionText,
     required this.options,
-    required this.lives,
+    required this.player,
     required this.category,
     required this.currentNode,
     required this.onOptionSelected,
@@ -29,24 +32,9 @@ class TriviaScreen extends StatelessWidget {
         title: Text("$category - Nivel $currentNode"),
         leading: IconButton(icon: const Icon(Icons.close), onPressed: onQuit),
         actions: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Row(
-              children: [
-                const Icon(Icons.favorite, color: Colors.red),
-                const SizedBox(width: 5),
-                Text(
-                  "$lives",
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-          ),
+         PlayerStatusBar(player: player),
         ],
-        backgroundColor: const Color(0xFFA1CF58),
+        backgroundColor: const Color.fromARGB(255, 145, 183, 85),
       ),
       body: Stack(
         children: [
