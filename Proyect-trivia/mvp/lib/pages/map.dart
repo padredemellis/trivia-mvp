@@ -50,10 +50,12 @@ class HomePage extends StatelessWidget {
     final engine = di.sl<GameEngine>();
 
     final List<String> themes = [
-      'Cultura',
-      'Ciencias',
+      'Ciencias Naturales',
+      'Ciencias Sociales',
       'Actualidad',
-      'Hobbies',
+      'Arte y Entretenimiento',
+      'Deportes',
+      'Historia',
     ];
 
     return StreamBuilder(

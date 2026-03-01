@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:mvp/core/constants/text_styles.dart';
 import 'package:mvp/core/constants/app_color.dart';
 import 'package:mvp/core/di/injection_container.dart' as di;
+import 'package:mvp/data/models/player.dart';
 import 'package:mvp/domain/engine/game_engine.dart';
 
 class PlayerStatusBar extends StatelessWidget {
-  const PlayerStatusBar({super.key});
+  const PlayerStatusBar({super.key, required Player player});
 
   @override
   Widget build(BuildContext context) {
