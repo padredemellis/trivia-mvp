@@ -1,4 +1,3 @@
-import 'package:mvp/core/constants/app_color.dart';
 import 'package:mvp/widget/node_button.dart';
 import 'package:flutter/material.dart';
 import 'package:mvp/data/models/node.dart';
@@ -51,10 +50,12 @@ class HomePage extends StatelessWidget {
     final engine = di.sl<GameEngine>();
 
     final List<String> themes = [
-      'Cultura',
-      'Ciencias',
+      'Ciencias Naturales',
+      'Ciencias Sociales',
       'Actualidad',
-      'Hobbies',
+      'Arte y Entretenimiento',
+      'Deportes',
+      'Historia',
     ];
 
     return StreamBuilder(
@@ -81,7 +82,7 @@ class HomePage extends StatelessWidget {
               },
             ),
             title: const Text('Mapa', style: TextStyles.bar),
-            backgroundColor: AppColor.backgroundVerde.withValues(),
+            backgroundColor: const Color.fromARGB(255, 118, 135, 61).withValues(),
             elevation: 0,
           ),
           body: Stack(
