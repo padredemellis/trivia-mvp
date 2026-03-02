@@ -5,7 +5,6 @@ import 'package:mvp/core/constants/text_styles.dart';
 import 'package:mvp/core/di/injection_container.dart' as di;
 import 'package:mvp/domain/engine/game_engine.dart';
 
-
 class NodeButton extends StatefulWidget {
   const NodeButton({super.key, required this.box});
   final Node box;
@@ -25,9 +24,7 @@ class _NodeButtonState extends State<NodeButton> {
 
     return MouseRegion(
       onEnter: (_) {
-        if (isUnlocked) {
-          setState(() => isHovering = true);
-        }
+        if (isUnlocked) setState(() => isHovering = true);
       },
       onExit: (_) => setState(() => isHovering = false),
       child: GestureDetector(
@@ -43,8 +40,9 @@ class _NodeButtonState extends State<NodeButton> {
                   BoxShadow(
                     color: isUnlocked
                         ? (isHovering
-                              ? Colors.yellow.withOpacity(0.5)
-                              : const Color.fromARGB(255, 84, 135, 55).withOpacity(0.1))
+                            ? Colors.yellow.withOpacity(0.5)
+                            : const Color.fromARGB(255, 84, 135, 55)
+                                .withOpacity(0.1))
                         : Colors.transparent,
                     spreadRadius: isHovering ? 6 : 3,
                     blurRadius: isHovering ? 40 : 5,
@@ -57,14 +55,15 @@ class _NodeButtonState extends State<NodeButton> {
                   alignment: Alignment.center,
                   children: [
                     Image.asset(
-                      themeImages[widget.box.title] ??
+                      themeImages[widget.box.category] ??
                           'assets/images/default.png',
                       fit: BoxFit.contain,
                     ),
+
                     Text(
                       '${widget.box.nodeId}',
                       style: TextStyles.bar.copyWith(
-                        shadows: [
+                        shadows: const [
                           Shadow(
                             blurRadius: 6,
                             color: Colors.black,
@@ -73,24 +72,23 @@ class _NodeButtonState extends State<NodeButton> {
                         ],
                       ),
                     ),
+
                     if (!isUnlocked)
                       const Icon(Icons.lock, size: 28, color: Colors.white),
 
                     if (isCompleted)
-                       Container(
-                        alignment: Alignment.center,
-                        child: Icon(
-                          Icons.check_circle,
-                          color: Colors.amberAccent,
-                          size: 30,
-                        ),
+                      const Icon(
+                        Icons.check_circle,
+                        color: Colors.amberAccent,
+                        size: 30,
                       ),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: kDouble5),
-            Text(widget.box.title, style: TextStyles.categoria),
+            const SizedBox(height: kDouble5),
+
+            Text(widget.box.category, style: TextStyles.categoria),
           ],
         ),
       ),

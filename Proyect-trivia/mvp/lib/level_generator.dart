@@ -12,7 +12,7 @@ class _LevelGeneratorState extends State<LevelGenerator> {
   bool _uploading = false;
   String _status = "Listo para generar 30 niveles con pools de 10 preguntas";
 
-  // Categorías exactas de tu JSON de 600 preguntas
+  
   final List<String> themes = [
     'Historia',
     'Actualidad',
@@ -31,7 +31,7 @@ class _LevelGeneratorState extends State<LevelGenerator> {
     final firestore = FirebaseFirestore.instance;
 
     try {
-      // 1. Descargar todas las preguntas para clasificarlas en memoria
+      
       final questionsSnap = await firestore.collection('questions').get();
       final allDocs = questionsSnap.docs;
 
@@ -39,7 +39,7 @@ class _LevelGeneratorState extends State<LevelGenerator> {
         throw "No hay preguntas en 'questions'. Súbelas primero.";
       }
 
-      // 2. Organizar IDs por categoría
+      
       Map<String, List<String>> questionsByCategory = {};
       for (var theme in themes) {
         questionsByCategory[theme] = [];
@@ -59,12 +59,12 @@ class _LevelGeneratorState extends State<LevelGenerator> {
 
       final batch = firestore.batch();
 
-      // 3. Generar 30 niveles temáticos
+      
       for (int i = 1; i <= 30; i++) {
-        // Rotación de temas (1: Historia, 2: Actualidad, etc.)
+        
         String currentTheme = themes[(i - 1) % themes.length];
         
-        // Obtener preguntas del tema y mezclarlas
+        
         List<String> thematicPool = List.from(questionsByCategory[currentTheme] ?? []);
         thematicPool.shuffle();
         

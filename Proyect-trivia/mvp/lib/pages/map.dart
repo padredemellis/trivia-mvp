@@ -1,10 +1,10 @@
 import 'package:mvp/widget/node_button.dart';
 import 'package:flutter/material.dart';
 import 'package:mvp/data/models/node.dart';
-import 'package:mvp/core/enums/difficulty.dart';
 import 'package:mvp/core/constants/text_styles.dart';
 import 'package:mvp/core/di/injection_container.dart' as di;
 import 'package:mvp/domain/engine/game_engine.dart';
+import 'package:mvp/data/repositories/node_repository.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -48,51 +48,47 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final engine = di.sl<GameEngine>();
-
-    final List<String> themes = [
-      'Ciencias Naturales',
-      'Ciencias Sociales',
-      'Actualidad',
-      'Arte y Entretenimiento',
-      'Deportes',
-      'Historia',
-    ];
+    final nodeRepo = di.sl<NodeRepository>();
 
     return StreamBuilder(
       stream: engine.stateStream,
       builder: (context, snapshot) {
-        final items = List.generate(30, (index) {
-          String theme = themes[index % themes.length];
-          return Node(
-            nodeId: index + 1,
-            title: theme,
-            description: '',
-            difficulty: Difficulty.easy,
-            poolQuestionIds: [],
-            questionsToShow: 0,
-          );
-        });
+        return FutureBuilder<List<Node>>(
+          future: nodeRepo.getAllNodes(),
+          builder: (context, nodesSnap) {
+            final nodes = nodesSnap.data ?? const <Node>[];
 
-        return Scaffold(
-          appBar: AppBar(
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-            title: const Text('Mapa', style: TextStyles.bar),
-            backgroundColor: const Color.fromARGB(255, 118, 135, 61).withValues(),
-            elevation: 0,
-          ),
-          body: Stack(
-            children: [
-              Positioned.fill(child: background()),
-              SingleChildScrollView(
-                child: Column(children: buildLevelCards(items)),
+            return Scaffold(
+              appBar: AppBar(
+                leading: IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () => Navigator.of(context).pop(),
+                ),
+                title: const Text('Mapa', style: TextStyles.bar),
+                backgroundColor:
+                    const Color.fromARGB(255, 118, 135, 61).withValues(),
+                elevation: 0,
               ),
-            ],
-          ),
+              body: Stack(
+                children: [
+                  Positioned.fill(child: background()),
+                  if (nodesSnap.connectionState == ConnectionState.waiting)
+                    const Center(child: CircularProgressIndicator())
+                  else if (nodesSnap.hasError)
+                    Center(
+                      child: Text(
+                        'Error cargando nodos: ${nodesSnap.error}',
+                        style: const TextStyle(color: Colors.white),
+                      ),
+                    )
+                  else
+                    SingleChildScrollView(
+                      child: Column(children: buildLevelCards(nodes)),
+                    ),
+                ],
+              ),
+            );
+          },
         );
       },
     );
