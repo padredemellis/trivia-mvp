@@ -39,21 +39,21 @@ class GameOrchestrator extends StatelessWidget {
                 body: Center(child: CircularProgressIndicator()),
               );
             }
+
             return TriviaScreen(
               questionText: currentQuestion.text,
               options: currentQuestion.options,
               player: state.player,
               category: currentQuestion.category,
-              currentNode: "${state.currentQuestionIndex + 1} / ${state.currentQuestions?.length ?? '?'}",
-              
-              // 👇 NUEVO PARÁMETRO AGREGADO AQUÍ 👇
-              // Si tu modelo Player ya tiene el personaje, puedes usar algo como: state.player.characterSkin
-              // Por ahora, le pasamos un string duro de los que definió el frontend para que compile y funcione:
-              selectedCharacter: 'assets/images/skin_fox2.png', 
-              
-              onOptionSelected: (selectedAnswer) {
-                engine.answerQuestion(selectedAnswer);
+              currentNode:
+                  "${state.currentQuestionIndex + 1} / ${state.currentQuestions?.length ?? '?'}",
+
+              selectedCharacter: 'assets/images/skin_fox2.png',
+
+              onOptionSelected: (selectedAnswer) async {
+                return await engine.answerQuestion(selectedAnswer);
               },
+
               onQuit: () {
                 engine.resetGame();
               },
@@ -95,7 +95,10 @@ class GameOrchestrator extends StatelessWidget {
                     const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () => engine.goToMap(),
-                      child: const Text("Continuar", style:TextStyle(fontSize: 18)),
+                      child: const Text(
+                        "Continuar",
+                        style: TextStyle(fontSize: 18),
+                      ),
                     ),
                   ],
                 ),

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:mvp/core/enums/game_state.dart';
 import 'package:mvp/data/models/player.dart';
+import 'package:mvp/data/models/answer_feedback.dart';
 import 'package:mvp/domain/engine/game_engine_state.dart';
 import 'package:mvp/data/models/game_sessions.dart';
 import 'package:mvp/data/models/question.dart';
@@ -119,69 +120,79 @@ class GameEngine {
     _update(status: GameState.navigating);
   }
 
-  /// Procesa la respuesta del usuario a una pregunta.
-  ///
-  /// Flujo:
-  /// - Valida la respuesta mediante AnswerQuestionUseCase.
-  /// - Actualiza la sesión de juego.
-  /// - Persiste los cambios.
-  /// - Gestiona pérdida de vidas y Game Over.
-  /// - Avanza a la siguiente pregunta o finaliza el nodo.
-  Future<void> answerQuestion(String userAnswer) async {
-    if (_state.currentQuestions == null || _state.currentSession == null) {
-      return;
-    }
+  // Procesa la respuesta del usuario a una pregunta.
+///
+/// Flujo:
+/// - Valida la respuesta mediante AnswerQuestionUseCase.
+/// - Actualiza la sesión de juego.
+/// - Persiste los cambios.
+/// - Gestiona pérdida de vidas y Game Over.
+/// - Avanza a la siguiente pregunta o finaliza el nodo.
+///
+/// Retorna [AnswerFeedback] para que la UI muestre feedback inmediato.
+Future<AnswerFeedback?> answerQuestion(String userAnswer) async {
+  if (_state.currentQuestions == null || _state.currentSession == null) {
+    return null;
+  }
 
-    final question = _state.currentQuestions![_state.currentQuestionIndex];
+  final question = _state.currentQuestions![_state.currentQuestionIndex];
 
-    final isCorrect = _answerQuestionUC.execute(question, userAnswer);
+  final isCorrect = _answerQuestionUC.execute(question, userAnswer);
 
-    var updatedSession = _state.currentSession!.copyWith(
-      correctCount: isCorrect
-          ? _state.currentSession!.correctCount + 1
-          : _state.currentSession!.correctCount,
-      incorrectCount: !isCorrect
-          ? _state.currentSession!.incorrectCount + 1
-          : _state.currentSession!.incorrectCount,
-      lastUpdated: DateTime.now(),
+  final feedback = AnswerFeedback(
+    isCorrect: isCorrect,
+    correctAnswer: question.correctAnswer,
+  );
+
+  var updatedSession = _state.currentSession!.copyWith(
+    correctCount: isCorrect
+        ? _state.currentSession!.correctCount + 1
+        : _state.currentSession!.correctCount,
+    incorrectCount: !isCorrect
+        ? _state.currentSession!.incorrectCount + 1
+        : _state.currentSession!.incorrectCount,
+    lastUpdated: DateTime.now(),
+  );
+
+  updatedSession.answersGiven[question.questionId] = isCorrect;
+
+  await _updateSessionUC.execute(updatedSession);
+
+  Player currentPlayer = _state.player;
+  if (!isCorrect) {
+    currentPlayer = _loseLifeUC.execute(currentPlayer);
+
+    print(
+      "💥 [ENGINE] RESPUESTA INCORRECTA. Guardando vidas en DB: ${currentPlayer.lives}",
     );
 
-    updatedSession.answersGiven[question.questionId] = isCorrect;
-
-    await _updateSessionUC.execute(updatedSession);
-
-    Player currentPlayer = _state.player;
-    if (!isCorrect) {
-      currentPlayer = _loseLifeUC.execute(currentPlayer);
-
-      print("💥 [ENGINE] RESPUESTA INCORRECTA. Guardando vidas en DB: ${currentPlayer.lives}");
-
-      
-      await di.sl<PlayerRepository>().updateLives(currentPlayer.userId, currentPlayer.lives);
-
-      if (currentPlayer.lives <= 0) {
-        _update(
-          player: currentPlayer,
-          status: GameState.gameOver
+    await di.sl<PlayerRepository>().updateLives(
+          currentPlayer.userId,
+          currentPlayer.lives,
         );
-        return; 
-      } else {
-        _update(player: currentPlayer);
-      }
-    }
 
-    final isLastQuestion =
-        _state.currentQuestionIndex == _state.currentQuestions!.length - 1;
-
-    if (isLastQuestion) {
-      _finishNode(updatedSession);
+    if (currentPlayer.lives <= 0) {
+      _update(player: currentPlayer, status: GameState.gameOver);
+      return feedback; 
     } else {
-      _update(
-        currentSession: updatedSession,
-        currentQuestionIndex: _state.currentQuestionIndex + 1,
-      );
+      _update(player: currentPlayer);
     }
   }
+
+  final isLastQuestion =
+      _state.currentQuestionIndex == _state.currentQuestions!.length - 1;
+
+  if (isLastQuestion) {
+    _finishNode(updatedSession);
+  } else {
+    _update(
+      currentSession: updatedSession,
+      currentQuestionIndex: _state.currentQuestionIndex + 1,
+    );
+  }
+
+  return feedback;
+}
 
   /// Finaliza un nodo del juego.
   ///
@@ -222,6 +233,7 @@ class GameEngine {
       errorMessage: null,
     );
   }
+
   // Actualiza los datos del jugador tras un inicio de sesión exitoso.
   /// Esto reemplaza al initialPlayer con los datos reales de Firestore.
   void setAuthenticatedPlayer(Player loggedInPlayer) {

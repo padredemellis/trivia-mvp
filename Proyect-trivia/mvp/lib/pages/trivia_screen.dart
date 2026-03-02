@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mvp/data/models/answer_feedback.dart';
 import 'package:mvp/widget/pregunta_widget.dart';
 import 'package:mvp/widget/respuesta_widget.dart';
 import 'package:mvp/widget/status_bar.dart';
@@ -11,7 +12,9 @@ class TriviaScreen extends StatelessWidget {
   final String category;
   final String currentNode;
   final String selectedCharacter;
-  final Function(String) onOptionSelected;
+
+  final Future<AnswerFeedback?> Function(String) onOptionSelected;
+
   final VoidCallback onQuit;
 
   static const Map<String, String> _characterBackgrounds = {
@@ -35,6 +38,26 @@ class TriviaScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future<void> handleOptionTap(String userAnswer) async {
+      final feedback = await onOptionSelected(userAnswer);
+
+      if (!context.mounted || feedback == null) return;
+
+      final text = feedback.isCorrect
+          ? "Respuesta correcta, ¡sigue así!"
+          : 'Respuesta equivocada. La respuesta correcta era: "${feedback.correctAnswer}"';
+
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          behavior: SnackBarBehavior.floating,
+          backgroundColor: feedback.isCorrect ? Colors.green : Colors.red,
+          duration: const Duration(seconds: 2),
+          content: Text(text),
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text("$category - Nivel $currentNode"),
@@ -57,23 +80,18 @@ class TriviaScreen extends StatelessWidget {
             ),
           ),
 
-      
           // Caja de texto de la pregunta (Ajustada al globo de diálogo)
           Positioned(
             top: MediaQuery.of(context).size.height * 0.12,
             left: MediaQuery.of(context).size.width * 0.05,
             width: MediaQuery.of(context).size.width * 0.38,
             height: MediaQuery.of(context).size.height * 0.20,
-
             child: Container(
-          
               padding: const EdgeInsets.symmetric(horizontal: 4.0),
-
               child: Center(child: PreguntaWidget(texto: questionText)),
             ),
           ),
 
-          
           Align(
             alignment: Alignment.bottomCenter,
             child: SizedBox(
@@ -93,7 +111,7 @@ class TriviaScreen extends StatelessWidget {
                         texto: options[index],
                         esCorrecta: false,
                         mostrarResultado: false,
-                        onTap: () => onOptionSelected(options[index]),
+                        onTap: () => handleOptionTap(options[index]),
                       ),
                     ),
                   );
