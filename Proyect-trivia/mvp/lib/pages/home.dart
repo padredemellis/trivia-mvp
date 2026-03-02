@@ -197,27 +197,49 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     if (userCredential != null &&
                                         userCredential.user != null) {
                                       final engine = di.sl<GameEngine>();
-                                      final Player? myPlayer = await di
-                                          .sl<PlayerRepository>()
-                                          .getPlayer(userCredential.user!.uid);
+                                      final playerRepo = di.sl<PlayerRepository>();
+                                      final uid = userCredential.user!.uid;
+
+                                      // 1. Buscamos al jugador en Firestore
+                                      Player? myPlayer = await playerRepo.getPlayer(uid);
+
+                                      print("🔥 [HOME] LEYENDO FIRESTORE. Vidas encontradas: ${myPlayer?.lives}");
 
                                       if (myPlayer != null) {
-                                        engine.setAuthenticatedPlayer(myPlayer);
-                                      } else {
-                                        final newPlayer = Player(
-                                          userId: userCredential.user!.uid,
-                                          name:
-                                              userCredential
-                                                  .user!
-                                                  .displayName ??
-                                              'Jugador Nuevo',
-                                          lives: 3,
-                                        );
-                                        engine.setAuthenticatedPlayer(
-                                          newPlayer,
-                                        );
+                                        await di.sl<PlayerRepository>().updatePlayer(myPlayer);
                                       }
 
+                                      if (myPlayer != null) {
+                                        // 2. Evaluamos si el jugador perdió todas las vidas
+                                        if (myPlayer.lives <= 0) {
+                                          
+                                          // 3. Reiniciamos las vidas en RAM usando copyWith
+                                          final playerReseteado = myPlayer.copyWith(lives: 3);
+                                          
+                                          // 4. Persistimos el reinicio en Firestore usando tu método optimizado
+                                          await playerRepo.updateLives(uid, 3);
+                                          
+                                          // 5. Inyectamos al jugador curado en el motor
+                                          engine.setAuthenticatedPlayer(playerReseteado);
+                                        } else {
+                                          // 6. Si tiene 1, 2 o 3 vidas, inyectamos el jugador tal cual para respetar tu persistencia
+                                          engine.setAuthenticatedPlayer(myPlayer);
+                                        }
+                                      } else {
+                                        // 7. Si es un jugador nuevo
+                                        final newPlayer = Player(
+                                          userId: uid,
+                                          name: userCredential.user!.displayName ?? 'Jugador Nuevo',
+                                          // lives: 3 viene por defecto en el constructor de player.dart
+                                        );
+                                        
+                                        // 8. Guardamos al jugador nuevo en Firestore
+                                        await playerRepo.savePlayer(newPlayer);
+                                        
+                                        engine.setAuthenticatedPlayer(newPlayer);
+                                      }
+
+                                      // 9. Navegamos al mapa
                                       engine.goToMap();
                                     } else {
                                       if (mounted) {

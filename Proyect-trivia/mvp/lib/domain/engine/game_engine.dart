@@ -10,6 +10,8 @@ import 'package:mvp/domain/use-cases/complete_node_use_case.dart';
 import 'package:mvp/domain/use-cases/lose_life_use_case.dart';
 import 'package:mvp/domain/use-cases/start_node_use_case.dart';
 import 'package:mvp/domain/use-cases/update_game_session_use_case.dart';
+import 'package:mvp/data/repositories/player_repository.dart';
+import 'package:mvp/core/di/injection_container.dart' as di;
 
 /// GameEngine
 ///
@@ -151,11 +153,20 @@ class GameEngine {
     Player currentPlayer = _state.player;
     if (!isCorrect) {
       currentPlayer = _loseLifeUC.execute(currentPlayer);
-      _update(player: currentPlayer);
+
+      print("💥 [ENGINE] RESPUESTA INCORRECTA. Guardando vidas en DB: ${currentPlayer.lives}");
+
+      
+      await di.sl<PlayerRepository>().updateLives(currentPlayer.userId, currentPlayer.lives);
 
       if (currentPlayer.lives <= 0) {
-        _update(status: GameState.gameOver);
-        return;
+        _update(
+          player: currentPlayer,
+          status: GameState.gameOver
+        );
+        return; 
+      } else {
+        _update(player: currentPlayer);
       }
     }
 
