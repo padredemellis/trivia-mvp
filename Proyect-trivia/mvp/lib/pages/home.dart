@@ -178,7 +178,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           )
                         : AnimatedIconButton(
                             imagePath: 'assets/images/play2.png',
-                            onPressed: currentCharacterIndex == 1
+                            onPressed: currentCharacterIndex == 4
                                 ? null
                                 : () async {
                                     setState(() {
