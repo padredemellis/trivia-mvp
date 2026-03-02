@@ -17,7 +17,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   int currentCharacterIndex = 0;
-  bool _isLoading = false; // Variable de estado para el login
+  bool _isLoading = false;
 
   late AnimationController _controller;
   late Animation<double> _breathingAnimation;
@@ -76,8 +76,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           child: Column(
             children: <Widget>[
               const SizedBox(height: 20),
-
-              // Titulo
               Padding(
                 padding: const EdgeInsets.only(top: 50.0),
                 child: Text(
@@ -96,23 +94,18 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   ),
                 ),
               ),
-
-              // Body - Personaje
               Expanded(
                 child: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Spacer(),
-
                       AnimatedIconButton(
                         imagePath: 'assets/images/left.png',
                         size: 40,
                         onPressed: () => changeCharacter(-1),
                       ),
-
                       const SizedBox(width: 20),
-
                       Expanded(
                         flex: 3,
                         child: Padding(
@@ -134,22 +127,17 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           ),
                         ),
                       ),
-
                       const SizedBox(width: 20),
-
                       AnimatedIconButton(
                         imagePath: 'assets/images/right.png',
                         size: 40,
                         onPressed: () => changeCharacter(1),
                       ),
-
                       const Spacer(),
                     ],
                   ),
                 ),
               ),
-
-              // Descripcion
               Text(
                 'Choose your character!',
                 style: TextStyles.categoria.copyWith(
@@ -157,16 +145,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   color: AppColor.oscuro.withOpacity(0.8),
                 ),
               ),
-
               const SizedBox(height: 30),
-
-              // Botones inferiores
               Padding(
                 padding: const EdgeInsets.only(bottom: 60.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Renderizado condicional del botón PLAY
                     _isLoading
                         ? const SizedBox(
                             width: 60,
@@ -197,49 +181,53 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     if (userCredential != null &&
                                         userCredential.user != null) {
                                       final engine = di.sl<GameEngine>();
-                                      final playerRepo = di.sl<PlayerRepository>();
+                                      final playerRepo =
+                                          di.sl<PlayerRepository>();
                                       final uid = userCredential.user!.uid;
 
-                                      // 1. Buscamos al jugador en Firestore
-                                      Player? myPlayer = await playerRepo.getPlayer(uid);
+                                      Player? myPlayer =
+                                          await playerRepo.getPlayer(uid);
 
-                                      print("🔥 [HOME] LEYENDO FIRESTORE. Vidas encontradas: ${myPlayer?.lives}");
+                                      print(
+                                        "🔥 [HOME] LEYENDO FIRESTORE. Vidas encontradas: ${myPlayer?.lives}",
+                                      );
 
                                       if (myPlayer != null) {
-                                        await di.sl<PlayerRepository>().updatePlayer(myPlayer);
+                                        await di
+                                            .sl<PlayerRepository>()
+                                            .updatePlayer(myPlayer);
                                       }
 
                                       if (myPlayer != null) {
-                                        // 2. Evaluamos si el jugador perdió todas las vidas
                                         if (myPlayer.lives <= 0) {
-                                          
-                                          // 3. Reiniciamos las vidas en RAM usando copyWith
-                                          final playerReseteado = myPlayer.copyWith(lives: 3);
-                                          
-                                          // 4. Persistimos el reinicio en Firestore usando tu método optimizado
+                                          final playerReseteado =
+                                              myPlayer.copyWith(lives: 3);
+
                                           await playerRepo.updateLives(uid, 3);
-                                          
-                                          // 5. Inyectamos al jugador curado en el motor
-                                          engine.setAuthenticatedPlayer(playerReseteado);
+
+                                          engine.setAuthenticatedPlayer(
+                                            playerReseteado,
+                                          );
                                         } else {
-                                          // 6. Si tiene 1, 2 o 3 vidas, inyectamos el jugador tal cual para respetar tu persistencia
-                                          engine.setAuthenticatedPlayer(myPlayer);
+                                          engine.setAuthenticatedPlayer(
+                                            myPlayer,
+                                          );
                                         }
                                       } else {
-                                        // 7. Si es un jugador nuevo
                                         final newPlayer = Player(
                                           userId: uid,
-                                          name: userCredential.user!.displayName ?? 'Jugador Nuevo',
-                                          // lives: 3 viene por defecto en el constructor de player.dart
+                                          name: userCredential.user!
+                                                  .displayName ??
+                                              'Jugador Nuevo',
                                         );
-                                        
-                                        // 8. Guardamos al jugador nuevo en Firestore
+
                                         await playerRepo.savePlayer(newPlayer);
-                                        
-                                        engine.setAuthenticatedPlayer(newPlayer);
+
+                                        engine.setAuthenticatedPlayer(
+                                          newPlayer,
+                                        );
                                       }
 
-                                      // 9. Navegamos al mapa
                                       engine.goToMap();
                                     } else {
                                       if (mounted) {
@@ -257,13 +245,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     }
                                   },
                           ),
-                    const SizedBox(width: 40),
-                    AnimatedIconButton(
-                      imagePath: 'assets/images/setting.png',
-                      onPressed: () {
-                        print("Settings clicked");
-                      },
-                    ),
                   ],
                 ),
               ),
