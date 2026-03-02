@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mvp/core/constants/text_styles.dart';
+// 1. Importamos la nueva herramienta
+import 'package:auto_size_text/auto_size_text.dart';
 
 class PreguntaWidget extends StatefulWidget {
   final String texto;
@@ -13,13 +15,15 @@ class PreguntaWidget extends StatefulWidget {
 class _PreguntaWidgetState extends State<PreguntaWidget> {
   int _charCount = 0;
 
+  // 2. Creamos un grupo para sincronizar los tamaños
+  final AutoSizeGroup _myGroup = AutoSizeGroup();
+
   @override
   void initState() {
     super.initState();
     _animateText();
   }
 
-  // Detecta cuando la trivia pasa a la siguiente pregunta y reinicia la animación
   @override
   void didUpdateWidget(covariant PreguntaWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
@@ -32,27 +36,39 @@ class _PreguntaWidgetState extends State<PreguntaWidget> {
   }
 
   Future<void> _animateText() async {
-    final originalText = widget.texto; 
+    final originalText = widget.texto;
     for (int i = 0; i <= originalText.length; i++) {
-      // Pequeña pausa entre letras
       await Future.delayed(const Duration(milliseconds: 30));
-      
-      // Si el widget se cierra o el texto cambia, detenemos este bucle
-      if (!mounted || widget.texto != originalText) return; 
-      
+      if (!mounted || widget.texto != originalText) return;
       setState(() => _charCount = i);
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    // EL SEGURO: clamp evita que _charCount sea mayor al texto actual (evita el error rojo)
     final safeCharCount = _charCount.clamp(0, widget.texto.length);
-    
-    return Text(
-      widget.texto.substring(0, safeCharCount),
-      style: TextStyles.pregunta,
-      textAlign: TextAlign.left,
+
+    return Stack(
+      children: [
+        // 1. El molde invisible (Texto Completo)
+        AutoSizeText(
+          widget.texto,
+          style: TextStyles.pregunta.copyWith(color: Colors.transparent),
+          group: _myGroup,
+          maxLines: 7, // 👈 Aumentamos los renglones permitidos
+          minFontSize: 10, // 👈 Tamaño mínimo de letra permitido
+        ),
+
+        // 2. El texto visible (Animación)
+        AutoSizeText(
+          widget.texto.substring(0, safeCharCount),
+          style: TextStyles.pregunta,
+          textAlign: TextAlign.left,
+          group: _myGroup,
+          maxLines: 7, // 👈 Debe ser exactamente igual al molde
+          minFontSize: 10, // 👈 Debe ser exactamente igual al molde
+        ),
+      ],
     );
   }
 }

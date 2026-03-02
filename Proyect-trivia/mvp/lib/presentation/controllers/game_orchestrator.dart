@@ -7,48 +7,31 @@ import 'package:mvp/pages/map.dart';
 import 'package:mvp/pages/home.dart';
 import 'package:mvp/pages/trivia_screen.dart';
 
-/// Manejador central de la interfaz de usuario.
-///
-/// Su función es escuchar reactivamente el estado del GameEngine
-/// y determinar qué pantalla debe mostrarse en cada momento.
-///
-/// Este componente actúa como el punto de entrada principal de la navegación
-/// basada en estados del juego.
 class GameOrchestrator extends StatelessWidget {
   const GameOrchestrator({super.key});
 
   @override
   Widget build(BuildContext context) {
-    /// Obtiene la instancia única del motor de juego desde el Service Locator.
     final engine = di.sl<GameEngine>();
 
-    /// Escucha el flujo de estados emitidos por el motor.
-    /// [initialData] asegura que la UI tenga un estado válido desde el primer frame.
     return StreamBuilder<GameEngineState>(
       stream: engine.stateStream,
       initialData: engine.state,
       builder: (context, snapshot) {
-        /// Obtenemos los datos del estado actual.
-        /// Usamos el operador [!] porque initialData garantiza que no sea nulo.
         final state = snapshot.data!;
 
-        /// Selector lógico de pantallas basado en el enum [GameState].
         switch (state.status) {
-          /// Estado de carga: Se muestra mientras se obtienen datos de Firebase.
           case GameState.loading:
             return const Scaffold(
               body: Center(child: CircularProgressIndicator()),
             );
 
-          /// Estado de reposo: El usuario está en la pantalla de inicio.
           case GameState.idle:
             return Home();
 
-          /// Estado de navegación: El usuario está en el mapa de niveles.
           case GameState.navigating:
-            return  HomePage();
+            return HomePage();
 
-          /// Estado de juego activo: Se muestra la interfaz de la trivia.
           case GameState.playing:
             final currentQuestion = engine.getCurrentQuestion();
             if (currentQuestion == null) {
@@ -61,8 +44,13 @@ class GameOrchestrator extends StatelessWidget {
               options: currentQuestion.options,
               player: state.player,
               category: currentQuestion.category,
-              currentNode:
-                  "${state.currentQuestionIndex + 1} / ${state.currentQuestions?.length ?? '?'}",
+              currentNode: "${state.currentQuestionIndex + 1} / ${state.currentQuestions?.length ?? '?'}",
+              
+              // 👇 NUEVO PARÁMETRO AGREGADO AQUÍ 👇
+              // Si tu modelo Player ya tiene el personaje, puedes usar algo como: state.player.characterSkin
+              // Por ahora, le pasamos un string duro de los que definió el frontend para que compile y funcione:
+              selectedCharacter: 'assets/images/skin_fox2.png', 
+              
               onOptionSelected: (selectedAnswer) {
                 engine.answerQuestion(selectedAnswer);
               },
@@ -71,7 +59,6 @@ class GameOrchestrator extends StatelessWidget {
               },
             );
 
-          /// Estado de derrota: Se muestra cuando el jugador agota sus vidas.
           case GameState.gameOver:
             return Scaffold(
               backgroundColor: Colors.red[50],
@@ -93,7 +80,6 @@ class GameOrchestrator extends StatelessWidget {
               ),
             );
 
-          /// Estado de éxito: Se muestra al completar todas las preguntas del nodo.
           case GameState.nodeCompleted:
             return Scaffold(
               backgroundColor: Colors.green[50],
@@ -108,7 +94,6 @@ class GameOrchestrator extends StatelessWidget {
                     Text("Puntos ganados: ${state.pointsEarned ?? 0}"),
                     const SizedBox(height: 20),
                     ElevatedButton(
-                      // Vuelve al mapa/menú
                       onPressed: () => engine.goToMap(),
                       child: const Text("Continuar", style:TextStyle(fontSize: 18)),
                     ),
@@ -117,7 +102,6 @@ class GameOrchestrator extends StatelessWidget {
               ),
             );
 
-          /// Caso por defecto para manejar estados no contemplados explícitamente.
           default:
             return const Scaffold(
               body: Center(child: Text("Estado no manejado")),

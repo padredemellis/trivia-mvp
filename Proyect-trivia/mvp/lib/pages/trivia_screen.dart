@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mvp/widget/pregunta_widget.dart';
 import 'package:mvp/widget/respuesta_widget.dart';
 import 'package:mvp/widget/status_bar.dart';
-
 import 'package:mvp/data/models/player.dart';
 
 class TriviaScreen extends StatelessWidget {
@@ -11,8 +10,16 @@ class TriviaScreen extends StatelessWidget {
   final Player player;
   final String category;
   final String currentNode;
+  final String selectedCharacter;
   final Function(String) onOptionSelected;
   final VoidCallback onQuit;
+
+  static const Map<String, String> _characterBackgrounds = {
+    'assets/images/skin_fox2.png': 'assets/images/background_quiz.png',
+    'assets/images/skin_cat.png': 'assets/images/quiz_cat.png',
+    'assets/images/rana.png': 'assets/images/skin_frong.png',
+    'assets/images/oveja.png': 'assets/images/skin_sheep.png',
+  };
 
   const TriviaScreen({
     super.key,
@@ -21,6 +28,7 @@ class TriviaScreen extends StatelessWidget {
     required this.player,
     required this.category,
     required this.currentNode,
+    required this.selectedCharacter,
     required this.onOptionSelected,
     required this.onQuit,
   });
@@ -31,54 +39,50 @@ class TriviaScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("$category - Nivel $currentNode"),
         leading: IconButton(icon: const Icon(Icons.close), onPressed: onQuit),
-        actions: [
-         PlayerStatusBar(player: player),
-        ],
+        actions: [PlayerStatusBar(player: player)],
         backgroundColor: const Color.fromARGB(255, 145, 183, 85),
       ),
       body: Stack(
         children: [
+          // Fondo del personaje
           Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/background_quiz.png'),
+                image: AssetImage(
+                  _characterBackgrounds[selectedCharacter] ??
+                      'assets/images/background_quiz.png',
+                ),
                 fit: BoxFit.cover,
               ),
             ),
           ),
 
-          // Pregunta en cuadrante superior izquierdo
+      
+          // Caja de texto de la pregunta (Ajustada al globo de diálogo)
           Positioned(
-            top: 0,
-            left: 0,
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.5,
-              height: MediaQuery.of(context).size.height * 0.5,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 70.0, top: 35.0),
-                child: Container(
-                  padding: const EdgeInsets.all(12.0),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.8),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    alignment: Alignment.centerLeft,
-                    child: PreguntaWidget(texto: questionText),
-                  ),
-                ),
-              ),
+            top: MediaQuery.of(context).size.height * 0.12,
+            left: MediaQuery.of(context).size.width * 0.05,
+            width: MediaQuery.of(context).size.width * 0.38,
+            height: MediaQuery.of(context).size.height * 0.20,
+
+            child: Container(
+          
+              padding: const EdgeInsets.symmetric(horizontal: 4.0),
+
+              child: Center(child: PreguntaWidget(texto: questionText)),
             ),
           ),
 
-          // Opciones abajo
+          
           Align(
             alignment: Alignment.bottomCenter,
             child: SizedBox(
               height: MediaQuery.of(context).size.height * 0.45,
               child: ListView.builder(
-                padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24.0,
+                  vertical: 16.0,
+                ),
                 itemCount: options.length,
                 itemBuilder: (context, index) {
                   return Padding(
@@ -97,7 +101,7 @@ class TriviaScreen extends StatelessWidget {
               ),
             ),
           ),
-      ],
+        ],
       ),
     );
   }
