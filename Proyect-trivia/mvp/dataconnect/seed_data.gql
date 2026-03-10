@@ -1,0 +1,94 @@
+mutation SeedDemoData @transaction @auth(level: ADMIN, insecureReason: "This mutation is for seeding initial data and should only be run by administrators.") {
+  user_insertMany(data: [
+    {
+      id: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      username: "quizmaster_alpha",
+      email: "alpha@example.com",
+      photoUrl: "https://example.com/alpha.jpg",
+      bio: "Creator of amazing quizzes.",
+      createdAt: "2023-01-01T10:00:00Z"
+    },
+    {
+      id: "b1f0e22a-1c8f-4d3e-9b7a-8b8a8b8a8b8a",
+      username: "quiztaker_beta",
+      email: "beta@example.com",
+      photoUrl: "https://example.com/beta.jpg",
+      bio: "Loves taking quizzes.",
+      createdAt: "2023-01-02T11:00:00Z"
+    }
+  ])
+  quiz_insertMany(data: [
+    {
+      id: "c2d1f33b-2d9c-4f4e-ac5b-9c9b9c9b9c9b",
+      title: "General Knowledge Quiz",
+      description: "Test your general knowledge with these challenging questions!",
+      public: true,
+      category: "Education",
+      imageUrl: "https://example.com/gk_quiz.jpg",
+      createdAt: "2023-01-03T12:00:00Z",
+      updatedAt: "2023-01-03T12:00:00Z",
+      creatorId: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11"
+    },
+    {
+      id: "d3e2f44c-3e0d-4a5f-bd6c-0d0c0d0c0d0c",
+      title: "Science Facts",
+      description: "How well do you know science?",
+      public: false,
+      category: "Science",
+      imageUrl: "https://example.com/science_quiz.jpg",
+      createdAt: "2023-01-04T13:00:00Z",
+      updatedAt: "2023-01-04T13:00:00Z",
+      creatorId: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11"
+    }
+  ])
+  question_insertMany(data: [
+    {
+      id: "e4f3a55d-4f1e-4b6a-ce7d-1e1d1e1d1e1d",
+      text: "What is the capital of France?",
+      correctAnswer: "Paris",
+      explanation: "Paris is known as the 'City of Love'.",
+      createdAt: "2023-01-05T14:00:00Z",
+      quizId: "c2d1f33b-2d9c-4f4e-ac5b-9c9b9c9b9c9b"
+    },
+    {
+      id: "f5g4b66e-5g2f-4c7b-df8e-2f2e2f2e2f2e",
+      text: "Which planet is known as the Red Planet?",
+      correctAnswer: "Mars",
+      explanation: "Mars gets its reddish hue from iron oxide on its surface.",
+      createdAt: "2023-01-06T15:00:00Z",
+      quizId: "d3e2f44c-3e0d-4a5f-bd6c-0d0c0d0c0d0c"
+    }
+  ])
+  answerOption_insertMany(data: [
+    {
+      id: "g6h5c77f-6h3g-4d8c-eg9f-3g3f3g3f3g3f",
+      text: "Berlin",
+      questionId: "e4f3a55d-4f1e-4b6a-ce7d-1e1d1e1d1e1d"
+    },
+    {
+      id: "h7i6d88g-7i4h-4e9d-fh0g-4h4g4h4g4h4g",
+      text: "Paris",
+      questionId: "e4f3a55d-4f1e-4b6a-ce7d-1e1d1e1d1e1d"
+    },
+    {
+      id: "i8j7e99h-8j5i-4f0e-gi1h-5i5h5i5h5i5h",
+      text: "Rome",
+      questionId: "e4f3a55d-4f1e-4b6a-ce7d-1e1d1e1d1e1d"
+    },
+    {
+      id: "j9k8f00i-9k6j-4g1f-hj2i-6j6i6j6i6j6i",
+      text: "Jupiter",
+      questionId: "f5g4b66e-5g2f-4c7b-df8e-2f2e2f2e2f2e"
+    },
+    {
+      id: "k0l9g11j-0l7k-4h2g-ik3j-7k7j7k7j7k7j",
+      text: "Mars",
+      questionId: "f5g4b66e-5g2f-4c7b-df8e-2f2e2f2e2f2e"
+    },
+    {
+      id: "l1m0h22k-1m8l-4i3h-jl4k-8l8k8l8k8l8k",
+      text: "Venus",
+      questionId: "f5g4b66e-5g2f-4c7b-df8e-2f2e2f2e2f2e"
+    }
+  ])
+}

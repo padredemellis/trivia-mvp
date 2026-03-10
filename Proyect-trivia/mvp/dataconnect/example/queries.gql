@@ -1,0 +1,55 @@
+query ListPublicQuizzes @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public as it only lists public quizzes.") {
+  quizzes(where: { public: { eq: true } }) {
+    id
+    title
+    description
+    category
+    imageUrl
+    createdAt
+    updatedAt
+    creator {
+      username
+    }
+  }
+}
+
+query GetMyProfile @auth(level: USER) {
+  user(key: { id_expr: "auth.uid" }) {
+    id
+    username
+    email
+    photoUrl
+    bio
+    createdAt
+  }
+}
+
+mutation CreateNewQuiz($title: String!, $description: String!, $category: String, $imageUrl: String, $public: Boolean!) @auth(level: USER) {
+  quiz_insert(
+    data: {
+      title: $title
+      description: $description
+      category: $category
+      imageUrl: $imageUrl
+      public: $public
+      creatorId_expr: "auth.uid"
+      createdAt_expr: "request.time"
+      updatedAt_expr: "request.time"
+    }
+  ) {
+    id
+  }
+}
+
+mutation RecordQuizAttempt($quizId: UUID!, $score: Int!) @auth(level: USER) {
+  userQuizAttempt_insert(
+    data: {
+      quizId: $quizId
+      userId_expr: "auth.uid"
+      score: $score
+      createdAt_expr: "request.time"
+    }
+  ) {
+    id
+  }
+}

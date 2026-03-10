@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 
 /// Repositorio encargado de gestionar la autenticación del jugador.
 ///
@@ -26,30 +27,48 @@ class AuthRepository {
   /// Retorna un [UserCredential] si el proceso es exitoso, o [null] si el
   /// jugador cancela el flujo o si ocurre un error.
   Future<UserCredential?> signInWithGoogle() async {
-    try {
+  try {
+
+    if (kIsWeb) {
+      // LOGIN PARA WEB
+      GoogleAuthProvider googleProvider = GoogleAuthProvider();
+
+      final UserCredential userCredential =
+          await _auth.signInWithPopup(googleProvider);
+
+      await _saveUserToFirestore(userCredential.user);
+
+      return userCredential;
+
+    } else {
+      // LOGIN PARA ANDROID / IOS
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
 
       if (googleUser == null) {
-        return null; // El usuario cerró el modal de inicio de sesión
+        return null;
       }
 
-      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
 
       final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
 
-      final UserCredential userCredential = await _auth.signInWithCredential(credential);
+      final UserCredential userCredential =
+          await _auth.signInWithCredential(credential);
 
       await _saveUserToFirestore(userCredential.user);
 
       return userCredential;
-    } catch (e) {
-      print("Error en AuthRepository.signInWithGoogle: $e");
-      return null;
     }
+
+  } catch (e) {
+    print("Error en AuthRepository.signInWithGoogle: $e");
+    return null;
   }
+}
 
   /// Guarda o inicializa los datos del jugador en la base de datos.
   ///
