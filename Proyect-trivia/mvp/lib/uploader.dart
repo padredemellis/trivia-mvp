@@ -29,17 +29,15 @@ class _DataUploaderState extends State<DataUploader> {
     });
 
     try {
-      // 1. Convertimos el texto JSON a una lista de Dart
       final data = await readJson('lib/questions.json');
       final firestore = FirebaseFirestore.instance;
 
-      // 2. Recorremos cada elemento y lo subimos
       for (var item in data) {
         await firestore
-            .collection('questions') // Nombre de tu colección
+            .collection('questions') 
             .doc(
               item['questionId'],
-            ) // Usamos el ID del JSON como ID del documento
+            )
             .set(item);
 
         print("Subido: ${item['questionId']}");
