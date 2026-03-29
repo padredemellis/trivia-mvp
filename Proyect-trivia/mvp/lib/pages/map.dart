@@ -50,6 +50,10 @@ class HomePage extends StatelessWidget {
     final engine = di.sl<GameEngine>();
     final nodeRepo = di.sl<NodeRepository>();
 
+    void goBackToHome() {
+      engine.resetGame();
+    }
+
     return StreamBuilder(
       stream: engine.stateStream,
       builder: (context, snapshot) {
@@ -58,34 +62,40 @@ class HomePage extends StatelessWidget {
           builder: (context, nodesSnap) {
             final nodes = nodesSnap.data ?? const <Node>[];
 
-            return Scaffold(
-              appBar: AppBar(
-                leading: IconButton(
-                  icon: const Icon(Icons.arrow_back),
-                  onPressed: () => Navigator.of(context).pop(),
+            return WillPopScope(
+              onWillPop: () async {
+                goBackToHome();
+                return false;
+              },
+              child: Scaffold(
+                appBar: AppBar(
+                  leading: IconButton(
+                    icon: const Icon(Icons.arrow_back),
+                    onPressed: goBackToHome,
+                  ),
+                  title: const Text('Mapa', style: TextStyles.bar),
+                  backgroundColor:
+                      const Color.fromARGB(255, 118, 135, 61).withValues(),
+                  elevation: 0,
                 ),
-                title: const Text('Mapa', style: TextStyles.bar),
-                backgroundColor:
-                    const Color.fromARGB(255, 118, 135, 61).withValues(),
-                elevation: 0,
-              ),
-              body: Stack(
-                children: [
-                  Positioned.fill(child: background()),
-                  if (nodesSnap.connectionState == ConnectionState.waiting)
-                    const Center(child: CircularProgressIndicator())
-                  else if (nodesSnap.hasError)
-                    Center(
-                      child: Text(
-                        'Error cargando nodos: ${nodesSnap.error}',
-                        style: const TextStyle(color: Colors.white),
+                body: Stack(
+                  children: [
+                    Positioned.fill(child: background()),
+                    if (nodesSnap.connectionState == ConnectionState.waiting)
+                      const Center(child: CircularProgressIndicator())
+                    else if (nodesSnap.hasError)
+                      Center(
+                        child: Text(
+                          'Error cargando nodos: ${nodesSnap.error}',
+                          style: const TextStyle(color: Colors.white),
+                        ),
+                      )
+                    else
+                      SingleChildScrollView(
+                        child: Column(children: buildLevelCards(nodes)),
                       ),
-                    )
-                  else
-                    SingleChildScrollView(
-                      child: Column(children: buildLevelCards(nodes)),
-                    ),
-                ],
+                  ],
+                ),
               ),
             );
           },

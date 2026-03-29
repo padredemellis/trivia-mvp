@@ -1,7 +1,18 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
+
+class AuthFailure implements Exception {
+  final String message;
+  final String? code;
+
+  AuthFailure(this.message, {this.code});
+
+  @override
+  String toString() {
+    return code == null ? message : '$message (code: $code)';
+  }
+}
 
 /// Repositorio encargado de gestionar la autenticación del jugador.
 ///
@@ -15,9 +26,6 @@ class AuthRepository {
   /// Instancia de GoogleSignIn para lanzar el flujo interactivo de Google.
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-  /// Instancia de Firestore para persistir los datos del jugador.
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-
   /// Inicia el flujo de autenticación con Google.
   ///
   /// Despliega el modal nativo para que el jugador elija su cuenta de Google.
@@ -27,69 +35,49 @@ class AuthRepository {
   /// Retorna un [UserCredential] si el proceso es exitoso, o [null] si el
   /// jugador cancela el flujo o si ocurre un error.
   Future<UserCredential?> signInWithGoogle() async {
-  try {
+    try {
+      if (kIsWeb) {
+        // LOGIN PARA WEB
+        final GoogleAuthProvider googleProvider = GoogleAuthProvider()
+          ..setCustomParameters({'prompt': 'select_account'});
 
-    if (kIsWeb) {
-      // LOGIN PARA WEB
-      GoogleAuthProvider googleProvider = GoogleAuthProvider();
+        final UserCredential userCredential =
+            await _auth.signInWithPopup(googleProvider);
 
-      final UserCredential userCredential =
-          await _auth.signInWithPopup(googleProvider);
+        return userCredential;
+      } else {
+        // LOGIN PARA ANDROID / IOS
+        final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
 
-      await _saveUserToFirestore(userCredential.user);
+        if (googleUser == null) {
+          // El usuario cerró el diálogo de Google.
+          return null;
+        }
 
-      return userCredential;
+        final GoogleSignInAuthentication googleAuth =
+            await googleUser.authentication;
 
-    } else {
-      // LOGIN PARA ANDROID / IOS
-      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+        final AuthCredential credential = GoogleAuthProvider.credential(
+          accessToken: googleAuth.accessToken,
+          idToken: googleAuth.idToken,
+        );
 
-      if (googleUser == null) {
-        return null;
+        final UserCredential userCredential =
+            await _auth.signInWithCredential(credential);
+
+        return userCredential;
       }
-
-      final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
-
-      final AuthCredential credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth.accessToken,
-        idToken: googleAuth.idToken,
+    } on FirebaseAuthException catch (e) {
+      print('FirebaseAuthException en signInWithGoogle: ${e.code} ${e.message}');
+      throw AuthFailure(
+        e.message ?? 'Error de autenticación con Firebase.',
+        code: e.code,
       );
-
-      final UserCredential userCredential =
-          await _auth.signInWithCredential(credential);
-
-      await _saveUserToFirestore(userCredential.user);
-
-      return userCredential;
-    }
-
-  } catch (e) {
-    print("Error en AuthRepository.signInWithGoogle: $e");
-    return null;
-  }
-}
-
-  /// Guarda o inicializa los datos del jugador en la base de datos.
-  ///
-  /// Busca si el usuario ya existe en la colección `Users`. Si es la primera
-  /// vez que inicia sesión (el documento no existe), crea un perfil base con
-  /// puntaje cero y progreso vacío.
-  Future<void> _saveUserToFirestore(User? user) async {
-    if (user != null) {
-      final userRef = _firestore.collection('Users').doc(user.uid);
-      final snapshot = await userRef.get();
-
-      if (!snapshot.exists) {
-        await userRef.set({
-          'id': user.uid,
-          'name': user.displayName ?? 'Jugador',
-          'email': user.email,
-          'score': 0,
-          'progress': [],
-          'createdAt': FieldValue.serverTimestamp(),
-        });
-      }
+    } catch (e) {
+      print('Error en AuthRepository.signInWithGoogle: $e');
+      throw AuthFailure(
+        'Ocurrió un error al iniciar sesión con Google. Revisa la configuración de Firebase y Google Sign-In.',
+      );
     }
   }
 

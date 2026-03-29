@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:mvp/core/constants/text_styles.dart';
 import 'package:mvp/widget/animated_hover_button.dart';
 import 'package:mvp/core/constants/app_color.dart';
 import 'package:mvp/core/di/injection_container.dart' as di;
 import 'package:mvp/data/repositories/player_repository.dart';
 import 'package:mvp/data/models/player.dart';
+import 'package:mvp/data/repositories/auth_repository.dart';
 import 'package:mvp/domain/engine/game_engine.dart';
 import 'package:mvp/domain/use-cases/login_use_case.dart';
 
@@ -165,12 +167,25 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             onPressed: currentCharacterIndex == 4
                                 ? null
                                 : () async {
+                                    String? loginError;
+
                                     setState(() {
                                       _isLoading = true;
                                     });
 
                                     final loginUseCase = di.sl<LoginUseCase>();
-                                    final userCredential = await loginUseCase();
+                                    final userCredential = await (() async {
+                                      try {
+                                        return await loginUseCase();
+                                      } on AuthFailure catch (e) {
+                                        loginError = e.toString();
+                                        return null;
+                                      } catch (_) {
+                                        loginError =
+                                            'Error inesperado durante el inicio de sesión.';
+                                        return null;
+                                      }
+                                    })();
 
                                     if (mounted) {
                                       setState(() {
@@ -181,51 +196,81 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     if (userCredential != null &&
                                         userCredential.user != null) {
                                       final engine = di.sl<GameEngine>();
-                                      final playerRepo =
-                                          di.sl<PlayerRepository>();
                                       final uid = userCredential.user!.uid;
 
-                                      Player? myPlayer =
-                                          await playerRepo.getPlayer(uid);
+                                      try {
+                                        final playerRepo =
+                                            di.sl<PlayerRepository>();
 
-                                      print(
-                                        "🔥 [HOME] LEYENDO FIRESTORE. Vidas encontradas: ${myPlayer?.lives}",
-                                      );
+                                        Player? myPlayer =
+                                            await playerRepo.getPlayer(uid);
 
-                                      if (myPlayer != null) {
-                                        await di
-                                            .sl<PlayerRepository>()
-                                            .updatePlayer(myPlayer);
-                                      }
+                                        print(
+                                          "🔥 [HOME] LEYENDO FIRESTORE. Vidas encontradas: ${myPlayer?.lives}",
+                                        );
 
-                                      if (myPlayer != null) {
-                                        if (myPlayer.lives <= 0) {
-                                          final playerReseteado =
-                                              myPlayer.copyWith(lives: 3);
+                                        if (myPlayer != null) {
+                                          await di
+                                              .sl<PlayerRepository>()
+                                              .updatePlayer(myPlayer);
+                                        }
 
-                                          await playerRepo.updateLives(uid, 3);
+                                        if (myPlayer != null) {
+                                          if (myPlayer.lives <= 0) {
+                                            final playerReseteado =
+                                                myPlayer.copyWith(lives: 3);
 
-                                          engine.setAuthenticatedPlayer(
-                                            playerReseteado,
-                                          );
+                                            await playerRepo.updateLives(
+                                              uid,
+                                              3,
+                                            );
+
+                                            engine.setAuthenticatedPlayer(
+                                              playerReseteado,
+                                            );
+                                          } else {
+                                            engine.setAuthenticatedPlayer(
+                                              myPlayer,
+                                            );
+                                          }
                                         } else {
+                                          final newPlayer = Player(
+                                            userId: uid,
+                                            name: userCredential.user!
+                                                    .displayName ??
+                                                'Jugador Nuevo',
+                                          );
+
+                                          await playerRepo.savePlayer(newPlayer);
+
                                           engine.setAuthenticatedPlayer(
-                                            myPlayer,
+                                            newPlayer,
                                           );
                                         }
-                                      } else {
-                                        final newPlayer = Player(
+                                      } on FirebaseException catch (e) {
+                                        // Permite entrar si Auth fue exitoso aunque Firestore esté restringido.
+                                        final fallbackPlayer = Player(
                                           userId: uid,
-                                          name: userCredential.user!
-                                                  .displayName ??
-                                              'Jugador Nuevo',
+                                          name:
+                                              userCredential.user!.displayName ??
+                                              'Jugador',
                                         );
-
-                                        await playerRepo.savePlayer(newPlayer);
-
                                         engine.setAuthenticatedPlayer(
-                                          newPlayer,
+                                          fallbackPlayer,
                                         );
+
+                                        if (mounted) {
+                                          ScaffoldMessenger.of(
+                                            context,
+                                          ).showSnackBar(
+                                            SnackBar(
+                                              content: Text(
+                                                'Sesion iniciada, pero no se pudo sincronizar progreso (${e.code}).',
+                                              ),
+                                              backgroundColor: Colors.orange,
+                                            ),
+                                          );
+                                        }
                                       }
 
                                       engine.goToMap();
@@ -234,9 +279,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                         ScaffoldMessenger.of(
                                           context,
                                         ).showSnackBar(
-                                          const SnackBar(
+                                          SnackBar(
                                             content: Text(
-                                              'No se pudo iniciar sesión. Intenta de nuevo.',
+                                              loginError ??
+                                                  'No se pudo iniciar sesión. Intenta de nuevo.',
                                             ),
                                             backgroundColor: Colors.red,
                                           ),

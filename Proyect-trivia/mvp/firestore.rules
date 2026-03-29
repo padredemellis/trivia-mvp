@@ -1,0 +1,31 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Datos del jugador: cada usuario solo accede a su propio documento.
+    match /players/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Progreso de sesión: requiere autenticación.
+    match /game_sessions/{sessionId} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Contenido de juego público de solo lectura.
+    match /questions/{questionId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /nodes/{nodeId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Deniega todo lo no contemplado.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
