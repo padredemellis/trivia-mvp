@@ -40,11 +40,28 @@ class AuthRepository {
         final GoogleAuthProvider googleProvider = GoogleAuthProvider()
           ..setCustomParameters({'prompt': 'select_account'});
 
-        final UserCredential userCredential = await _auth.signInWithPopup(
-          googleProvider,
-        );
+        // Si volvemos de un redirect, Firebase devuelve aquí el resultado.
+        final UserCredential redirectResult = await _auth.getRedirectResult();
+        if (redirectResult.user != null) {
+          return redirectResult;
+        }
 
-        return userCredential;
+        try {
+          final UserCredential userCredential = await _auth.signInWithPopup(
+            googleProvider,
+          );
+
+          return userCredential;
+        } on FirebaseAuthException catch (e) {
+          // Fallback para navegadores que bloquean popup o storage del popup.
+          if (e.code == 'popup-blocked' ||
+              e.code == 'cancelled-popup-request' ||
+              e.code == 'web-storage-unsupported') {
+            await _auth.signInWithRedirect(googleProvider);
+            return null;
+          }
+          rethrow;
+        }
       } else {
         final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
 
@@ -76,8 +93,16 @@ class AuthRepository {
       );
     } catch (e) {
       print('Error en AuthRepository.signInWithGoogle: $e');
+      final String details = e.toString();
+      if (details.contains('auth/unauthorized-domain')) {
+        throw AuthFailure(
+          'Dominio no autorizado para login web. Agrega bandw-questions.web.app en Firebase Auth > Authorized domains.',
+          code: 'unauthorized-domain',
+        );
+      }
+
       throw AuthFailure(
-        'Ocurrió un error al iniciar sesión con Google. Revisa la configuración de Firebase y Google Sign-In.',
+        'Ocurrió un error al iniciar sesión con Google en web. Revisa Authorized domains y la configuración de Google Sign-In.',
       );
     }
   }
