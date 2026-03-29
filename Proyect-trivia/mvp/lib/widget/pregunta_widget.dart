@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mvp/core/constants/text_styles.dart';
-// 1. Importamos la nueva herramienta
 import 'package:auto_size_text/auto_size_text.dart';
 
 class PreguntaWidget extends StatefulWidget {
@@ -15,7 +14,6 @@ class PreguntaWidget extends StatefulWidget {
 class _PreguntaWidgetState extends State<PreguntaWidget> {
   int _charCount = 0;
 
-  // 2. Creamos un grupo para sincronizar los tamaños
   final AutoSizeGroup _myGroup = AutoSizeGroup();
 
   @override
@@ -47,28 +45,37 @@ class _PreguntaWidgetState extends State<PreguntaWidget> {
   @override
   Widget build(BuildContext context) {
     final safeCharCount = _charCount.clamp(0, widget.texto.length);
+    final animatedText = widget.texto.substring(0, safeCharCount);
 
-    return Stack(
-      children: [
-        // 1. El molde invisible (Texto Completo)
-        AutoSizeText(
-          widget.texto,
-          style: TextStyles.pregunta.copyWith(color: Colors.transparent),
-          group: _myGroup,
-          maxLines: 7, // 👈 Aumentamos los renglones permitidos
-          minFontSize: 10, // 👈 Tamaño mínimo de letra permitido
-        ),
-
-        // 2. El texto visible (Animación)
-        AutoSizeText(
-          widget.texto.substring(0, safeCharCount),
-          style: TextStyles.pregunta,
-          textAlign: TextAlign.left,
-          group: _myGroup,
-          maxLines: 7, // 👈 Debe ser exactamente igual al molde
-          minFontSize: 10, // 👈 Debe ser exactamente igual al molde
-        ),
-      ],
+    return ClipRect(
+      child: Stack(
+        fit: StackFit.expand,
+        clipBehavior: Clip.hardEdge,
+        children: [
+          AutoSizeText(
+            widget.texto,
+            style: TextStyles.pregunta.copyWith(color: Colors.transparent),
+            textAlign: TextAlign.left,
+            softWrap: true,
+            wrapWords: true,
+            overflow: TextOverflow.ellipsis,
+            group: _myGroup,
+            maxLines: 7,
+            minFontSize: 10,
+          ),
+          AutoSizeText(
+            animatedText,
+            style: TextStyles.pregunta,
+            textAlign: TextAlign.left,
+            softWrap: true,
+            wrapWords: true,
+            overflow: TextOverflow.ellipsis,
+            group: _myGroup,
+            maxLines: 7,
+            minFontSize: 10,
+          ),
+        ],
+      ),
     );
   }
 }

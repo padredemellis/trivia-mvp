@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:mvp/core/constants/app_color.dart';
 import 'package:mvp/core/constants/text_styles.dart';
 
@@ -35,12 +36,23 @@ class RespuestasWidget extends StatelessWidget {
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor(),
-          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+          minimumSize: const Size(double.infinity, 56),
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(18.0),
           ),
         ),
-        child: Text(texto, style: TextStyles.respuesta),
+        child: AutoSizeText(
+          texto,
+          style: TextStyles.respuesta,
+          textAlign: TextAlign.center,
+          maxLines: 2,
+          minFontSize: 12,
+          stepGranularity: 1,
+          wrapWords: true,
+          overflow: TextOverflow.visible,
+        ),
       ),
     );
   }

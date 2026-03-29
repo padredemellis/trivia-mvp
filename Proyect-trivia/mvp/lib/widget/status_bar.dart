@@ -10,7 +10,6 @@ import 'package:mvp/data/models/player.dart';
 // con la información que le den.
 
 class PlayerStatusBar extends StatelessWidget {
-  // 2. Aquí recibimos al jugador con la información ACTUALIZADA que nos manda TriviaScreen.
   final Player player; 
   
   // 3. Modificamos el constructor para guardar a ese jugador en nuestra variable.
@@ -18,60 +17,57 @@ class PlayerStatusBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 4. Eliminamos por completo el StreamBuilder y la consulta al engine.
-    // Usaremos directamente la variable 'player' de la línea 15.
-
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 20,
-        vertical: 12,
-      ),
+      padding: const EdgeInsets.only(right: 10),
       child: Container(
         padding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 8,
+          horizontal: 14,
+          vertical: 6,
         ),
         decoration: BoxDecoration(
           color: Colors.black.withOpacity(0.4),
           borderRadius: BorderRadius.circular(20),
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // SECCIÓN DE PUNTOS
             Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const Icon(
                   Icons.star,
                   color: Colors.amber,
-                  size: 26,
+                  size: 22,
                 ),
-                const SizedBox(width: 6),
+                const SizedBox(width: 4),
                 Text(
-                  // 5. Imprimimos los puntos usando el jugador que recibimos
                   player.points.toString(),
                   style: TextStyles.bar.copyWith(
-                    fontSize: 18,
+                    fontSize: 16,
                     color: AppColor.amarillo,
                   ),
                 ),
               ],
             ),
 
+            const SizedBox(width: 10),
+
             // SECCIÓN DE VIDAS
             Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const Icon(
                   Icons.favorite,
                   color: Colors.red,
-                  size: 26,
+                  size: 22,
                 ),
-                const SizedBox(width: 6),
+                const SizedBox(width: 4),
                 Text(
-                  // 6. Imprimimos las vidas usando el jugador que recibimos
                   player.lives.toString(),
                   style: TextStyles.bar.copyWith(
-                    fontSize: 18,
+                    fontSize: 16,
                     color: Colors.white,
                   ),
                 ),
