@@ -37,20 +37,18 @@ class AuthRepository {
   Future<UserCredential?> signInWithGoogle() async {
     try {
       if (kIsWeb) {
-        // LOGIN PARA WEB
         final GoogleAuthProvider googleProvider = GoogleAuthProvider()
           ..setCustomParameters({'prompt': 'select_account'});
 
-        final UserCredential userCredential =
-            await _auth.signInWithPopup(googleProvider);
+        final UserCredential userCredential = await _auth.signInWithPopup(
+          googleProvider,
+        );
 
         return userCredential;
       } else {
-        // LOGIN PARA ANDROID / IOS
         final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
 
         if (googleUser == null) {
-          // El usuario cerró el diálogo de Google.
           return null;
         }
 
@@ -62,13 +60,16 @@ class AuthRepository {
           idToken: googleAuth.idToken,
         );
 
-        final UserCredential userCredential =
-            await _auth.signInWithCredential(credential);
+        final UserCredential userCredential = await _auth.signInWithCredential(
+          credential,
+        );
 
         return userCredential;
       }
     } on FirebaseAuthException catch (e) {
-      print('FirebaseAuthException en signInWithGoogle: ${e.code} ${e.message}');
+      print(
+        'FirebaseAuthException en signInWithGoogle: ${e.code} ${e.message}',
+      );
       throw AuthFailure(
         e.message ?? 'Error de autenticación con Firebase.',
         code: e.code,
@@ -95,4 +96,3 @@ class AuthRepository {
     }
   }
 }
-

@@ -96,7 +96,6 @@ class TriviaScreen extends StatelessWidget {
             height: sceneHeight,
             child: Stack(
               children: [
-                // Fondo del personaje
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
@@ -109,7 +108,6 @@ class TriviaScreen extends StatelessWidget {
                   ),
                 ),
 
-                // Caja de texto de la pregunta (Ajustada al globo de diálogo)
                 Positioned(
                   top: questionTop,
                   left: questionLeft,
@@ -126,18 +124,26 @@ class TriviaScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Padding(
-                    padding: EdgeInsets.fromLTRB(24, 12, 24, 14 + safeBottom + 10),
+                    padding: EdgeInsets.fromLTRB(
+                      24,
+                      12,
+                      24,
+                      14 + safeBottom + 10,
+                    ),
                     child: LayoutBuilder(
                       builder: (context, _) {
-                        final optionCount = options.isEmpty ? 1 : options.length;
-                        final availableHeight =
-                            (sceneHeight * 0.34).clamp(210.0, 340.0).toDouble();
-                        final spacing = 7.0;
-                        final buttonHeight = ((availableHeight -
-                                    (optionCount - 1) * spacing) /
-                                optionCount)
-                            .clamp(46.0, 62.0)
+                        final optionCount = options.isEmpty
+                            ? 1
+                            : options.length;
+                        final availableHeight = (sceneHeight * 0.34)
+                            .clamp(210.0, 340.0)
                             .toDouble();
+                        final spacing = 7.0;
+                        final buttonHeight =
+                            ((availableHeight - (optionCount - 1) * spacing) /
+                                    optionCount)
+                                .clamp(46.0, 62.0)
+                                .toDouble();
 
                         return SizedBox(
                           width: double.infinity,
@@ -157,7 +163,8 @@ class TriviaScreen extends StatelessWidget {
                                     texto: options[index],
                                     esCorrecta: false,
                                     mostrarResultado: false,
-                                    onTap: () => handleOptionTap(options[index]),
+                                    onTap: () =>
+                                        handleOptionTap(options[index]),
                                   ),
                                 ),
                               );
@@ -182,7 +189,10 @@ class TriviaScreen extends StatelessWidget {
                       height: sceneHeight - 20,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(26),
-                        border: Border.all(color: const Color(0x33111111), width: 2),
+                        border: Border.all(
+                          color: const Color(0x33111111),
+                          width: 2,
+                        ),
                         boxShadow: const [
                           BoxShadow(
                             color: Color(0x33000000),

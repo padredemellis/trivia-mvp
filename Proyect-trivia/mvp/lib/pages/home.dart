@@ -199,11 +199,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                       final uid = userCredential.user!.uid;
 
                                       try {
-                                        final playerRepo =
-                                            di.sl<PlayerRepository>();
+                                        final playerRepo = di
+                                            .sl<PlayerRepository>();
 
-                                        Player? myPlayer =
-                                            await playerRepo.getPlayer(uid);
+                                        Player? myPlayer = await playerRepo
+                                            .getPlayer(uid);
 
                                         print(
                                           "🔥 [HOME] LEYENDO FIRESTORE. Vidas encontradas: ${myPlayer?.lives}",
@@ -217,8 +217,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
                                         if (myPlayer != null) {
                                           if (myPlayer.lives <= 0) {
-                                            final playerReseteado =
-                                                myPlayer.copyWith(lives: 3);
+                                            final playerReseteado = myPlayer
+                                                .copyWith(lives: 3);
 
                                             await playerRepo.updateLives(
                                               uid,
@@ -236,23 +236,28 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                         } else {
                                           final newPlayer = Player(
                                             userId: uid,
-                                            name: userCredential.user!
+                                            name:
+                                                userCredential
+                                                    .user!
                                                     .displayName ??
                                                 'Jugador Nuevo',
                                           );
 
-                                          await playerRepo.savePlayer(newPlayer);
+                                          await playerRepo.savePlayer(
+                                            newPlayer,
+                                          );
 
                                           engine.setAuthenticatedPlayer(
                                             newPlayer,
                                           );
                                         }
                                       } on FirebaseException catch (e) {
-                                        // Permite entrar si Auth fue exitoso aunque Firestore esté restringido.
                                         final fallbackPlayer = Player(
                                           userId: uid,
                                           name:
-                                              userCredential.user!.displayName ??
+                                              userCredential
+                                                  .user!
+                                                  .displayName ??
                                               'Jugador',
                                         );
                                         engine.setAuthenticatedPlayer(
